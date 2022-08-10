@@ -34,6 +34,7 @@
 		98584B14277E605F0028DBEA /* ActivityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B0E277E605F0028DBEA /* ActivityDetailsView.swift */; };
 		98584B1F277E60740028DBEA /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B19277E60740028DBEA /* ContactListView.swift */; };
 		98584B20277E60740028DBEA /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B1A277E60740028DBEA /* ContactListViewController.swift */; };
+		BC74B2E828A333FD005B97EB /* Transfer in Frameworks */ = {isa = PBXBuildFile; productRef = BC74B2E728A333FD005B97EB /* Transfer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		98584B0E277E605F0028DBEA /* ActivityDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsView.swift; sourceTree = "<group>"; };
 		98584B19277E60740028DBEA /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		98584B1A277E60740028DBEA /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		BC74B2E628A333CA005B97EB /* Transfer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transfer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E6125428A3290800966393 /* Sample in Frameworks */,
+				BC74B2E828A333FD005B97EB /* Transfer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +119,7 @@
 		70E6125028A3283D00966393 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BC74B2E628A333CA005B97EB /* Transfer */,
 				70E6125128A3287700966393 /* Sample */,
 			);
 			path = Libraries;
@@ -312,6 +316,7 @@
 			name = FinanceApp;
 			packageProductDependencies = (
 				70E6125328A3290800966393 /* Sample */,
+				BC74B2E728A333FD005B97EB /* Transfer */,
 			);
 			productName = FinanceApp;
 			productReference = 98584A69277E32C30028DBEA /* FinanceApp.app */;
@@ -790,6 +795,10 @@
 		70E6125328A3290800966393 /* Sample */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Sample;
+		};
+		BC74B2E728A333FD005B97EB /* Transfer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Transfer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
