@@ -3,11 +3,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "Modules",
+    name: "Components",
     platforms: [.iOS(.v15)],
     products: [
         .library(
-            name: "Modules",
+            name: "Components",
             targets: ["Components"]),
     ],
     dependencies: [],
