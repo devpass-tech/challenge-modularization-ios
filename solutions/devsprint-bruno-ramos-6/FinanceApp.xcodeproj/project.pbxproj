@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92EAAC3D28A3296400A819EF /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = 92EAAC3C28A3296400A819EF /* Components */; };
 		70E6125428A3290800966393 /* Sample in Frameworks */ = {isa = PBXBuildFile; productRef = 70E6125328A3290800966393 /* Sample */; };
 		98426FAA27A6EC8700B09645 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98426FA927A6EC8700B09645 /* TabBarController.swift */; };
 		98426FAC27A6FC8000B09645 /* UserProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98426FAB27A6FC8000B09645 /* UserProfileHeaderView.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92EAAC3A28A3291D00A819EF /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Components; sourceTree = "<group>"; };
 		70E6125128A3287700966393 /* Sample */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Sample; sourceTree = "<group>"; };
 		98426FA927A6EC8700B09645 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		98426FAB27A6FC8000B09645 /* UserProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EAAC3D28A3296400A819EF /* Components in Frameworks */,
 				70E6125428A3290800966393 /* Sample in Frameworks */,
 				BC74B2E828A333FD005B97EB /* Transfer in Frameworks */,
 			);
@@ -119,6 +122,7 @@
 		70E6125028A3283D00966393 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+        92EAAC3A28A3291D00A819EF /* Components */,
 				BC74B2E628A333CA005B97EB /* Transfer */,
 				70E6125128A3287700966393 /* Sample */,
 			);
@@ -323,6 +327,7 @@
 			);
 			name = FinanceApp;
 			packageProductDependencies = (
+				92EAAC3C28A3296400A819EF /* Components */,
 				70E6125328A3290800966393 /* Sample */,
 				BC74B2E728A333FD005B97EB /* Transfer */,
 			);
@@ -800,6 +805,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		92EAAC3C28A3296400A819EF /* Components */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Components;
 		70E6125328A3290800966393 /* Sample */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Sample;
