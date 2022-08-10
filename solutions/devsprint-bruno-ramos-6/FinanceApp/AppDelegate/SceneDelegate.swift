@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Sample
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,9 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
+        let viewController = SampleViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UINavigationController(rootViewController: TabBarController())
+        self.window?.rootViewController = UINavigationController(rootViewController: viewController)
         self.window?.windowScene = windowScene
         self.window?.makeKeyAndVisible()
     }
