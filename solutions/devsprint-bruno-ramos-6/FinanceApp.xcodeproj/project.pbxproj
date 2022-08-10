@@ -808,6 +808,7 @@
 		92EAAC3C28A3296400A819EF /* Components */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Components;
+		};
 		70E6125328A3290800966393 /* Sample */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Sample;
