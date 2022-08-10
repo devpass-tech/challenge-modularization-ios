@@ -298,6 +298,14 @@
 			path = ContactList;
 			sourceTree = "<group>";
 		};
+		BC74B2E128A31892005B97EB /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				BC74B2E228A318B6005B97EB /* Transfer */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
