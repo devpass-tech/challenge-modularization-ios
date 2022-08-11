@@ -1,15 +1,10 @@
-//
-//  UserProfileHeaderView.swift
-//  FinanceApp
-//
-//  Created by Rodrigo Borges on 30/01/22.
-//
-
 import UIKit
 
-class UserProfileHeaderView: UIView {
+final class UserProfileHeaderView: UIView {
+    
+    // MARK: - Private Properties
 
-    let stackView: UIStackView = {
+    private lazy var stackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +15,7 @@ class UserProfileHeaderView: UIView {
         return stackView
     }()
 
-    let imageView: UIImageView = {
+    private lazy var imageView: UIImageView = {
 
         let imageView = UIImageView()
         imageView.image = UIImage(named: "avatar-placeholder")
@@ -29,7 +24,7 @@ class UserProfileHeaderView: UIView {
         return imageView
     }()
 
-    let nameLabel: UILabel = {
+    private lazy var nameLabel: UILabel = {
 
         let label = UILabel()
         label.text = "User Name"
@@ -38,7 +33,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    let agencyLabel: UILabel = {
+    private lazy var agencyLabel: UILabel = {
 
         let label = UILabel()
         label.text = "Agency 0001"
@@ -47,7 +42,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    let accountLabel: UILabel = {
+    private lazy var accountLabel: UILabel = {
 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +51,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    let bankLabel: UILabel = {
+    private lazy var bankLabel: UILabel = {
 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -65,12 +60,28 @@ class UserProfileHeaderView: UIView {
 
         return label
     }()
+    
+    // MARK: - Init
 
     init() {
         super.init(frame: .zero)
-
-        backgroundColor = .white
-
+        setup()
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Setup
+    
+    private func setup() {
+        setupViews()
+        setupBackgroundColor()
+        setupConstraints()
+    }
+    
+    private func setupViews() {
         stackView.addArrangedSubview(imageView)
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(agencyLabel)
@@ -78,7 +89,13 @@ class UserProfileHeaderView: UIView {
         stackView.addArrangedSubview(bankLabel)
 
         addSubview(stackView)
-
+    }
+    
+    private func setupBackgroundColor() {
+        backgroundColor = .white
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
@@ -87,9 +104,5 @@ class UserProfileHeaderView: UIView {
             imageView.heightAnchor.constraint(equalToConstant: 100),
             imageView.widthAnchor.constraint(equalToConstant: 100)
         ])
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
