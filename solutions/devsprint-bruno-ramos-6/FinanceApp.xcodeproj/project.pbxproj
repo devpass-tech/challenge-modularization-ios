@@ -86,6 +86,7 @@
 		98584B0E277E605F0028DBEA /* ActivityDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsView.swift; sourceTree = "<group>"; };
 		98584B19277E60740028DBEA /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		98584B1A277E60740028DBEA /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		BB1F0AEF28A6EFD40013C530 /* Home */ = {isa = PBXFileReference; lastKnownFileType = text; name = Home; path = FinanceApp/Home; sourceTree = SOURCE_ROOT; };
 		BC74B2E628A333CA005B97EB /* Transfer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transfer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +123,7 @@
 		70E6125028A3283D00966393 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BB1F0AEF28A6EFD40013C530 /* Home */,
 				2F3DE72028A59F9500D7F7B0 /* ActivityDetails */,
 				7E315BA228A3BE800013A2F1 /* UserProfile */,
 				92EAAC3A28A3291D00A819EF /* Components */,
