@@ -1,14 +1,8 @@
-//
-//  UserProfileView.swift
-//  FinanceApp
-//
-//  Created by Rodrigo Borges on 30/12/21.
-//
-
-import Foundation
 import UIKit
 
-class UserProfileView: UIView {
+final class UserProfileView: UIView {
+    
+    // MARK: - Private Properties
 
     private lazy var tableView: UITableView = {
 
@@ -22,14 +16,36 @@ class UserProfileView: UIView {
         tableView.tableHeaderView = headerView
         return tableView
     }()
+    
+    // MARK: - Init
 
     init() {
         super.init(frame: .zero)
-
-        backgroundColor = .white
-
+        setup()
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Setup
+    
+    private func setup() {
+        setupViews()
+        setupBackgroundColor()
+        setupConstraints()
+    }
+    
+    private func setupViews() {
         addSubview(tableView)
-
+    }
+    
+    private func setupBackgroundColor() {
+        backgroundColor = .white
+    }
+    
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
@@ -37,11 +53,9 @@ class UserProfileView: UIView {
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
+
+// MARK: - Extension
 
 extension UserProfileView: UITableViewDataSource {
 
@@ -81,5 +95,4 @@ extension UserProfileView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "My account"
     }
-
 }

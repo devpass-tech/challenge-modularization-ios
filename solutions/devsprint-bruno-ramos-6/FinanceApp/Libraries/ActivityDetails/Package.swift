@@ -4,23 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "Transfer",
+    name: "ActivityDetails",
     platforms: [.iOS(.v15)],
     products: [
         .library(
-            name: "Transfer",
-            targets: ["Transfer"]
-        ),
+            name: "ActivityDetails",
+            targets: ["ActivityDetails"]),
     ],
-    dependencies: [ ],
+    dependencies: [],
     targets: [
         .target(
-            name: "Transfer",
-            dependencies: []
-        ),
+            name: "ActivityDetails",
+            dependencies: []),
         .testTarget(
-            name: "TransferTests",
-            dependencies: ["Transfer"]
-        ),
+            name: "ActivityDetailsTests",
+            dependencies: ["ActivityDetails"]),
     ]
 )
