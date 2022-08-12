@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		92EAAC3D28A3296400A819EF /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = 92EAAC3C28A3296400A819EF /* Components */; };
+		2F3DE72228A5A22D00D7F7B0 /* ActivityDetails in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */; };
 		70E6125428A3290800966393 /* Sample in Frameworks */ = {isa = PBXBuildFile; productRef = 70E6125328A3290800966393 /* Sample */; };
 		7E315BA428A3BEB70013A2F1 /* UserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E315BA328A3BEB70013A2F1 /* UserProfile */; };
+		92EAAC3D28A3296400A819EF /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = 92EAAC3C28A3296400A819EF /* Components */; };
 		98426FAA27A6EC8700B09645 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98426FA927A6EC8700B09645 /* TabBarController.swift */; };
 		98584A6D277E32C30028DBEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584A6C277E32C30028DBEA /* AppDelegate.swift */; };
 		98584A6F277E32C30028DBEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584A6E277E32C30028DBEA /* SceneDelegate.swift */; };
@@ -54,9 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92EAAC3A28A3291D00A819EF /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Components; sourceTree = "<group>"; };
+		2F3DE72028A59F9500D7F7B0 /* ActivityDetails */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ActivityDetails; sourceTree = "<group>"; };
 		70E6125128A3287700966393 /* Sample */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Sample; sourceTree = "<group>"; };
 		7E315BA228A3BE800013A2F1 /* UserProfile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UserProfile; sourceTree = "<group>"; };
+		92EAAC3A28A3291D00A819EF /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Components; sourceTree = "<group>"; };
 		98426FA927A6EC8700B09645 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		98584A69277E32C30028DBEA /* FinanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98584A6C277E32C30028DBEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3DE72228A5A22D00D7F7B0 /* ActivityDetails in Frameworks */,
 				92EAAC3D28A3296400A819EF /* Components in Frameworks */,
 				70E6125428A3290800966393 /* Sample in Frameworks */,
 				7E315BA428A3BEB70013A2F1 /* UserProfile in Frameworks */,
@@ -119,8 +122,9 @@
 		70E6125028A3283D00966393 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				2F3DE72028A59F9500D7F7B0 /* ActivityDetails */,
 				7E315BA228A3BE800013A2F1 /* UserProfile */,
-        		92EAAC3A28A3291D00A819EF /* Components */,
+				92EAAC3A28A3291D00A819EF /* Components */,
 				BC74B2E628A333CA005B97EB /* Transfer */,
 				70E6125128A3287700966393 /* Sample */,
 			);
@@ -289,14 +293,6 @@
 			path = ContactList;
 			sourceTree = "<group>";
 		};
-		BC74B2E128A31892005B97EB /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				BC74B2E228A318B6005B97EB /* Transfer */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -318,6 +314,7 @@
 				70E6125328A3290800966393 /* Sample */,
 				7E315BA328A3BEB70013A2F1 /* UserProfile */,
 				BC74B2E728A333FD005B97EB /* Transfer */,
+				2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */,
 			);
 			productName = FinanceApp;
 			productReference = 98584A69277E32C30028DBEA /* FinanceApp.app */;
@@ -790,9 +787,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		92EAAC3C28A3296400A819EF /* Components */ = {
+		2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Components;
+			productName = ActivityDetails;
 		};
 		70E6125328A3290800966393 /* Sample */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -801,6 +798,10 @@
 		7E315BA328A3BEB70013A2F1 /* UserProfile */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UserProfile;
+		};
+		92EAAC3C28A3296400A819EF /* Components */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Components;
 		};
 		BC74B2E728A333FD005B97EB /* Transfer */ = {
 			isa = XCSwiftPackageProductDependency;
