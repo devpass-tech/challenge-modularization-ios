@@ -18,7 +18,7 @@ class ActivityListView: UIView {
 
     static let cellSize = CGFloat(82)
 
-    private let cellIdentifier = "ActivityCellIdentifier"
+    let cellIdentifier = "ActivityCellIdentifier"
 
     lazy var tableView: UITableView = {
 
