@@ -93,11 +93,10 @@ class HomeHeaderView: UIView, ViewCode {
     func setup() {
         setupComponents()
         setupConstraints()
+        setupExtraConfiguration()
     }
     
     func setupComponents() {
-        backgroundColor = .white
-        
         savingsStackView.addArrangedSubview(savingsLabel)
         savingsStackView.addArrangedSubview(savingsValueLabel)
 
@@ -118,5 +117,9 @@ class HomeHeaderView: UIView, ViewCode {
             stackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
 
         ])
+    }
+    
+    func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }

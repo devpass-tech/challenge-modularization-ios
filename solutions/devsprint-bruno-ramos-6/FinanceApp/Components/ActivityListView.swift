@@ -48,10 +48,10 @@ extension ActivityListView {
     func setup() {
         setupComponents()
         setupConstraints()
+        setupExtraConfiguration()
     }
     
     func setupComponents() {
-        backgroundColor = .white
         addSubview(tableView)
     }
     
@@ -63,6 +63,10 @@ extension ActivityListView {
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+    
+    func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }
 

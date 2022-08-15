@@ -110,11 +110,10 @@ class ActivityDetailsView: UIView, ViewCode {
     func setup() {
         setupComponents()
         setupConstraints()
+        setupExtraConfiguration()
     }
     
     func setupComponents() {
-        backgroundColor = .white
-
         priceContainerView.addSubview(priceLabel)
         priceContainerView.addSubview(timeLabel)
 
@@ -146,5 +145,9 @@ class ActivityDetailsView: UIView, ViewCode {
             reportIssueButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
             reportIssueButton.heightAnchor.constraint(equalToConstant: 56)
         ])
+    }
+    
+    func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }

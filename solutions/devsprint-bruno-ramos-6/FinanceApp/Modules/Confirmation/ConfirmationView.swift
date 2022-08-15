@@ -79,11 +79,10 @@ class ConfirmationView: UIView, ViewCode {
     func setup() {
         setupComponents()
         setupConstraints()
+        setupExtraConfiguration()
     }
     
     func setupComponents() {
-        backgroundColor = .white
-
         stackView.addArrangedSubview(confirmationImageView)
         stackView.addArrangedSubview(confirmationLabel)
 
@@ -106,5 +105,9 @@ class ConfirmationView: UIView, ViewCode {
             confirmationButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
             confirmationButton.heightAnchor.constraint(equalToConstant: 56)
         ])
+    }
+    
+    func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }

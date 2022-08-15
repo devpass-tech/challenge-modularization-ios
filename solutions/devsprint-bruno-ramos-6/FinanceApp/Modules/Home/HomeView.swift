@@ -55,11 +55,10 @@ class HomeView: UIView, ViewCode {
     func setup() {
         setupComponents()
         setupConstraints()
+        setupExtraConfiguration()
     }
     
     func setupComponents() {
-        backgroundColor = .white
-
         stackView.addArrangedSubview(homeHeaderView)
         stackView.addArrangedSubview(activityListView)
         stackView.setCustomSpacing(32, after: homeHeaderView)
@@ -76,6 +75,10 @@ class HomeView: UIView, ViewCode {
             
             activityListView.heightAnchor.constraint(equalToConstant: estimatedHeight)
         ])
+    }
+    
+    func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }
 
