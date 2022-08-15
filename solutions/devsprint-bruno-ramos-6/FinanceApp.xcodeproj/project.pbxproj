@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B82AFCF28A45E2B00FD5A2B /* ContactList in Frameworks */ = {isa = PBXBuildFile; productRef = 0B82AFCE28A45E2B00FD5A2B /* ContactList */; };
 		70E6125428A3290800966393 /* Sample in Frameworks */ = {isa = PBXBuildFile; productRef = 70E6125328A3290800966393 /* Sample */; };
+		92EAAC3D28A3296400A819EF /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = 92EAAC3C28A3296400A819EF /* Components */; };
 		7E315BA428A3BEB70013A2F1 /* UserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E315BA328A3BEB70013A2F1 /* UserProfile */; };
+		92AF118728A5CEA800237530 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 92AF118628A5CEA800237530 /* UIComponents */; };
+		2F3DE72228A5A22D00D7F7B0 /* ActivityDetails in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */; };
 		92EAAC3D28A3296400A819EF /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = 92EAAC3C28A3296400A819EF /* Components */; };
 		98426FAA27A6EC8700B09645 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98426FA927A6EC8700B09645 /* TabBarController.swift */; };
 		98584A6D277E32C30028DBEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584A6C277E32C30028DBEA /* AppDelegate.swift */; };
@@ -26,11 +30,8 @@
 		98584AFA277E51850028DBEA /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584AF9277E51850028DBEA /* HomeHeaderView.swift */; };
 		98584AFC277E51960028DBEA /* ActivityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584AFB277E51960028DBEA /* ActivityCellView.swift */; };
 		98584AFE277E51A70028DBEA /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584AFD277E51A70028DBEA /* ActivityListView.swift */; };
-		98584B04277E51DA0028DBEA /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B03277E51DA0028DBEA /* ContactCellView.swift */; };
 		98584B10277E605F0028DBEA /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B0A277E605F0028DBEA /* ActivityDetailsViewController.swift */; };
 		98584B14277E605F0028DBEA /* ActivityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B0E277E605F0028DBEA /* ActivityDetailsView.swift */; };
-		98584B1F277E60740028DBEA /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B19277E60740028DBEA /* ContactListView.swift */; };
-		98584B20277E60740028DBEA /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B1A277E60740028DBEA /* ContactListViewController.swift */; };
 		BC74B2E828A333FD005B97EB /* Transfer in Frameworks */ = {isa = PBXBuildFile; productRef = BC74B2E728A333FD005B97EB /* Transfer */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B82AFCD28A45B8C00FD5A2B /* ContactList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ContactList; sourceTree = "<group>"; };
 		70E6125128A3287700966393 /* Sample */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Sample; sourceTree = "<group>"; };
+		92EAAC3A28A3291D00A819EF /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Components; sourceTree = "<group>"; };
 		7E315BA228A3BE800013A2F1 /* UserProfile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UserProfile; sourceTree = "<group>"; };
+		92AF118528A5CD3800237530 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIComponents; sourceTree = "<group>"; };
+		2F3DE72028A59F9500D7F7B0 /* ActivityDetails */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ActivityDetails; sourceTree = "<group>"; };
 		92EAAC3A28A3291D00A819EF /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Components; sourceTree = "<group>"; };
 		98426FA927A6EC8700B09645 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		98584A69277E32C30028DBEA /* FinanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,11 +80,11 @@
 		98584AF9277E51850028DBEA /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		98584AFB277E51960028DBEA /* ActivityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCellView.swift; sourceTree = "<group>"; };
 		98584AFD277E51A70028DBEA /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
-		98584B03277E51DA0028DBEA /* ContactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellView.swift; sourceTree = "<group>"; };
 		98584B0A277E605F0028DBEA /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		98584B0E277E605F0028DBEA /* ActivityDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsView.swift; sourceTree = "<group>"; };
 		98584B19277E60740028DBEA /* ContactListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		98584B1A277E60740028DBEA /* ContactListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		BB1F0AEF28A6EFD40013C530 /* Home */ = {isa = PBXFileReference; lastKnownFileType = text; name = Home; path = FinanceApp/Home; sourceTree = SOURCE_ROOT; };
 		BC74B2E628A333CA005B97EB /* Transfer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transfer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,10 +93,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F3DE72228A5A22D00D7F7B0 /* ActivityDetails in Frameworks */,
 				92EAAC3D28A3296400A819EF /* Components in Frameworks */,
 				70E6125428A3290800966393 /* Sample in Frameworks */,
 				7E315BA428A3BEB70013A2F1 /* UserProfile in Frameworks */,
 				BC74B2E828A333FD005B97EB /* Transfer in Frameworks */,
+				0B82AFCF28A45E2B00FD5A2B /* ContactList in Frameworks */,
+				92AF118728A5CEA800237530 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +123,11 @@
 		70E6125028A3283D00966393 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				7E315BA228A3BE800013A2F1 /* UserProfile */,
+				BB1F0AEF28A6EFD40013C530 /* Home */,
+        		0B82AFCD28A45B8C00FD5A2B /* ContactList */,
+				92AF118528A5CD3800237530 /* UIComponents */,
+				2F3DE72028A59F9500D7F7B0 /* ActivityDetails */,
+        		7E315BA228A3BE800013A2F1 /* UserProfile */,
 				92EAAC3A28A3291D00A819EF /* Components */,
 				BC74B2E628A333CA005B97EB /* Transfer */,
 				70E6125128A3287700966393 /* Sample */,
@@ -203,7 +215,6 @@
 		98584A9E277E35700028DBEA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				98584B08277E602C0028DBEA /* ContactList */,
 				98584ADF277E50430028DBEA /* Confirmation */,
 				98584AD1277E50430028DBEA /* Transfers */,
 				98584A9F277E35780028DBEA /* Home */,
@@ -259,7 +270,6 @@
 				98584AF9277E51850028DBEA /* HomeHeaderView.swift */,
 				98584AFB277E51960028DBEA /* ActivityCellView.swift */,
 				98584AFD277E51A70028DBEA /* ActivityListView.swift */,
-				98584B03277E51DA0028DBEA /* ContactCellView.swift */,
 				98426FA927A6EC8700B09645 /* TabBarController.swift */,
 			);
 			path = Components;
@@ -304,6 +314,9 @@
 				70E6125328A3290800966393 /* Sample */,
 				7E315BA328A3BEB70013A2F1 /* UserProfile */,
 				BC74B2E728A333FD005B97EB /* Transfer */,
+				0B82AFCE28A45E2B00FD5A2B /* ContactList */,
+				92AF118628A5CEA800237530 /* UIComponents */,
+        		2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */,
 			);
 			productName = FinanceApp;
 			productReference = 98584A69277E32C30028DBEA /* FinanceApp.app */;
@@ -422,10 +435,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98584AC3277E42E80028DBEA /* FinanceService.swift in Sources */,
-				98584B04277E51DA0028DBEA /* ContactCellView.swift in Sources */,
 				98584B10277E605F0028DBEA /* ActivityDetailsViewController.swift in Sources */,
 				98584AFE277E51A70028DBEA /* ActivityListView.swift in Sources */,
-				98584B20277E60740028DBEA /* ContactListViewController.swift in Sources */,
 				98584AF4277E50430028DBEA /* ConfirmationViewController.swift in Sources */,
 				98584AFC277E51960028DBEA /* ActivityCellView.swift in Sources */,
 				98584AFA277E51850028DBEA /* HomeHeaderView.swift in Sources */,
@@ -434,7 +445,6 @@
 				98584A6D277E32C30028DBEA /* AppDelegate.swift in Sources */,
 				98584A6F277E32C30028DBEA /* SceneDelegate.swift in Sources */,
 				98584AA7277E35F10028DBEA /* HomeView.swift in Sources */,
-				98584B1F277E60740028DBEA /* ContactListView.swift in Sources */,
 				98584AA5277E35E90028DBEA /* HomeViewController.swift in Sources */,
 				98426FAA27A6EC8700B09645 /* TabBarController.swift in Sources */,
 			);
@@ -774,13 +784,29 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0B82AFCE28A45E2B00FD5A2B /* ContactList */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ContactList;
+		};
+		2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ActivityDetails;
+		};
 		70E6125328A3290800966393 /* Sample */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Sample;
 		};
+		92EAAC3C28A3296400A819EF /* Components */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Components;
+		};
 		7E315BA328A3BEB70013A2F1 /* UserProfile */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UserProfile;
+		};
+		92AF118628A5CEA800237530 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
 		};
 		92EAAC3C28A3296400A819EF /* Components */ = {
 			isa = XCSwiftPackageProductDependency;
