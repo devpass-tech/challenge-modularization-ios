@@ -13,13 +13,15 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "../Components")
+        .package(path: "../Components"),
+        .package(path: "../ContactList"),
     ],
     targets: [
         .target(
             name: "Transfer",
             dependencies: [
-                "Components"
+                "Components",
+                "ContactList"
             ]
         ),
         .testTarget(

@@ -5,6 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import ContactList
 import UIKit
 
 public final class TransfersViewController: UIViewController {
@@ -23,10 +24,10 @@ public final class TransfersViewController: UIViewController {
 extension TransfersViewController: TransferViewDelegate {
 
     func didPressChooseContactButton() {
-//        let contactListViewController = ContactListViewController()
-//        contactListViewController.delegate = self
-//        let navigationController = UINavigationController(rootViewController: contactListViewController)
-//        self.present(navigationController, animated: true)
+        let contactListViewController = ContactListViewController()
+        contactListViewController.delegate = self
+        let navigationController = UINavigationController(rootViewController: contactListViewController)
+        self.present(navigationController, animated: true)
     }
 
     func didPressTransferButton(with amount: String) {
@@ -36,13 +37,14 @@ extension TransfersViewController: TransferViewDelegate {
     }
 }
 
-//extension TransfersViewController: ContactListViewControllerDelegate {
-//
-//    func didSelectContact() {
-//        self.dismiss(animated: true)
-//        let alertViewController = UIAlertController(title: "Contact selection", message: "A contact was selected", preferredStyle: .alert)
-//        let action = UIAlertAction(title: "Thanks", style: .default)
-//        alertViewController.addAction(action)
-//        self.present(alertViewController, animated: true)
-//    }
-//}
+// MARK: - ContactListViewControllerDelegate
+
+extension TransfersViewController: ContactListViewControllerDelegate {
+    public func didSelectContact() {
+        self.dismiss(animated: true)
+        let alertViewController = UIAlertController(title: "Contact selection", message: "A contact was selected", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Thanks", style: .default)
+        alertViewController.addAction(action)
+        self.present(alertViewController, animated: true)
+    }
+}
