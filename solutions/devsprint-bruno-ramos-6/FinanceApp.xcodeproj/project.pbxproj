@@ -124,10 +124,10 @@
 		70E6125028A3283D00966393 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-        0B82AFCD28A45B8C00FD5A2B /* ContactList */,
+        		0B82AFCD28A45B8C00FD5A2B /* ContactList */,
 				92AF118528A5CD3800237530 /* UIComponents */,
 				2F3DE72028A59F9500D7F7B0 /* ActivityDetails */,
-        7E315BA228A3BE800013A2F1 /* UserProfile */,
+        		7E315BA228A3BE800013A2F1 /* UserProfile */,
 				92EAAC3A28A3291D00A819EF /* Components */,
 				BC74B2E628A333CA005B97EB /* Transfer */,
 				70E6125128A3287700966393 /* Sample */,
@@ -318,7 +318,7 @@
 				BC74B2E728A333FD005B97EB /* Transfer */,
 				0B82AFCE28A45E2B00FD5A2B /* ContactList */,
 				92AF118628A5CEA800237530 /* UIComponents */,
-        2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */,
+        		2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */,
 			);
 			productName = FinanceApp;
 			productReference = 98584A69277E32C30028DBEA /* FinanceApp.app */;
@@ -791,6 +791,7 @@
 		0B82AFCE28A45E2B00FD5A2B /* ContactList */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ContactList;
+		};
 		2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ActivityDetails;
@@ -802,6 +803,7 @@
 		92EAAC3C28A3296400A819EF /* Components */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Components;
+		};
 		7E315BA328A3BEB70013A2F1 /* UserProfile */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UserProfile;
