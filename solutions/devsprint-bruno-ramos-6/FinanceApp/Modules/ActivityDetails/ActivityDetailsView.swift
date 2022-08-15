@@ -5,6 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Components
 import Foundation
 import UIKit
 
@@ -13,7 +14,7 @@ protocol ActivityDetailsViewDelegate: AnyObject {
     func didPressReportButton()
 }
 
-class ActivityDetailsView: UIView {
+class ActivityDetailsView: UIView, ViewCode {
 
     weak var delegate: ActivityDetailsViewDelegate?
 
@@ -92,7 +93,26 @@ class ActivityDetailsView: UIView {
 
     init() {
         super.init(frame: .zero)
+        
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
+    @objc
+    func reportButtonPressed() {
+
+        delegate?.didPressReportButton()
+    }
+    
+    func setup() {
+        setupComponents()
+        setupConstraints()
+    }
+    
+    func setupComponents() {
         backgroundColor = .white
 
         priceContainerView.addSubview(priceLabel)
@@ -105,7 +125,9 @@ class ActivityDetailsView: UIView {
 
         addSubview(stackView)
         addSubview(reportIssueButton)
-
+    }
+    
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -124,15 +146,5 @@ class ActivityDetailsView: UIView {
             reportIssueButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
             reportIssueButton.heightAnchor.constraint(equalToConstant: 56)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    @objc
-    func reportButtonPressed() {
-
-        delegate?.didPressReportButton()
     }
 }

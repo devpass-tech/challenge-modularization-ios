@@ -5,6 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Components
 import Foundation
 import UIKit
 
@@ -14,7 +15,7 @@ protocol TransferViewDelegate: AnyObject {
     func didPressTransferButton(with amount: String)
 }
 
-class TransfersView: UIView {
+class TransfersView: UIView, ViewCode {
 
     weak var delegate: TransferViewDelegate?
 
@@ -63,23 +64,7 @@ class TransfersView: UIView {
     init() {
         super.init(frame: .zero)
 
-        backgroundColor = .white
-
-        stackView.addArrangedSubview(amountTextField)
-        stackView.addArrangedSubview(chooseContactButton)
-
-        addSubview(stackView)
-        addSubview(transferButton)
-
-        NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-
-            transferButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            transferButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            transferButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            transferButton.heightAnchor.constraint(equalToConstant: 56)
-        ])
+        setup()
     }
 
     @objc
@@ -96,5 +81,32 @@ class TransfersView: UIView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setup() {
+        setupComponents()
+        setupConstraints()
+    }
+    
+    func setupComponents() {
+        backgroundColor = .white
+
+        stackView.addArrangedSubview(amountTextField)
+        stackView.addArrangedSubview(chooseContactButton)
+
+        addSubview(stackView)
+        addSubview(transferButton)
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+
+            transferButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            transferButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            transferButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            transferButton.heightAnchor.constraint(equalToConstant: 56)
+        ])
     }
 }

@@ -5,6 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Components
 import Foundation
 import UIKit
 
@@ -13,7 +14,7 @@ protocol HomeViewDelegate: AnyObject {
     func didSelectActivity()
 }
 
-class HomeView: UIView {
+class HomeView: UIView, ViewCode {
 
     weak var delegate: HomeViewDelegate?
 
@@ -44,13 +45,28 @@ class HomeView: UIView {
     init() {
         super.init(frame: .zero)
 
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setup() {
+        setupComponents()
+        setupConstraints()
+    }
+    
+    func setupComponents() {
         backgroundColor = .white
 
         stackView.addArrangedSubview(homeHeaderView)
         stackView.addArrangedSubview(activityListView)
         stackView.setCustomSpacing(32, after: homeHeaderView)
         addSubview(stackView)
-
+    }
+    
+    func setupConstraints() {
         let estimatedHeight = CGFloat(activityListView.tableView.numberOfRows(inSection: 0))*ActivityListView.cellSize
 
         NSLayoutConstraint.activate([
@@ -60,10 +76,6 @@ class HomeView: UIView {
             
             activityListView.heightAnchor.constraint(equalToConstant: estimatedHeight)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 
