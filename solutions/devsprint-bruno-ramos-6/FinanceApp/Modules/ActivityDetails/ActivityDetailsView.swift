@@ -107,12 +107,6 @@ class ActivityDetailsView: UIView, ViewCode {
         delegate?.didPressReportButton()
     }
     
-    func setup() {
-        setupComponents()
-        setupConstraints()
-        setupExtraConfiguration()
-    }
-    
     func setupComponents() {
         priceContainerView.addSubview(priceLabel)
         priceContainerView.addSubview(timeLabel)

@@ -90,12 +90,6 @@ class HomeHeaderView: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
-        setupComponents()
-        setupConstraints()
-        setupExtraConfiguration()
-    }
-    
     func setupComponents() {
         savingsStackView.addArrangedSubview(savingsLabel)
         savingsStackView.addArrangedSubview(savingsValueLabel)

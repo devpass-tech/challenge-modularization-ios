@@ -68,11 +68,6 @@ class ActivityCellView: UITableViewCell, ViewCode {
 }
 
 extension ActivityCellView {
-
-    func setup() {
-        setupComponents()
-        setupConstraints()
-    }
     
     func setupComponents() {
         addSubview(mainStackView)

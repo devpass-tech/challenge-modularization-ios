@@ -52,12 +52,6 @@ class HomeView: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
-        setupComponents()
-        setupConstraints()
-        setupExtraConfiguration()
-    }
-    
     func setupComponents() {
         stackView.addArrangedSubview(homeHeaderView)
         stackView.addArrangedSubview(activityListView)

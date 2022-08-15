@@ -45,12 +45,6 @@ class ActivityListView: UIView, ViewCode {
 
 extension ActivityListView {
     
-    func setup() {
-        setupComponents()
-        setupConstraints()
-        setupExtraConfiguration()
-    }
-    
     func setupComponents() {
         addSubview(tableView)
     }

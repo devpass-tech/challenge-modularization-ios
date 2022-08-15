@@ -76,12 +76,6 @@ class ConfirmationView: UIView, ViewCode {
         delegate?.didPressConfirmationButton()
     }
     
-    func setup() {
-        setupComponents()
-        setupConstraints()
-        setupExtraConfiguration()
-    }
-    
     func setupComponents() {
         stackView.addArrangedSubview(confirmationImageView)
         stackView.addArrangedSubview(confirmationLabel)
