@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "UserProfile",
+    name: "UIComponents",
     platforms: [.iOS(.v15)],
     products: [
         .library(
-            name: "UserProfile",
-            targets: ["UserProfile"]),
+            name: "UIComponents",
+            targets: ["UIComponents"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "UserProfile",
+            name: "UIComponents",
             dependencies: []),
         .testTarget(
-            name: "UserProfileTests",
-            dependencies: ["UserProfile"]),
+            name: "UIComponentsTests",
+            dependencies: ["UIComponents"]),
     ]
 )

@@ -7,7 +7,7 @@ public protocol ViewCode: UIView {
     func setup()
 }
 
-extension ViewCode {
+public extension ViewCode {
     func setup() {
         setupComponents()
         setupConstraints()
