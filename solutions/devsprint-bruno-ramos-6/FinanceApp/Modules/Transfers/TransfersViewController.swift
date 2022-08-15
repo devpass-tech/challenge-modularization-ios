@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ContactList
 
 class TransfersViewController: UIViewController {
 
