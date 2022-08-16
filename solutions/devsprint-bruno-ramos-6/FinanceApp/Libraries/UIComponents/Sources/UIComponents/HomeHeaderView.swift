@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HomeHeaderView: UIView {
+public class HomeHeaderView: UIView {
 
     let stackView: UIStackView = {
 
@@ -79,7 +79,7 @@ class HomeHeaderView: UIView {
         return label
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
