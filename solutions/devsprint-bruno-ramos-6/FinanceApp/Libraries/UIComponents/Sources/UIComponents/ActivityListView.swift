@@ -5,6 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Foundation
 import UIKit
 
 public protocol ActivityListViewDelegate: AnyObject {
@@ -18,7 +19,7 @@ public class ActivityListView: UIView {
 
     public static let cellSize = CGFloat(82)
 
-    private let cellIdentifier = "ActivityCellIdentifier"
+    let cellIdentifier = "ActivityCellIdentifier"
 
     public lazy var tableView: UITableView = {
 

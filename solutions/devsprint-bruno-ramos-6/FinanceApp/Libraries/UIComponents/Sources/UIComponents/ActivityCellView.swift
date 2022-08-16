@@ -5,11 +5,12 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Foundation
 import UIKit
 
-class ActivityCellView: UITableViewCell {
+public class ActivityCellView: UITableViewCell {
 
-   private var mainStackView: UIStackView = {
+    var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
        stack.translatesAutoresizingMaskIntoConstraints = false
        stack.spacing = 8
@@ -19,7 +20,7 @@ class ActivityCellView: UITableViewCell {
        return stack
     }()
 
-    private var labelsStackView: UIStackView = {
+    var labelsStackView: UIStackView = {
         let stack = UIStackView(frame: .zero)
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
