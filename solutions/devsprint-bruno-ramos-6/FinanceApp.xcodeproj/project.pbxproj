@@ -276,10 +276,7 @@
 				0B82AFCE28A45E2B00FD5A2B /* ContactList */,
 				92AF118628A5CEA800237530 /* UIComponents */,
 				2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */,
-<<<<<<< HEAD
 				BBF4647828AB14D700DFFAEB /* Home */,
-=======
->>>>>>> main
 			);
 			productName = FinanceApp;
 			productReference = 98584A69277E32C30028DBEA /* FinanceApp.app */;
