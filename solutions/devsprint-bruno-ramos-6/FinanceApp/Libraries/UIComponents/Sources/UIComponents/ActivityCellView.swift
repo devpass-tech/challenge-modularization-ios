@@ -10,7 +10,7 @@ import UIKit
 
 class ActivityCellView: UITableViewCell, ViewCode {
 
-   private var mainStackView: UIStackView = {
+    var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
        stack.translatesAutoresizingMaskIntoConstraints = false
        stack.spacing = 8
@@ -20,7 +20,7 @@ class ActivityCellView: UITableViewCell, ViewCode {
        return stack
     }()
 
-    private var labelsStackView: UIStackView = {
+    var labelsStackView: UIStackView = {
         let stack = UIStackView(frame: .zero)
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
