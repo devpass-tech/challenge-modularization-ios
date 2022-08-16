@@ -80,7 +80,7 @@ class HomeHeaderView: UIView, ViewCode {
         return label
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
         
         setup()

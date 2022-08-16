@@ -8,20 +8,20 @@
 import Components
 import UIKit
 
-protocol ActivityListViewDelegate: AnyObject {
+public protocol ActivityListViewDelegate: AnyObject {
 
     func didSelectedActivity()
 }
 
 class ActivityListView: UIView, ViewCode {
 
-    weak var delegate: ActivityListViewDelegate?
+    public weak var delegate: ActivityListViewDelegate?
 
-    static let cellSize = CGFloat(82)
+    public static let cellSize = CGFloat(82)
 
     private let cellIdentifier = "ActivityCellIdentifier"
 
-    lazy var tableView: UITableView = {
+    public lazy var tableView: UITableView = {
 
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class ActivityListView: UIView, ViewCode {
         return tableView
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         setup()
@@ -81,7 +81,7 @@ extension ActivityListView: UITableViewDataSource {
 
 extension ActivityListView: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ActivityListView.cellSize
     }
 
