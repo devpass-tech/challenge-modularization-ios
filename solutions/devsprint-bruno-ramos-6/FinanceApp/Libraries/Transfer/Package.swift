@@ -12,11 +12,17 @@ let package = Package(
             targets: ["Transfer"]
         ),
     ],
-    dependencies: [ ],
+    dependencies: [
+        .package(path: "../Components"),
+        .package(path: "../ContactList"),
+    ],
     targets: [
         .target(
             name: "Transfer",
-            dependencies: []
+            dependencies: [
+                "Components",
+                "ContactList"
+            ]
         ),
         .testTarget(
             name: "TransferTests",
