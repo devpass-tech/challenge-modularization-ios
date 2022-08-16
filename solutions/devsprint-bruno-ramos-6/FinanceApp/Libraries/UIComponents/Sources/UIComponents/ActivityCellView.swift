@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ActivityCellView: UITableViewCell {
+public class ActivityCellView: UITableViewCell {
 
     var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)

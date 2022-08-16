@@ -101,5 +101,4 @@ extension TransfersView: ViewCode {
     func setupExtraConfiguration() {
         backgroundColor = .white
     }
-    
 }
