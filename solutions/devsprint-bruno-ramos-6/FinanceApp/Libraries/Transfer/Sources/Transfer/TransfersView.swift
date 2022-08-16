@@ -13,19 +13,19 @@ protocol TransferViewDelegate: AnyObject {
     func didPressTransferButton(with amount: String)
 }
 
-final class TransfersView: UIView {
-
+final class TransfersView: UIView, ViewCode {
+    
     weak var delegate: TransferViewDelegate?
-
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 8
-
+        
         return stackView
     }()
-
+    
     private let amountTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "$0"
@@ -34,7 +34,7 @@ final class TransfersView: UIView {
         textField.keyboardType = .numberPad
         return textField
     }()
-
+    
     private lazy var chooseContactButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +43,7 @@ final class TransfersView: UIView {
         button.addTarget(self, action: #selector(chooseContact), for: .touchUpInside)
         return button
     }()
-
+    
     private lazy var transferButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -54,38 +54,28 @@ final class TransfersView: UIView {
         button.addTarget(self, action: #selector(transfer), for: .touchUpInside)
         return button
     }()
-
+    
     init() {
         super.init(frame: .zero)
         setup()
     }
-
-    @objc
-    func chooseContact() {
-
-    private func chooseContact() {
+    
+    @objc func chooseContact() {
         delegate?.didPressChooseContactButton()
     }
-
-    @objc
-    func transfer() {
-
-    private func transfer() {
+    
+    @objc func transfer() {
         delegate?.didPressTransferButton(with: amountTextField.text ?? "0")
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-// MARK: - ViewCode
-extension TransfersView: ViewCode {
     
     func setupComponents() {
         stackView.addArrangedSubview(amountTextField)
         stackView.addArrangedSubview(chooseContactButton)
-
+        
         addSubview(stackView)
         addSubview(transferButton)
     }
@@ -94,7 +84,7 @@ extension TransfersView: ViewCode {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-
+            
             transferButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
             transferButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
             transferButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
@@ -105,5 +95,4 @@ extension TransfersView: ViewCode {
     func setupExtraConfiguration() {
         backgroundColor = .white
     }
-    
 }

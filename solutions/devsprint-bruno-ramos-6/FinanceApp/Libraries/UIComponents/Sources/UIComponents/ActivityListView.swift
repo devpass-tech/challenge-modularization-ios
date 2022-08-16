@@ -13,7 +13,7 @@ public protocol ActivityListViewDelegate: AnyObject {
     func didSelectedActivity()
 }
 
-class ActivityListView: UIView, ViewCode {
+public class ActivityListView: UIView, ViewCode {
 
     public weak var delegate: ActivityListViewDelegate?
 
@@ -41,15 +41,12 @@ class ActivityListView: UIView, ViewCode {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension ActivityListView {
     
-    func setupComponents() {
+    public func setupComponents() {
         addSubview(tableView)
     }
     
-    func setupConstraints() {
+    public func setupConstraints() {
         NSLayoutConstraint.activate([
 
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -59,7 +56,7 @@ extension ActivityListView {
         ])
     }
     
-    func setupExtraConfiguration() {
+    public func setupExtraConfiguration() {
         backgroundColor = .white
     }
 }

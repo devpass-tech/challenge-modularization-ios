@@ -9,7 +9,7 @@ import Components
 import Foundation
 import UIKit
 
-class HomeHeaderView: UIView, ViewCode {
+public class HomeHeaderView: UIView, ViewCode {
 
     let stackView: UIStackView = {
 
@@ -90,7 +90,7 @@ class HomeHeaderView: UIView, ViewCode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupComponents() {
+    public func setupComponents() {
         savingsStackView.addArrangedSubview(savingsLabel)
         savingsStackView.addArrangedSubview(savingsValueLabel)
 
@@ -103,7 +103,7 @@ class HomeHeaderView: UIView, ViewCode {
         addSubview(stackView)
     }
     
-    func setupConstraints() {
+    public func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
@@ -113,7 +113,7 @@ class HomeHeaderView: UIView, ViewCode {
         ])
     }
     
-    func setupExtraConfiguration() {
+    public func setupExtraConfiguration() {
         backgroundColor = .white
     }
 }
