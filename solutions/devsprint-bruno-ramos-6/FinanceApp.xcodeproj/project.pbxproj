@@ -26,6 +26,7 @@
 		98584AF4277E50430028DBEA /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584AE2277E50430028DBEA /* ConfirmationViewController.swift */; };
 		98584B10277E605F0028DBEA /* ActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B0A277E605F0028DBEA /* ActivityDetailsViewController.swift */; };
 		98584B14277E605F0028DBEA /* ActivityDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98584B0E277E605F0028DBEA /* ActivityDetailsView.swift */; };
+		BB47EDA028AD6536006DCA4C /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = BB47ED9F28AD6536006DCA4C /* Network */; };
 		BBF4647928AB14D700DFFAEB /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = BBF4647828AB14D700DFFAEB /* Home */; };
 		BC74B2E828A333FD005B97EB /* Transfer in Frameworks */ = {isa = PBXBuildFile; productRef = BC74B2E728A333FD005B97EB /* Transfer */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		98584AE2277E50430028DBEA /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		98584B0A277E605F0028DBEA /* ActivityDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		98584B0E277E605F0028DBEA /* ActivityDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailsView.swift; sourceTree = "<group>"; };
+		BB47ED9E28AD6528006DCA4C /* Network */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Network; sourceTree = "<group>"; };
 		BBF4647728AB142600DFFAEB /* Home */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Home; sourceTree = "<group>"; };
 		BC74B2E628A333CA005B97EB /* Transfer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Transfer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB47EDA028AD6536006DCA4C /* Network in Frameworks */,
 				2F3DE72228A5A22D00D7F7B0 /* ActivityDetails in Frameworks */,
 				92EAAC3D28A3296400A819EF /* Components in Frameworks */,
 				70E6125428A3290800966393 /* Sample in Frameworks */,
@@ -111,6 +114,7 @@
 		70E6125028A3283D00966393 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BB47ED9E28AD6528006DCA4C /* Network */,
 				BBF4647728AB142600DFFAEB /* Home */,
 				0B82AFCD28A45B8C00FD5A2B /* ContactList */,
 				92AF118528A5CD3800237530 /* UIComponents */,
@@ -138,7 +142,6 @@
 				98584A8C277E32C60028DBEA /* FinanceAppUITests */,
 				98584A6A277E32C30028DBEA /* Products */,
 				70E6125228A3290800966393 /* Frameworks */,
-				BBF4647628AB141200DFFAEB /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -277,6 +280,7 @@
 				92AF118628A5CEA800237530 /* UIComponents */,
 				2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */,
 				BBF4647828AB14D700DFFAEB /* Home */,
+				BB47ED9F28AD6536006DCA4C /* Network */,
 			);
 			productName = FinanceApp;
 			productReference = 98584A69277E32C30028DBEA /* FinanceApp.app */;
@@ -397,9 +401,6 @@
 				98584AC3277E42E80028DBEA /* FinanceService.swift in Sources */,
 				98584B10277E605F0028DBEA /* ActivityDetailsViewController.swift in Sources */,
 				98584AF4277E50430028DBEA /* ConfirmationViewController.swift in Sources */,
-				98584AE8277E50430028DBEA /* TransfersViewController.swift in Sources */,
-				98584AFC277E51960028DBEA /* ActivityCellView.swift in Sources */,
-				98584AFA277E51850028DBEA /* HomeHeaderView.swift in Sources */,
 				98584B14277E605F0028DBEA /* ActivityDetailsView.swift in Sources */,
 				98584AF3277E50430028DBEA /* ConfirmationView.swift in Sources */,
 				98584A6D277E32C30028DBEA /* AppDelegate.swift in Sources */,
@@ -765,6 +766,10 @@
 		92EAAC3C28A3296400A819EF /* Components */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Components;
+		};
+		BB47ED9F28AD6536006DCA4C /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
 		};
 		BBF4647828AB14D700DFFAEB /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
