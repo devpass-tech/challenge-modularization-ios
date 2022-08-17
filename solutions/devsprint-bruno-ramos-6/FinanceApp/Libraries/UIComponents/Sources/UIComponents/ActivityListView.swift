@@ -5,7 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
-import Foundation
+import Components
 import UIKit
 
 public protocol ActivityListViewDelegate: AnyObject {
@@ -13,7 +13,7 @@ public protocol ActivityListViewDelegate: AnyObject {
     func didSelectedActivity()
 }
 
-public class ActivityListView: UIView {
+public class ActivityListView: UIView, ViewCode {
 
     public weak var delegate: ActivityListViewDelegate?
 
@@ -34,27 +34,19 @@ public class ActivityListView: UIView {
     public init() {
         super.init(frame: .zero)
 
-        backgroundColor = .white
-        addSubviews()
-        configureConstraints()
-
+        setup()
         tableView.reloadData()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension ActivityListView {
-
-    func addSubviews() {
-
+    
+    public func setupComponents() {
         addSubview(tableView)
     }
-
-    func configureConstraints() {
-
+    
+    public func setupConstraints() {
         NSLayoutConstraint.activate([
 
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
@@ -62,6 +54,10 @@ extension ActivityListView {
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+    
+    public func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }
 

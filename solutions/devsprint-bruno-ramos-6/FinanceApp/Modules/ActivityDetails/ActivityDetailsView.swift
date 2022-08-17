@@ -5,6 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Components
 import Foundation
 import UIKit
 
@@ -13,7 +14,7 @@ protocol ActivityDetailsViewDelegate: AnyObject {
     func didPressReportButton()
 }
 
-class ActivityDetailsView: UIView {
+class ActivityDetailsView: UIView, ViewCode {
 
     weak var delegate: ActivityDetailsViewDelegate?
 
@@ -92,9 +93,21 @@ class ActivityDetailsView: UIView {
 
     init() {
         super.init(frame: .zero)
+        
+        setup()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
-        backgroundColor = .white
+    @objc
+    func reportButtonPressed() {
 
+        delegate?.didPressReportButton()
+    }
+    
+    func setupComponents() {
         priceContainerView.addSubview(priceLabel)
         priceContainerView.addSubview(timeLabel)
 
@@ -105,7 +118,9 @@ class ActivityDetailsView: UIView {
 
         addSubview(stackView)
         addSubview(reportIssueButton)
-
+    }
+    
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
@@ -126,13 +141,7 @@ class ActivityDetailsView: UIView {
         ])
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    @objc
-    func reportButtonPressed() {
-
-        delegate?.didPressReportButton()
+    func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }

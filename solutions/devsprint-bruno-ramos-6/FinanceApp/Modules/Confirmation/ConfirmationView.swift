@@ -5,6 +5,7 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Components
 import Foundation
 import UIKit
 
@@ -13,7 +14,7 @@ protocol ConfirmationViewDelegate: AnyObject {
     func didPressConfirmationButton()
 }
 
-class ConfirmationView: UIView {
+class ConfirmationView: UIView, ViewCode {
 
     weak var delegate: ConfirmationViewDelegate?
 
@@ -61,15 +62,29 @@ class ConfirmationView: UIView {
 
     init() {
         super.init(frame: .zero)
+        
+        setup()
+    }
 
-        backgroundColor = .white
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
+    @objc
+    func confirmationButtonPressed() {
+
+        delegate?.didPressConfirmationButton()
+    }
+    
+    func setupComponents() {
         stackView.addArrangedSubview(confirmationImageView)
         stackView.addArrangedSubview(confirmationLabel)
 
         addSubview(stackView)
         addSubview(confirmationButton)
-
+    }
+    
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
@@ -85,14 +100,8 @@ class ConfirmationView: UIView {
             confirmationButton.heightAnchor.constraint(equalToConstant: 56)
         ])
     }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    @objc
-    func confirmationButtonPressed() {
-
-        delegate?.didPressConfirmationButton()
+    
+    func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }

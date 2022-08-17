@@ -5,10 +5,10 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
-import Foundation
+import Components
 import UIKit
 
-public class ActivityCellView: UITableViewCell {
+class ActivityCellView: UITableViewCell, ViewCode {
 
     var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
@@ -58,9 +58,8 @@ public class ActivityCellView: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
-
-        addSubviews()
-        configureConstraints()
+        
+        setup()
     }
 
     required init?(coder: NSCoder) {
@@ -69,9 +68,8 @@ public class ActivityCellView: UITableViewCell {
 }
 
 extension ActivityCellView {
-
-    func addSubviews() {
-
+    
+    func setupComponents() {
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(categoryImageView)
         mainStackView.addArrangedSubview(labelsStackView)
@@ -80,8 +78,7 @@ extension ActivityCellView {
         labelsStackView.addArrangedSubview(activityInfoLabel)
     }
 
-    func configureConstraints() {
-
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
@@ -89,9 +86,7 @@ extension ActivityCellView {
             mainStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
 
             self.categoryImageView.widthAnchor.constraint(equalToConstant: 50),
-            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50),
-
+            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
 }
-

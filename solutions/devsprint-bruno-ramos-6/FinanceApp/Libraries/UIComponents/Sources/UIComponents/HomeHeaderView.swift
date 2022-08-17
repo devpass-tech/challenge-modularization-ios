@@ -5,10 +5,11 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
+import Components
 import Foundation
 import UIKit
 
-public class HomeHeaderView: UIView {
+public class HomeHeaderView: UIView, ViewCode {
 
     let stackView: UIStackView = {
 
@@ -81,9 +82,15 @@ public class HomeHeaderView: UIView {
 
     public init() {
         super.init(frame: .zero)
+        
+        setup()
+    }
 
-        backgroundColor = .white
-
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func setupComponents() {
         savingsStackView.addArrangedSubview(savingsLabel)
         savingsStackView.addArrangedSubview(savingsValueLabel)
 
@@ -94,7 +101,9 @@ public class HomeHeaderView: UIView {
         stackView.addArrangedSubview(savingsStackView)
         stackView.addArrangedSubview(spendingStackView)
         addSubview(stackView)
-
+    }
+    
+    public func setupConstraints() {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
@@ -103,8 +112,8 @@ public class HomeHeaderView: UIView {
 
         ])
     }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    public func setupExtraConfiguration() {
+        backgroundColor = .white
     }
 }
