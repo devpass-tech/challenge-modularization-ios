@@ -11,11 +11,15 @@ let package = Package(
             name: "UserProfile",
             targets: ["UserProfile"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "../Components"),
+    ],
     targets: [
         .target(
             name: "UserProfile",
-            dependencies: []),
+            dependencies: [
+                "Components"
+            ]),
         .testTarget(
             name: "UserProfileTests",
             dependencies: ["UserProfile"]),

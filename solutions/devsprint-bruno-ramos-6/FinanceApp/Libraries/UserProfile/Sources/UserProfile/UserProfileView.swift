@@ -1,4 +1,5 @@
 import UIKit
+import Components
 
 final class UserProfileView: UIView {
     
@@ -28,24 +29,17 @@ final class UserProfileView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+// MARK: - Extension
+
+extension UserProfileView: ViewCode {
     
-    // MARK: - Setup
-    
-    private func setup() {
-        setupViews()
-        setupBackgroundColor()
-        setupConstraints()
-    }
-    
-    private func setupViews() {
+    func setupComponents() {
         addSubview(tableView)
     }
     
-    private func setupBackgroundColor() {
-        backgroundColor = .white
-    }
-    
-    private func setupConstraints() {
+    func setupConstraints() {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
@@ -53,9 +47,11 @@ final class UserProfileView: UIView {
             tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    
+    func setupExtraConfiguration() {
+        backgroundColor = .white
+    }
 }
-
-// MARK: - Extension
 
 extension UserProfileView: UITableViewDataSource {
 
