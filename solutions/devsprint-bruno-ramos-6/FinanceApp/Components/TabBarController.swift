@@ -8,13 +8,14 @@
 import Transfer
 import UIKit
 import Home
+import UserProfile
+import ActivityDetails
+import Sample
 
 class TabBarController: UITabBarController {
 
     override func viewWillAppear(_ animated: Bool) {
-
-        let homeViewController = HomeViewController()
-        let homeNavigationController = UINavigationController(rootViewController: homeViewController)
+        let homeNavigationController = UINavigationController(rootViewController: HomeFactory.make())
         let homeTabBar = UITabBarItem(title: "Home", image: UIImage(named: "house.fill"), tag: 0)
         homeNavigationController.tabBarItem = homeTabBar
 

@@ -12,18 +12,12 @@ let package = Package(
             targets: ["Home"]),
     ],
     dependencies: [
-        .package(path: "//ActivityDetails"),
-        .package(path: "//Sample"),
-        .package(path: "//UserProfile"),
         .package(path: "//UIComponents")
     ],
     targets: [
         .target(
             name: "Home",
             dependencies: [
-                "ActivityDetails",
-                "Sample",
-                "UserProfile",
                 "UIComponents"
             ]),
         .testTarget(

@@ -6,18 +6,30 @@
 //
 
 import UIKit
-import UserProfile
-import ActivityDetails
-import Sample
 
 public class HomeViewController: UIViewController {
 
     lazy var homeView: HomeView = {
-
         let homeView = HomeView()
         homeView.delegate = self
         return homeView
     }()
+
+    private let onRouteToUserProfile: (UIViewController) -> Void
+    private let onRouteToActivityDetail: (UIViewController) -> Void
+
+    public init(
+        onRouteToUserProfile: @escaping (UIViewController) -> Void,
+        onRouteToActivityDetail: @escaping (UIViewController) -> Void
+    ) {
+        self.onRouteToUserProfile = onRouteToUserProfile
+        self.onRouteToActivityDetail = onRouteToActivityDetail
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    public required init?(coder: NSCoder) {
+        fatalError()
+    }
 
     public override func viewDidLoad() {
 
@@ -30,17 +42,13 @@ public class HomeViewController: UIViewController {
 
     @objc
     private func openProfile() {
-
-        let navigationController = UINavigationController(rootViewController: UserProfileViewController())
-        self.present(navigationController, animated: true)
+        onRouteToUserProfile(self)
     }
 }
 
 extension HomeViewController: HomeViewDelegate {
 
     func didSelectActivity() {
-
-        let activityDetailsViewController = SampleViewController()
-        self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
+        onRouteToActivityDetail(self)
     }
 }
