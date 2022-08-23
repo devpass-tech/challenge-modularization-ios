@@ -14,7 +14,7 @@ protocol ActivityDetailsViewDelegate: AnyObject {
     func didPressReportButton()
 }
 
-class ActivityDetailsView: UIView, ViewCode {
+final class ActivityDetailsView: UIView, ViewCode {
 
     weak var delegate: ActivityDetailsViewDelegate?
 

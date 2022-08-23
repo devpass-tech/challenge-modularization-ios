@@ -23,7 +23,7 @@ public class ActivityDetailsViewController: UIViewController {
 
 extension ActivityDetailsViewController: ActivityDetailsViewDelegate {
 
-    func didPressReportButton() {
+    public func didPressReportButton() {
 
         let alertViewController = UIAlertController(title: "Report an issue", message: "The issue was reported", preferredStyle: .alert)
         let action = UIAlertAction(title: "Thanks", style: .default)
