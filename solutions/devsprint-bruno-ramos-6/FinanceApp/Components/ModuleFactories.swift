@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Home
 import UserProfile
+import ActivityDetails
 
 typealias DependencyFactory = (UIViewController) -> Void
 

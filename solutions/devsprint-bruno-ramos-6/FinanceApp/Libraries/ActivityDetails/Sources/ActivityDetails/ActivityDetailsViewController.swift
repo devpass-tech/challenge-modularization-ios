@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActivityDetailsViewController: UIViewController {
+public class ActivityDetailsViewController: UIViewController {
 
     lazy var activityDetailsView: ActivityDetailsView = {
 
@@ -16,7 +16,7 @@ class ActivityDetailsViewController: UIViewController {
         return activityDetailsView
     }()
 
-    override func loadView() {
+    public override func loadView() {
         self.view = activityDetailsView
     }
 }

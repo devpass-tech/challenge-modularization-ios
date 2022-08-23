@@ -5,9 +5,9 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
-import Components
 import Foundation
 import UIKit
+import Components
 
 protocol ActivityDetailsViewDelegate: AnyObject {
 

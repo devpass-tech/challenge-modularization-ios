@@ -11,11 +11,15 @@ let package = Package(
             name: "ActivityDetails",
             targets: ["ActivityDetails"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "//Components")
+    ],
     targets: [
         .target(
             name: "ActivityDetails",
-            dependencies: []),
+            dependencies: [
+                "Components"
+            ]),
         .testTarget(
             name: "ActivityDetailsTests",
             dependencies: ["ActivityDetails"]),
