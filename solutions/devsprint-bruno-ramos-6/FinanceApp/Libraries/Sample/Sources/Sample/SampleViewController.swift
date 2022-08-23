@@ -1,8 +1,12 @@
 import UIKit
-import Alamofire
 
 public final class SampleViewController: UIViewController {
-    public init() {
+    private let customView: SampleViewProtocol & UIView
+    private let service: SampleServiceProtocol
+
+    public init(customView: SampleViewProtocol & UIView, service: SampleServiceProtocol) {
+        self.customView = customView
+        self.service = service
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -12,13 +16,31 @@ public final class SampleViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        fetchData()
+    }
 
-        AF.request("https://httpbin.org/get").response { response in
-            debugPrint(response)
+    public func fetchData() {
+        service.fetch { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .success(let strings):
+                self.customView.display(data: strings)
+            case .failure(_):
+                self.customView.display(error: SampleViewControllerServiceError())
+            }
         }
     }
 
     public override func loadView() {
-        view = SampleView()
+        view = customView
+    }
+}
+
+public struct SampleViewControllerServiceError: Error {}
+
+extension SampleViewController: SampleViewDelegate {
+    public func didTapOnConfirmButton() {
+        print("user tapped confirm button")
     }
 }

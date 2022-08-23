@@ -1,7 +1,16 @@
 import UIKit
 import Kingfisher
 
-final class SampleView: UIView {
+public protocol SampleViewDelegate: AnyObject {
+    func didTapOnConfirmButton()
+}
+
+public protocol SampleViewProtocol {
+    func display(data: [String])
+    func display(error: Error)
+}
+
+public final class SampleView: UIView {
     private lazy var containerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -33,6 +42,7 @@ final class SampleView: UIView {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 7
+        button.addTarget(self, action: #selector(didTapOnConfirmButton), for: .touchUpInside)
         return button
     }()
 
@@ -42,7 +52,9 @@ final class SampleView: UIView {
         return imageView
     }()
 
-    init() {
+    public weak var delegate: SampleViewDelegate?
+
+    public init() {
         super.init(frame: .zero)
         setupSubViews()
         setupConstraints()
@@ -89,5 +101,28 @@ final class SampleView: UIView {
 
     private func setupExtraConfiguration() {
         backgroundColor = .white
+    }
+
+    @objc
+    private func didTapOnConfirmButton() {
+        delegate?.didTapOnConfirmButton()
+    }
+
+    public func foo() {
+
+    }
+
+    public func bla() {
+        
+    }
+}
+
+extension SampleView: SampleViewProtocol {
+    public func display(data: [String]) {
+        print("deu bom")
+    }
+
+    public func display(error: Error) {
+        print("deu ruim")
     }
 }
