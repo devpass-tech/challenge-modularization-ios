@@ -1,16 +1,26 @@
 import UIKit
-import Kingfisher
+import SampleDomain
 
 public protocol SampleViewDelegate: AnyObject {
     func didTapOnConfirmButton()
 }
 
 public protocol SampleViewProtocol {
-    func display(data: [String])
+    func display(viewModel: [SampleView.ViewModel])
     func display(error: Error)
 }
 
 public final class SampleView: UIView {
+    public struct ViewModel {
+        let activityName: String
+        let activityValue: Double
+
+        init(from domain: Activity) {
+            self.activityName = domain.name
+            self.activityValue = domain.value
+        }
+    }
+
     private lazy var containerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -59,24 +69,10 @@ public final class SampleView: UIView {
         setupSubViews()
         setupConstraints()
         setupExtraConfiguration()
-        fetchImageView()
     }
 
     required init?(coder: NSCoder) {
         fatalError()
-    }
-
-    private func fetchImageView() {
-        let url = URL(string: "https://picsum.photos/200/300")
-        imageView.kf.indicatorType = .activity
-        imageView.kf.setImage(with: url) { result in
-            switch result {
-            case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-            case .failure(let error):
-                print("Job failed: \(error.localizedDescription)")
-            }
-        }
     }
 
     private func setupSubViews() {
@@ -107,22 +103,14 @@ public final class SampleView: UIView {
     private func didTapOnConfirmButton() {
         delegate?.didTapOnConfirmButton()
     }
-
-    public func foo() {
-
-    }
-
-    public func bla() {
-        
-    }
 }
 
 extension SampleView: SampleViewProtocol {
-    public func display(data: [String]) {
-        print("deu bom")
+    public func display(viewModel: [ViewModel]) {
+        print(viewModel)
     }
 
     public func display(error: Error) {
-        print("deu ruim")
+        print(error)
     }
 }

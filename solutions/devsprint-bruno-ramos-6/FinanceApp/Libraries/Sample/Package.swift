@@ -9,21 +9,44 @@ let package = Package(
     products: [
         .library(
             name: "Sample",
-            targets: ["Sample"]),
+            targets: [
+                "SampleData",
+                "SampleDomain",
+                "SampleUI"
+            ]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1")),
-        .package(url: "https://github.com/onevcat/Kingfisher.git", .upToNextMajor(from: "7.0.0")),
+        .package(path: "//Network"),
     ],
     targets: [
         .target(
-            name: "Sample",
-            dependencies: [
-                "Alamofire",
-                "Kingfisher"
-            ]),
+            name: "SampleDomain",
+            dependencies: []
+        ),
         .testTarget(
-            name: "SampleTests",
-            dependencies: ["Sample"]),
+            name: "SampleDomainTests",
+            dependencies: ["SampleDomain"]
+        ),
+        .target(
+            name: "SampleData",
+            dependencies: [
+                "SampleDomain",
+                "Network"
+            ]
+        ),
+        .testTarget(
+            name: "SampleDataTests",
+            dependencies: ["SampleData"]
+        ),
+        .target(
+            name: "SampleUI",
+            dependencies: [
+                "SampleDomain"
+            ]
+        ),
+        .testTarget(
+            name: "SampleUITests",
+            dependencies: ["SampleUI"]
+        ),
     ]
 )

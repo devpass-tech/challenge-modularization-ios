@@ -24,10 +24,10 @@ public final class SampleViewController: UIViewController {
             guard let self = self else { return }
 
             switch result {
-            case .success(let strings):
-                self.customView.display(data: strings)
-            case .failure(_):
-                self.customView.display(error: SampleViewControllerServiceError())
+            case .success(let activities):
+                self.customView.display(viewModel: activities.map(SampleView.ViewModel.init))
+            case .failure(let error):
+                self.customView.display(error: error)
             }
         }
     }
@@ -36,8 +36,6 @@ public final class SampleViewController: UIViewController {
         view = customView
     }
 }
-
-public struct SampleViewControllerServiceError: Error {}
 
 extension SampleViewController: SampleViewDelegate {
     public func didTapOnConfirmButton() {

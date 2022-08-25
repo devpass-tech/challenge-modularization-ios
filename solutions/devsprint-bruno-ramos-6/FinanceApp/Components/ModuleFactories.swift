@@ -12,15 +12,6 @@ import UserProfile
 
 typealias DependencyFactory = (UIViewController) -> Void
 
-enum HomeFactory {
-    static func make() -> UIViewController {
-        HomeViewController(
-            onRouteToUserProfile: onRouteToUserProfile,
-            onRouteToActivityDetail: onRouteToActivityDetail
-        )
-    }
-}
-
 enum ActivityDetailFactory {
     static func make() -> UIViewController {
         ActivityDetailsViewController()

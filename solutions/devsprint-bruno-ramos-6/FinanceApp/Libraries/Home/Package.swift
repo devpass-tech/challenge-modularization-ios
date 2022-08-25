@@ -12,12 +12,14 @@ let package = Package(
             targets: ["Home"]),
     ],
     dependencies: [
+        .package(path: "//Sample"),
         .package(path: "//UIComponents")
     ],
     targets: [
         .target(
             name: "Home",
             dependencies: [
+                "Sample",
                 "UIComponents"
             ]),
         .testTarget(
