@@ -15,7 +15,7 @@ public final class SampleView: UIView {
         let activityName: String
         let activityValue: Double
 
-        init(from domain: Activity) {
+        public init(from domain: Activity) {
             self.activityName = domain.name
             self.activityValue = domain.value
         }
