@@ -5,10 +5,12 @@
 //  Created by Bruno Henrique Costa Ramos on 18/08/22.
 //
 
-import Foundation
 import UIKit
 import XCTest
 import Sample
+import SampleUI
+import SampleData
+import SampleDomain
 
 final class SampleViewControllerTests: XCTestCase {
     private let customViewSpy = SampleViewProtocolSpy()
@@ -21,7 +23,11 @@ final class SampleViewControllerTests: XCTestCase {
 
     func test_viewDidLoad_whenServiceReturnsSuccessWithData_shouldCallDisplayDataWithData() {
         // Given
-        let expectedData = ["foo", "bar", "xyz"]
+        let expectedData: [Activity] = [
+            .init(name: "foo", value: 0.0),
+            .init(name: "bar", value: 1.0),
+            .init(name: "xyz", value: 1.5)
+        ]
         serviceStub.fetchCompletionToBeReturned = .success(expectedData)
 
         // When
@@ -29,7 +35,7 @@ final class SampleViewControllerTests: XCTestCase {
 
         // Then
         XCTAssertTrue(customViewSpy.displayDataCalled)
-        XCTAssertEqual(customViewSpy.displayDataDataPassed, expectedData)
+        XCTAssertEqual(customViewSpy.displayDataDataPassed.count, expectedData.count)
         XCTAssertFalse(customViewSpy.displayErrorCalled)
     }
 
@@ -42,7 +48,7 @@ final class SampleViewControllerTests: XCTestCase {
 
         // Then
         XCTAssertTrue(customViewSpy.displayErrorCalled)
-        XCTAssertNotNil(customViewSpy.displayDataErrorPassed as? SampleViewControllerServiceError)
+        XCTAssertNotNil(customViewSpy.displayDataErrorPassed as? ErrorDummy)
         XCTAssertFalse(customViewSpy.displayDataCalled)
     }
 }
@@ -52,11 +58,11 @@ struct ErrorDummy: Error {}
 final class SampleViewProtocolSpy: UIView, SampleViewProtocol {
 
     private(set) var displayDataCalled = false
-    private(set) var displayDataDataPassed: [String] = []
+    private(set) var displayDataDataPassed: [SampleView.ViewModel] = []
 
-    func display(data: [String]) {
+    func display(viewModel: [SampleView.ViewModel]) {
         displayDataCalled = true
-        displayDataDataPassed = data
+        displayDataDataPassed = viewModel
     }
 
     private(set) var displayErrorCalled = false
@@ -70,9 +76,9 @@ final class SampleViewProtocolSpy: UIView, SampleViewProtocol {
 
 final class SampleServiceProtocolStub: SampleServiceProtocol {
 
-    var fetchCompletionToBeReturned: Result<[String], Error>?
+    var fetchCompletionToBeReturned: Result<[Activity], Error>?
 
-    func fetch(completion: @escaping (Result<[String], Error>) -> Void) {
+    func fetch(completion: @escaping (Result<[Activity], Error>) -> Void) {
         if let fetchCompletionToBeReturned = fetchCompletionToBeReturned {
             completion(fetchCompletionToBeReturned)
         }

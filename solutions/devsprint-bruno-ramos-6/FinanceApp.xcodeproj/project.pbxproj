@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B82AFCF28A45E2B00FD5A2B /* ContactList in Frameworks */ = {isa = PBXBuildFile; productRef = 0B82AFCE28A45E2B00FD5A2B /* ContactList */; };
 		2F3DE72228A5A22D00D7F7B0 /* ActivityDetails in Frameworks */ = {isa = PBXBuildFile; productRef = 2F3DE72128A5A22D00D7F7B0 /* ActivityDetails */; };
+		7016E1DC28B700B100FC065C /* SampleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7016E1DB28B700B000FC065C /* SampleFactory.swift */; };
+		7016E1DE28B7022100FC065C /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7016E1DD28B7022100FC065C /* HomeFactory.swift */; };
 		70AB134528ADB7CB00CDBB8F /* ModuleFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AB134428ADB7CB00CDBB8F /* ModuleFactories.swift */; };
 		70E6125428A3290800966393 /* Sample in Frameworks */ = {isa = PBXBuildFile; productRef = 70E6125328A3290800966393 /* Sample */; };
 		7E315BA428A3BEB70013A2F1 /* UserProfile in Frameworks */ = {isa = PBXBuildFile; productRef = 7E315BA328A3BEB70013A2F1 /* UserProfile */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		0B82AFCD28A45B8C00FD5A2B /* ContactList */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ContactList; sourceTree = "<group>"; };
 		2F3DE72028A59F9500D7F7B0 /* ActivityDetails */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ActivityDetails; sourceTree = "<group>"; };
+		7016E1DB28B700B000FC065C /* SampleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleFactory.swift; sourceTree = "<group>"; };
+		7016E1DD28B7022100FC065C /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		70AB134428ADB7CB00CDBB8F /* ModuleFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactories.swift; sourceTree = "<group>"; };
 		70E6125128A3287700966393 /* Sample */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Sample; sourceTree = "<group>"; };
 		7E315BA228A3BE800013A2F1 /* UserProfile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UserProfile; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				98584ADF277E50430028DBEA /* Confirmation */,
+				7016E1DB28B700B000FC065C /* SampleFactory.swift */,
+				7016E1DD28B7022100FC065C /* HomeFactory.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -388,11 +394,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				98584AC3277E42E80028DBEA /* FinanceService.swift in Sources */,
+				7016E1DE28B7022100FC065C /* HomeFactory.swift in Sources */,
+				98584B10277E605F0028DBEA /* ActivityDetailsViewController.swift in Sources */,
 				98584AF4277E50430028DBEA /* ConfirmationViewController.swift in Sources */,
 				98584AF3277E50430028DBEA /* ConfirmationView.swift in Sources */,
 				70AB134528ADB7CB00CDBB8F /* ModuleFactories.swift in Sources */,
 				98584A6D277E32C30028DBEA /* AppDelegate.swift in Sources */,
 				98584A6F277E32C30028DBEA /* SceneDelegate.swift in Sources */,
+				7016E1DC28B700B100FC065C /* SampleFactory.swift in Sources */,
 				98426FAA27A6EC8700B09645 /* TabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

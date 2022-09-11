@@ -15,15 +15,10 @@ public class HomeViewController: UIViewController {
         return homeView
     }()
 
-    private let onRouteToUserProfile: (UIViewController) -> Void
-    private let onRouteToActivityDetail: (UIViewController) -> Void
+    private let service: HomeServiceProtocol
 
-    public init(
-        onRouteToUserProfile: @escaping (UIViewController) -> Void,
-        onRouteToActivityDetail: @escaping (UIViewController) -> Void
-    ) {
-        self.onRouteToUserProfile = onRouteToUserProfile
-        self.onRouteToActivityDetail = onRouteToActivityDetail
+    public init(service: HomeServiceProtocol) {
+        self.service = service
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -34,6 +29,16 @@ public class HomeViewController: UIViewController {
     public override func viewDidLoad() {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(openProfile))
+
+        service.fetch { result in
+            switch result {
+            case .success(let activities):
+                print(activities)
+            case .failure(let error):
+                print(error)
+            }
+
+        }
     }
 
     public override func loadView() {
@@ -42,13 +47,11 @@ public class HomeViewController: UIViewController {
 
     @objc
     private func openProfile() {
-        onRouteToUserProfile(self)
     }
 }
 
 extension HomeViewController: HomeViewDelegate {
 
     func didSelectActivity() {
-        onRouteToActivityDetail(self)
     }
 }

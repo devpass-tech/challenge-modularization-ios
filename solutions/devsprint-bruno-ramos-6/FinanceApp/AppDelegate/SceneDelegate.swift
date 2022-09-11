@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Sample
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,17 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(frame: UIScreen.main.bounds)
-
-        let service = SampleServiceDois()
-
-        let customView = SampleView()
-        
-        let sampleViewController = SampleViewController(customView: customView, service: service)
-        customView.delegate = sampleViewController
-
-        self.window?.rootViewController = UINavigationController(rootViewController: sampleViewController)
+        self.window?.rootViewController = UINavigationController(rootViewController: SampleFactory.make())
         self.window?.windowScene = windowScene
         self.window?.makeKeyAndVisible()
     }
 }
-
