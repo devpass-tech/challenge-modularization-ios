@@ -1,0 +1,12 @@
+require 'rake'
+
+# New Domain SDK
+desc 'Create new SDK'
+task :create_domain_sdk do
+    ARGV.each { |name| task name.to_sym do ; end }
+
+    name = ARGV[1]
+    sh "cd Support/Scripts && ./create-sdk #{name}"
+    sh "cd Support/Scripts && ./setup #{name}"
+    sh "cd Support/Output/#{name}/ && open #{name}.xcworkspace"
+end
