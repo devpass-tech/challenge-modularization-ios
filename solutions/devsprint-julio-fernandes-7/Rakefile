@@ -10,3 +10,8 @@ task :create_domain_sdk do
     sh "cd Support/Scripts && ./setup #{name}"
     sh "cd Support/Output/#{name}/ && open #{name}.xcworkspace"
 end
+
+desc 'Setup Project'
+task :setup do
+    sh "xcodegen generate && pod install && open FinanceApp.xcworkspace"
+end
