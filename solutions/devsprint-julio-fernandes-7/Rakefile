@@ -21,8 +21,8 @@ task :setup do
         sh "xcodegen generate && pod install && open FinanceApp.xcworkspace"
     else 
         sh "cd libraries/#{name}"
-        sh "xcodegen generate && cd libraries/#{name}/SampleApp"        
-        sh "xcodegen generate"        
+        sh "xcodegen generate" # generate framework        
+        sh "cd libraries/#{name}/SampleApp/ && xcodegen generate" # generate sample        
         sh "cd libraries/#{name} && pod install && open #{name}.xcworkspace"        
     end 
 
