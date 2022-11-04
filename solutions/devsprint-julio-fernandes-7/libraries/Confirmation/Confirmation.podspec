@@ -9,25 +9,12 @@ Pod::Spec.new do |spec|
   spec.source = { :git => 'https://framework-source-code.git',
                   :tag => spec.version.to_s }
 
-  spec.ios.deployment_target = '11.0'
+  spec.ios.deployment_target = '13.0'
   spec.requires_arc = true
 
   spec.cocoapods_version = '>= 1.5'
-  spec.swift_version = '5.0'
+  spec.swift_version = '5.4'
 
   spec.source_files = 'Confirmation/**/*.{h,m,swift}'
-
-  spec.resource_bundles = {
-    'Confirmation' => [
-      'Confirmation/**/*.xcassets',
-      'Confirmation/**/*.xib'
-    ]
-  }
-
-  spec.resources = [
-    'Confirmation/**/*.strings'
-  ]
-
-  #spec.dependency 'Dependency', '~> 1.0.0'
 
 end
