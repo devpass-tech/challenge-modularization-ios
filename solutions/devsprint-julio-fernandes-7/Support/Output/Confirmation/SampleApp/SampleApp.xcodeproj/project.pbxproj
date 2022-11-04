@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,11 +12,9 @@
 		A2CD4C624986545D9A1D9C9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4EE8381A1B024A18F746385 /* Main.storyboard */; };
 		B40EAABAD05B4C90F91E938B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AF0D0BFA987C633480F16D /* LaunchScreen.storyboard */; };
 		C4F1FD3F52165081E21F04FA /* Pods_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568E54F4F3DDA372ABD3EE24 /* Pods_SampleApp.framework */; };
-		EEA6FE244E8AF57B5F39E147 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F844695415429CF3CE6EA2 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28F844695415429CF3CE6EA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3434713EC1AEB7A7B7675EDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		568E54F4F3DDA372ABD3EE24 /* Pods_SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B24E67CA62497884C4EF476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 				A9D7D9D82FDEFBEF2A468B1B /* Info.plist */,
 				80AF0D0BFA987C633480F16D /* LaunchScreen.storyboard */,
 				B4EE8381A1B024A18F746385 /* Main.storyboard */,
-				28F844695415429CF3CE6EA2 /* ViewController.swift */,
 			);
 			path = SampleApp;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				335875B04A4A257E22D3F39D /* AppDelegate.swift in Sources */,
-				EEA6FE244E8AF57B5F39E147 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
