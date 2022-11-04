@@ -5,7 +5,7 @@
 //  Created by Giuliano Accorsi on 04/11/22.
 //
 
-struct Contact: Decodable {
+public struct Contact: Decodable {
     let name: String
     let phone: String
 }
