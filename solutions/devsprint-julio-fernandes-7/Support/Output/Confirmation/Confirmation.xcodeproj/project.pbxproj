@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2712C7B073B85C1473624EA6 /* Pods_Confirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EBB00E53F65759D35441FB /* Pods_Confirmation.framework */; };
+		4193B5210BE24A68FEF8D088 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76AF1811B0B793CF6D89D9 /* Strings.swift */; };
+		48D52B4AEFA7396F47E33695 /* Confirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */; };
+		5910997FEA5F55BE556A069C /* Confirmation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62CE67A88FD6427321CFD785 /* ConfirmationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC34C71DEF4D555EC562CD51 /* ConfirmationInitializer.swift */; };
+		7B196C7D365B8B398C184FE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F4798E5489EEEDE5769637E /* Localizable.strings */; };
+		9CC81903B30C592432738FB4 /* Pods_Confirmation_ConfirmationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8E7C98A0A034EFBD7E9CE1 /* Pods_Confirmation_ConfirmationTests.framework */; };
+		9D31D21FCF03CA67E0FA7A75 /* Confirmation.h in Headers */ = {isa = PBXBuildFile; fileRef = 294643EF5EADBBAA44BC406D /* Confirmation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D641FB9C9FC42B3711B43EBF /* ConfirmationInitializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261082CE47AEAED9B57878E /* ConfirmationInitializerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2E3F76E5E55708B59C31BB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BAE9D34AC7B17B8EFE90412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BE267622CBC0E5CCFC7A971;
+			remoteInfo = Confirmation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CFC55D4B20C2E8C58EE747C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5910997FEA5F55BE556A069C /* Confirmation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0E76AF1811B0B793CF6D89D9 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		0F4798E5489EEEDE5769637E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		294643EF5EADBBAA44BC406D /* Confirmation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Confirmation.h; sourceTree = "<group>"; };
+		29BD936A2184316ED67223F1 /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation-ConfirmationTests.debug.xcconfig"; path = "Target Support Files/Pods-Confirmation-ConfirmationTests/Pods-Confirmation-ConfirmationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Confirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43EBB00E53F65759D35441FB /* Pods_Confirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Confirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6261082CE47AEAED9B57878E /* ConfirmationInitializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInitializerTests.swift; sourceTree = "<group>"; };
+		69F71A618CD4AA28C6B09AB8 /* ConfirmationTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ConfirmationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8E7C98A0A034EFBD7E9CE1 /* Pods_Confirmation_ConfirmationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Confirmation_ConfirmationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D00134014535F51182875A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9F35377C14B8AAA1E8BEC329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A32722A685A08A6A05419615 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation-ConfirmationTests.release.xcconfig"; path = "Target Support Files/Pods-Confirmation-ConfirmationTests/Pods-Confirmation-ConfirmationTests.release.xcconfig"; sourceTree = "<group>"; };
+		A75EB65DA21EB03D9C005151 /* Pods-Confirmation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation.debug.xcconfig"; path = "Target Support Files/Pods-Confirmation/Pods-Confirmation.debug.xcconfig"; sourceTree = "<group>"; };
+		E7B1819583F95E5D44EF6BCF /* Pods-Confirmation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation.release.xcconfig"; path = "Target Support Files/Pods-Confirmation/Pods-Confirmation.release.xcconfig"; sourceTree = "<group>"; };
+		FC34C71DEF4D555EC562CD51 /* ConfirmationInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInitializer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A6BF3B6F57858F506E96C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2712C7B073B85C1473624EA6 /* Pods_Confirmation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96AE5D885B5C28E6F5FE22C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48D52B4AEFA7396F47E33695 /* Confirmation.framework in Frameworks */,
+				9CC81903B30C592432738FB4 /* Pods_Confirmation_ConfirmationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22CD40250AFBDF3BFBC540E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */,
+				69F71A618CD4AA28C6B09AB8 /* ConfirmationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24ED1AA1317AB6CDBE790220 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43EBB00E53F65759D35441FB /* Pods_Confirmation.framework */,
+				7B8E7C98A0A034EFBD7E9CE1 /* Pods_Confirmation_ConfirmationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26A9EAD509975BFDDDC81880 /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				294643EF5EADBBAA44BC406D /* Confirmation.h */,
+				9F35377C14B8AAA1E8BEC329 /* Info.plist */,
+				5551E24634C249A17B8A4531 /* Classes */,
+				BC0DD9FA12626F63514E569F /* Generated */,
+				CFB4429B27F12CDD8409A6EF /* Resources */,
+			);
+			path = Confirmation;
+			sourceTree = "<group>";
+		};
+		5551E24634C249A17B8A4531 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FC34C71DEF4D555EC562CD51 /* ConfirmationInitializer.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BC0DD9FA12626F63514E569F /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				0E76AF1811B0B793CF6D89D9 /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		CFB4429B27F12CDD8409A6EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F4798E5489EEEDE5769637E /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E39BE4427BC2C58AF6975FC2 = {
+			isa = PBXGroup;
+			children = (
+				26A9EAD509975BFDDDC81880 /* Confirmation */,
+				E64B392757E687966B2A4817 /* ConfirmationTests */,
+				22CD40250AFBDF3BFBC540E5 /* Products */,
+				E69FE4614CD9CEC5616113CF /* Pods */,
+				24ED1AA1317AB6CDBE790220 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E64B392757E687966B2A4817 /* ConfirmationTests */ = {
+			isa = PBXGroup;
+			children = (
+				6261082CE47AEAED9B57878E /* ConfirmationInitializerTests.swift */,
+				9D00134014535F51182875A0 /* Info.plist */,
+			);
+			path = ConfirmationTests;
+			sourceTree = "<group>";
+		};
+		E69FE4614CD9CEC5616113CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A75EB65DA21EB03D9C005151 /* Pods-Confirmation.debug.xcconfig */,
+				E7B1819583F95E5D44EF6BCF /* Pods-Confirmation.release.xcconfig */,
+				29BD936A2184316ED67223F1 /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */,
+				A32722A685A08A6A05419615 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		72978883CDA63A51809D3EF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D31D21FCF03CA67E0FA7A75 /* Confirmation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9BE267622CBC0E5CCFC7A971 /* Confirmation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86E376A925C16820D9945040 /* Build configuration list for PBXNativeTarget "Confirmation" */;
+			buildPhases = (
+				8BAA996DF47810941C3DDE3E /* [CP] Check Pods Manifest.lock */,
+				DBD5AFAE0AB3B780F8AF5FB7 /* SwiftGen */,
+				72978883CDA63A51809D3EF4 /* Headers */,
+				10D3559BA0460DB94803F34B /* Sources */,
+				6D04C7F631022C0004414B57 /* Resources */,
+				9777A9C4EA0835247310FE39 /* SwiftLint */,
+				0A6BF3B6F57858F506E96C03 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Confirmation;
+			productName = Confirmation;
+			productReference = 39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8A17FA7585A29D25AF6E327 /* ConfirmationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27F2CF47AB19248D655D913F /* Build configuration list for PBXNativeTarget "ConfirmationTests" */;
+			buildPhases = (
+				E13DAC29F92C0057F9B86ADE /* [CP] Check Pods Manifest.lock */,
+				2957B080F812BCA55140CE12 /* Sources */,
+				D96AE5D885B5C28E6F5FE22C /* Frameworks */,
+				CFC55D4B20C2E8C58EE747C2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6766F73DFA7A4B96454B4EAE /* PBXTargetDependency */,
+			);
+			name = ConfirmationTests;
+			productName = ConfirmationTests;
+			productReference = 69F71A618CD4AA28C6B09AB8 /* ConfirmationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BAE9D34AC7B17B8EFE90412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					9BE267622CBC0E5CCFC7A971 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = A2861035B3C40C75901A0049 /* Build configuration list for PBXProject "Confirmation" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = "pt-BR";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				"pt-BR",
+			);
+			mainGroup = E39BE4427BC2C58AF6975FC2;
+			productRefGroup = 22CD40250AFBDF3BFBC540E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BE267622CBC0E5CCFC7A971 /* Confirmation */,
+				E8A17FA7585A29D25AF6E327 /* ConfirmationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D04C7F631022C0004414B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B196C7D365B8B398C184FE7 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BAA996DF47810941C3DDE3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Confirmation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9777A9C4EA0835247310FE39 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
+		};
+		DBD5AFAE0AB3B780F8AF5FB7 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen";
+		};
+		E13DAC29F92C0057F9B86ADE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Confirmation-ConfirmationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10D3559BA0460DB94803F34B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CE67A88FD6427321CFD785 /* ConfirmationInitializer.swift in Sources */,
+				4193B5210BE24A68FEF8D088 /* Strings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2957B080F812BCA55140CE12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D641FB9C9FC42B3711B43EBF /* ConfirmationInitializerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6766F73DFA7A4B96454B4EAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BE267622CBC0E5CCFC7A971 /* Confirmation */;
+			targetProxy = E2E3F76E5E55708B59C31BB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DD6A166D8B4CC2E9711A7A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		40948FA84CBD5C2D782FE316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29BD936A2184316ED67223F1 /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConfirmationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C8E5CD5CA958AA41F12020C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B1819583F95E5D44EF6BCF /* Pods-Confirmation.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Confirmation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.microfrontendGenerator.Confirmation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		A3315C207CC599D5EBE8B758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		DCE90092C22399828078265D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A32722A685A08A6A05419615 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ConfirmationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E22AD543593BC05BC340426D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A75EB65DA21EB03D9C005151 /* Pods-Confirmation.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Confirmation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.microfrontendGenerator.Confirmation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27F2CF47AB19248D655D913F /* Build configuration list for PBXNativeTarget "ConfirmationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40948FA84CBD5C2D782FE316 /* Debug */,
+				DCE90092C22399828078265D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		86E376A925C16820D9945040 /* Build configuration list for PBXNativeTarget "Confirmation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E22AD543593BC05BC340426D /* Debug */,
+				8C8E5CD5CA958AA41F12020C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A2861035B3C40C75901A0049 /* Build configuration list for PBXProject "Confirmation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DD6A166D8B4CC2E9711A7A5 /* Debug */,
+				A3315C207CC599D5EBE8B758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BAE9D34AC7B17B8EFE90412 /* Project object */;
+}

@@ -1,0 +1,111 @@
+Script started on Thu Nov  3 21:21:32 2022
+]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support]2;alexandrecardoso@MBPdeAlexandre]1;..des-7/Support]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support[0m[27m[24m[J[01;32m➜  [36mSupport[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004h[7mScripts[27m[27mS[27mc[27mr[27mi[27mp[27mt[27ms[?1l>[?2004l
+]2;Scripts]1;Scripts[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts]2;alexandrecardoso@MBPdeAlexandre]1;..pport/Scripts]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts[0m[27m[24m[J[01;32m➜  [36mScripts[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004h../setup[1m [0m[0m Confirmation[?1l>[?2004l
+]2;./setup Confirmation]1;./setup.
+============================================================================
+Starting setup
+Script path: /Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts
+============================================================================
+.
+.
+============================================================================
+Removing current project files
+============================================================================
+.
+find: .//Confirmation.xcodeproj: No such file or directory
+find: .//SampleApp/SampleApp.xcodeproj: No such file or directory
+.
+============================================================================
+Preparing Confirmation workspace
+Project path: /Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation
+============================================================================
+.
+⚙️  Generating plists...
+⚙️  Generating project...
+⚙️  Writing project...
+[32mCreated project at /Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation.xcodeproj[0m
+.
+⚙️  Generating plists...
+⚙️  Generating project...
+⚙️  Writing project...
+[32mCreated project at /Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp.xcodeproj[0m
+.
+============================================================================
+Confirmation Pod Install
+============================================================================
+.
+[in /Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation]
+Analyzing dependencies
+Downloading dependencies
+[32mInstalling Confirmation (0.1.0)[0m
+[32mInstalling SwiftGen (6.5.1)[0m
+[32mInstalling SwiftLint (0.49.1)[0m
+Generating Pods project
+Integrating client projects
+[32m
+[!] Please close any current Xcode sessions and use `Confirmation.xcworkspace` for this project from now on.[0m
+[32mPod installation complete! There are 3 dependencies from the Podfile and 3 total pods installed.[0m
+.
+============================================================================
+Confirmation.xcworkspace created
+============================================================================
+.
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts]2;alexandrecardoso@MBPdeAlexandre]1;..pport/Scripts]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts[0m[27m[24m[J[01;32m➜  [36mScripts[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hoopen .[?1l>[?2004l
+]2;open .]1;open[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts]2;alexandrecardoso@MBPdeAlexandre]1;..pport/Scripts]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts[0m[27m[24m[J[01;32m➜  [36mScripts[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hsswiftgen[?1l>[?2004l
+]2;swiftgen]1;swiftgen[31mswiftgen: error: File swiftgen.yml not found.
+[0m[31mswiftgen: error: It seems like there was an error running SwiftGen.
+
+- Verify that your configuration file exists at the correct path, or create a new one using:
+> swiftgen config init
+
+- Verify that your configuration file is valid by running:
+> swiftgen config lint
+
+- If you have any other questions or issues, we have extensive documentation and an issue tracker on GitHub:
+> https://github.com/SwiftGen/SwiftGen
+[0m[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts]2;alexandrecardoso@MBPdeAlexandre]1;..pport/Scripts]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts[0m[27m[24m[J[01;32m➜  [36mScripts[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hsswiftgen[?1l>[?2004l
+]2;swiftgen]1;swiftgen[31mswiftgen: error: File swiftgen.yml not found.
+[0m[31mswiftgen: error: It seems like there was an error running SwiftGen.
+
+- Verify that your configuration file exists at the correct path, or create a new one using:
+> swiftgen config init
+
+- Verify that your configuration file is valid by running:
+> swiftgen config lint
+
+- If you have any other questions or issues, we have extensive documentation and an issue tracker on GitHub:
+> https://github.com/SwiftGen/SwiftGen
+[0m[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts]2;alexandrecardoso@MBPdeAlexandre]1;..pport/Scripts]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Scripts[0m[27m[24m[J[01;32m➜  [36mScripts[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support]2;alexandrecardoso@MBPdeAlexandre]1;..des-7/Support]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support[0m[27m[24m[J[01;32m➜  [36mSupport[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hoout
+[0m_debcheckout          _x_selection_timeout  moo-outdated5.18      mpioutil            
+_route                bioutil               moose-outdated        route               
+_tcptraceroute        logout                moose-outdated5.18    traceroute          
+[J_timeout              [Jmoo-outdated          [Jmoose-outdated5.30    [Jtraceroute6         [J[4A[0m[27m[24m[63Cout[K o  lls[?1l>[?2004l
+[J]2;ls -G]1;ls[1m[36mFinanceApp[39;49m[0m        [1m[36mFinanceAppUITests[39;49m[0m Rakefile          project.yml
+[1m[36mFinanceAppTests[39;49m[0m   Podfile           [1m[36mSupport[39;49m[0m
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hSSupport[1m/[0m[0m/Output[1m/[0m[0m/COnfo[2Cirmation[1m/[0m[K[K[?1l>[?2004l
+]2;Support/Output/Confirmation]1;Support/Output/Confirmation[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation]2;alexandrecardoso@MBPdeAlexandre]1;../Confirmation]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation[0m[27m[24m[J[01;32m➜  [36mConfirmation[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hssiwq  s  sswiftgen[?1l>[?2004l
+]2;swiftgen]1;swiftgen[32mFile written: Confirmation/Generated/Strings.swift
+[0m[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation]2;alexandrecardoso@MBPdeAlexandre]1;../Confirmation]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation[0m[27m[24m[J[01;32m➜  [36mConfirmation[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation]2;alexandrecardoso@MBPdeAlexandre]1;../Confirmation]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation[0m[27m[24m[J[01;32m➜  [36mConfirmation[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hggst[?1l>[?2004l
+]2;git status]1;gstOn branch feature/confirmationSDK
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m./[m
+	[31m../../typescript[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation]2;alexandrecardoso@MBPdeAlexandre]1;../Confirmation]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation[0m[27m[24m[J[01;32m➜  [36mConfirmation[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output]2;alexandrecardoso@MBPdeAlexandre]1;..upport/Output]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support/Output[0m[27m[24m[J[01;32m➜  [36mOutput[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support]2;alexandrecardoso@MBPdeAlexandre]1;..des-7/Support]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7/Support[0m[27m[24m[J[01;32m➜  [36mSupport[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hccd ..[?1l>[?2004l
+]2;cd ..]1;cd[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004h[?1l>[?2004l
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hggit addd     g  ggst[?1l>[?2004l
+]2;git status]1;gstOn branch feature/confirmationSDK
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mSupport/Output/Confirmation/[m
+	[31mSupport/typescript[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004h
