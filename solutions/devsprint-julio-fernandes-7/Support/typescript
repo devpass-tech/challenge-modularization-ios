@@ -108,4 +108,39 @@ Untracked files:
 	[31mSupport/typescript[m
 
 nothing added to commit but untracked files present (use "git add" to track)
+[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hggit add .[?1l>[?2004l
+]2;git add .]1;git[1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004hggit commit -m ""  C r i a d o [1C S D K [1C  [K[A[89CC o on f i r m a t i o n " [?1l>[?2004l
+]2;git commit -m "Criado SDK Confirmation"]1;git[feature/confirmationSDK 9815bcc] Criado SDK Confirmation
+ 31 files changed, 2553 insertions(+)
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/.swiftlint.yml
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation.podspec
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation.xcodeproj/project.pbxproj
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation.xcodeproj/xcshareddata/xcschemes/ConfirmationSDK.xcscheme
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation.xcworkspace/contents.xcworkspacedata
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation/Classes/ConfirmationInitializer.swift
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation/Confirmation.h
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation/Generated/Strings.swift
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation/Info.plist
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Confirmation/Resources/Localizable.strings
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/ConfirmationTests/ConfirmationInitializerTests.swift
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/ConfirmationTests/Info.plist
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Gemfile
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Gemfile.lock
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/Podfile
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp.xcodeproj/project.pbxproj
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp.xcodeproj/xcshareddata/xcschemes/Sample.xcscheme
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp/AppDelegate.swift
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp/Assets.xcassets/AppIcon.appiconset/Contents.json
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp/Assets.xcassets/Contents.json
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp/Base.lproj/LaunchScreen.storyboard
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp/Base.lproj/Main.storyboard
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp/Info.plist
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/SampleApp/ViewController.swift
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/SampleApp/project.yml
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/project.yml
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/Output/Confirmation/swiftgen.yml
+ create mode 100644 solutions/devsprint-julio-fernandes-7/Support/typescript
 [1m[7m%[27m[1m[0m                                                                                          ]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7]2;alexandrecardoso@MBPdeAlexandre]1;..o-fernandes-7]7;file://MBPdeAlexandre/Users/alexandrecardoso/Developer/Devpass/challenge-modularization-ios/solutions/devsprint-julio-fernandes-7[0m[27m[24m[J[01;32m➜  [36mdevsprint-julio-fernandes-7[00m [01;34mgit:([31mfeature/confirmationSDK[34m) [33m✗[00m [K[?1h=[?2004h
