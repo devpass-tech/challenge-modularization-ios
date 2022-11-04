@@ -6,6 +6,7 @@ target 'FinanceApp' do
   use_frameworks!
 
   pod 'SwiftLint'
+  pod 'FinanceService', :path => './Support/Output/FinanceService'
 
   target 'FinanceAppTests' do
     inherit! :search_paths
