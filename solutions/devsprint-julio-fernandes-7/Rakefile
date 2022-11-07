@@ -13,5 +13,18 @@ end
 
 desc 'Setup Project'
 task :setup do
-    sh "xcodegen generate && pod install && open FinanceApp.xcworkspace"
+    
+    ARGV.each { |name| task name.to_sym do ; end }
+    name = ARGV[1]
+
+    if name == "FinanceApp" 
+        sh "xcodegen generate && pod install && open FinanceApp.xcworkspace"
+    else 
+        sh "cd libraries/#{name}"
+        sh "xcodegen generate" # generate framework        
+        sh "cd libraries/#{name}/SampleApp/ && xcodegen generate" # generate sample        
+        sh "cd libraries/#{name} && pod install && open #{name}.xcworkspace"        
+    end 
+
 end
+
