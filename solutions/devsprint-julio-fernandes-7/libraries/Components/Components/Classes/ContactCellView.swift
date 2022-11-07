@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactCellView: UITableViewCell {
+public class ContactCellView: UITableViewCell {
 
    private var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
@@ -64,7 +64,7 @@ class ContactCellView: UITableViewCell {
     }
 }
 
-extension ContactCellView {
+ extension ContactCellView {
 
     func addSubviews() {
 
@@ -90,4 +90,3 @@ extension ContactCellView {
         ])
     }
 }
-
