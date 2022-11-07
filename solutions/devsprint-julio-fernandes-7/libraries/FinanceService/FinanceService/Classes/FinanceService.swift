@@ -1,20 +1,16 @@
 //
 //  FinanceService.swift
-//  FinanceApp
+//  FinanceService
 //
-//  Created by Rodrigo Borges on 30/12/21.
+//  Created by Giuliano Accorsi on 04/11/22.
 //
 
 import Foundation
 
-class FinanceService {
-
+public final class FinanceService {
     func fetchHomeData(_ completion: @escaping (HomeData?) -> Void) {
-
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/home_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
             guard error == nil else {
                 completion(nil)
                 return
@@ -35,15 +31,13 @@ class FinanceService {
                 completion(nil)
             }
         }
-
         dataTask.resume()
     }
 
     func fetchActivityDetails(_ completion: @escaping (ActivityDetails?) -> Void) {
 
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/activity_details_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
 
             guard error == nil else {
                 completion(nil)
@@ -65,15 +59,12 @@ class FinanceService {
                 completion(nil)
             }
         }
-
         dataTask.resume()
     }
 
     func fetchContactList(_ completion: @escaping ([Contact]?) -> Void) {
-
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/contact_list_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
 
             guard error == nil else {
                 completion(nil)
@@ -95,16 +86,12 @@ class FinanceService {
                 completion(nil)
             }
         }
-
         dataTask.resume()
     }
 
     func transferAmount(_ completion: @escaping (TransferResult?) -> Void) {
-
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/transfer_successful_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
             guard error == nil else {
                 completion(nil)
                 return
@@ -130,11 +117,8 @@ class FinanceService {
     }
 
     func fetchUserProfile(_ completion: @escaping (UserProfile?) -> Void) {
-
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/user_profile_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
+        let dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
             guard error == nil else {
                 completion(nil)
                 return
@@ -155,8 +139,6 @@ class FinanceService {
                 completion(nil)
             }
         }
-
         dataTask.resume()
     }
-
 }
