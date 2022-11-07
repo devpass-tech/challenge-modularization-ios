@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Components
 
 protocol ContactListViewDelegate: AnyObject {
 
@@ -31,7 +32,7 @@ class ContactListView: UIView {
         return tableView
     }()
 
-    init() {
+   public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
