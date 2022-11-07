@@ -6,6 +6,7 @@ target 'FinanceApp' do
   
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
+  pod 'FinanceService', :path => 'libraries/FinanceService'
   pod 'Confirmation', :path => 'libraries/Confirmation'
   pod 'Components', :path => 'libraries/Components'
   
