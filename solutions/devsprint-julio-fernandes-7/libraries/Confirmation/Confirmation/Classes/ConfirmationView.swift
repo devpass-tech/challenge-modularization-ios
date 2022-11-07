@@ -1,24 +1,21 @@
 //
 //  ConfirmationView.swift
-//  FinanceApp
+//  Confirmation
 //
-//  Created by Rodrigo Borges on 30/12/21.
+//  Created by Alexandre Cardoso on 03/11/22.
 //
 
-import Foundation
 import UIKit
 
 protocol ConfirmationViewDelegate: AnyObject {
-
     func didPressConfirmationButton()
 }
 
-class ConfirmationView: UIView {
+final class ConfirmationView: UIView {
 
     weak var delegate: ConfirmationViewDelegate?
 
     let stackView: UIStackView = {
-
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -28,7 +25,6 @@ class ConfirmationView: UIView {
     }()
 
     let confirmationImageView: UIImageView = {
-
         let imageView = UIImageView()
         imageView.image = UIImage(named: "checkmark.circle.fill")
         imageView.layer.cornerRadius = 50
@@ -38,7 +34,6 @@ class ConfirmationView: UIView {
     }()
 
     let confirmationLabel: UILabel = {
-
         let label = UILabel()
         label.text = "Your transfer was successful"
         label.font = UIFont.boldSystemFont(ofSize: 17)
@@ -47,7 +42,6 @@ class ConfirmationView: UIView {
     }()
 
     lazy var confirmationButton: UIButton = {
-
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Nice!", for: .normal)
@@ -57,7 +51,6 @@ class ConfirmationView: UIView {
         button.addTarget(self, action: #selector(confirmationButtonPressed), for: .touchUpInside)
         return button
     }()
-
 
     init() {
         super.init(frame: .zero)
@@ -86,13 +79,13 @@ class ConfirmationView: UIView {
         ])
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     @objc
-    func confirmationButtonPressed() {
-
+    private func confirmationButtonPressed() {
         delegate?.didPressConfirmationButton()
     }
 }

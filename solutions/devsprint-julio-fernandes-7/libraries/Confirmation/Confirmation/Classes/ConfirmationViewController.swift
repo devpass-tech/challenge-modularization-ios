@@ -1,32 +1,31 @@
 //
 //  ConfirmationViewController.swift
-//  FinanceApp
+//  Confirmation
 //
-//  Created by Rodrigo Borges on 30/12/21.
+//  Created by Alexandre Cardoso on 03/11/22.
 //
 
 import UIKit
 
-class ConfirmationViewController: UIViewController {
+public final class ConfirmationViewController: UIViewController {
 
-    lazy var confirmationView: ConfirmationView = {
-
+    private lazy var confirmationView: ConfirmationView = {
         let confirmationView = ConfirmationView()
         confirmationView.delegate = self
         return confirmationView
     }()
 
-    init(amount: String) {
+    public init(amount: String) {
         super.init(nibName: nil, bundle: nil)
-
         confirmationView.confirmationLabel.text = "Your transfer of $\(amount) was successful 🤑"
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
+    public override func loadView() {
         self.view = confirmationView
     }
 }
@@ -34,7 +33,6 @@ class ConfirmationViewController: UIViewController {
 extension ConfirmationViewController: ConfirmationViewDelegate {
 
     func didPressConfirmationButton() {
-
         self.dismiss(animated: true)
     }
 }

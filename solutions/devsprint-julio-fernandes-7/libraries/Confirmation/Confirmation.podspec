@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.name = 'SDKDomain'
+  spec.name = 'Confirmation'
   spec.version = '0.1.0'
   spec.summary = 'Framework description.'
   spec.homepage = 'https://framework.com'
@@ -15,19 +15,6 @@ Pod::Spec.new do |spec|
   spec.cocoapods_version = '>= 1.5'
   spec.swift_version = '5.4'
 
-  spec.source_files = 'SDKDomain/**/*.{h,m,swift}'
-
-  spec.resource_bundles = {
-    'SDKDomain' => [
-      'SDKDomain/**/*.xcassets',
-      'SDKDomain/**/*.xib'
-    ]
-  }
-
-  spec.resources = [
-    'SDKDomain/**/*.strings'
-  ]
-
-  #spec.dependency 'Dependency', '~> 1.0.0'
+  spec.source_files = 'Confirmation/**/*.{h,m,swift}'
 
 end

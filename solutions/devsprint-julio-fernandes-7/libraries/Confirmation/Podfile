@@ -6,19 +6,17 @@ platform :ios, '13.0'
 inhibit_all_warnings!
 use_frameworks!
 
-workspace 'SDKDomain'
+workspace 'Confirmation'
 
-target 'SDKDomain' do
+target 'Confirmation' do
 
   pod 'SwiftLint'
-  pod 'SwiftGen', '6.5.1'
-
-  target 'SDKDomainTests' do
-      #pod 'Dependency', '~> 1.0.0'
+  
+  target 'ConfirmationTests' do
   end
 end
 
 target 'SampleApp' do
   project 'SampleApp/SampleApp'
-  pod 'SDKDomain', :path => './'
+  pod 'Confirmation', :path => './'
 end
