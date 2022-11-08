@@ -1,13 +1,13 @@
 //
 //  ContactListViewController.swift
-//  FinanceApp
+//  ContactList
 //
-//  Created by Rodrigo Borges on 30/12/21.
+//  Created by Cibele Paulino on 08/11/22.
 //
 
 import UIKit
 
-protocol ContactListViewControllerDelegate: AnyObject {
+public protocol ContactListViewControllerDelegate: AnyObject {
 
     func didSelectContact()
 }
@@ -28,7 +28,7 @@ class ContactListViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        self.title = "Contact List"
+        self.title = Localization.ContactList.title
     }
 }
 
