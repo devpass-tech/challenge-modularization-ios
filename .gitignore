@@ -52,6 +52,9 @@ playground.xcworkspace
 Pods/
 **/Pods/
 Podfile.lock
+solutions/devsprint-julio-fernandes-7/**/Gemfile.lock
+solutions/devsprint-julio-fernandes-7/**/Podfile.lock
+
 
 # XCodeGen
 solutions/devsprint-julio-fernandes-7/**/*.xcodeproj

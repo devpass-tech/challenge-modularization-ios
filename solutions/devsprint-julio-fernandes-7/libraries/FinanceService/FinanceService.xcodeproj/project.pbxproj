@@ -3,25 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0158D45C88DDCE368FA3EB42 /* Pods_FinanceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7F244FC67A1F962377FEDE /* Pods_FinanceService.framework */; };
 		08D6FDF4970E792E930F790B /* FinanceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CAD8AD6683AB968BF618CD /* FinanceService.framework */; };
-		19CCB6132915983F001C8566 /* FinanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCB6122915983F001C8566 /* FinanceService.swift */; };
-		19CCB61629159864001C8566 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCB61529159864001C8566 /* HomeData.swift */; };
-		19CCB618291598E3001C8566 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCB617291598E3001C8566 /* Contact.swift */; };
-		19CCB61A291598E9001C8566 /* TransferResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCB619291598E9001C8566 /* TransferResult.swift */; };
-		19CCB61C291598ED001C8566 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCB61B291598ED001C8566 /* UserProfile.swift */; };
-		19CCB61E291598FC001C8566 /* ActivityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CCB61D291598FC001C8566 /* ActivityDetail.swift */; };
-		232D9D41AEA7FFD58D9876A3 /* FinanceService.h in Headers */ = {isa = PBXBuildFile; fileRef = 80027A418708AA7FAA0164AC /* FinanceService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		248D8B67BBE1A3CFCF3A99D9 /* Pods_FinanceService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65021BA5EFF002E37431A65D /* Pods_FinanceService.framework */; };
+		1BC37006C9A328ECDD76A4CA /* Pods_FinanceService_FinanceServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBCCFF02E16555008405330 /* Pods_FinanceService_FinanceServiceTests.framework */; };
+		2494F947D977D00D526AD802 /* FinanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D543637EE3D6B14EFC64E6 /* FinanceService.swift */; };
 		2AB3EF0CE2A5C8ABAA90066F /* FinanceService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45CAD8AD6683AB968BF618CD /* FinanceService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		60A67CFFC63DDA59CCA1BBE1 /* Pods_FinanceService_FinanceServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C4B2D56951922CF0819815 /* Pods_FinanceService_FinanceServiceTests.framework */; };
-		988E0475A43BC7195CB2546E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DFC960C09DFA1A1B7BCEE08 /* Localizable.strings */; };
+		35719E1593CFD5B589C5B3B0 /* ActivityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B51875B83E717D0A7F4A70 /* ActivityDetail.swift */; };
+		6592F0EFEAFC16B3A32A5ED8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5781A5667B4937117413E3 /* UserProfile.swift */; };
+		A8655A93559A291ADAE002BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA6F570ABD916C9E0FC53D0 /* Contact.swift */; };
 		B57BE40DF6E0B406E9416D79 /* FinanceServiceInitializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC98A547553A3C265BCEE85C /* FinanceServiceInitializerTests.swift */; };
-		C471F337C19F911D129C447E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3DD7ED88F9FC5BC9C6A02 /* Strings.swift */; };
-		CEF2783065CDDEDF7D12E452 /* FinanceServiceInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850A648C345B91DA6D596F4 /* FinanceServiceInitializer.swift */; };
+		E1703874B0CCB39470542CC3 /* TransferResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366CAADF9EE42D1F59803ED0 /* TransferResult.swift */; };
+		EA1BEFC781AD42B341AD0C8C /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E2FC05631CC00C71C37A0 /* HomeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,44 +45,40 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0DFC960C09DFA1A1B7BCEE08 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		15A3DD7ED88F9FC5BC9C6A02 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		1850A648C345B91DA6D596F4 /* FinanceServiceInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceServiceInitializer.swift; sourceTree = "<group>"; };
-		19967F44959520027CAC805B /* Pods-FinanceService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService.release.xcconfig"; path = "Target Support Files/Pods-FinanceService/Pods-FinanceService.release.xcconfig"; sourceTree = "<group>"; };
-		19CCB6122915983F001C8566 /* FinanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceService.swift; sourceTree = "<group>"; };
-		19CCB61529159864001C8566 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
-		19CCB617291598E3001C8566 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		19CCB619291598E9001C8566 /* TransferResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResult.swift; sourceTree = "<group>"; };
-		19CCB61B291598ED001C8566 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		19CCB61D291598FC001C8566 /* ActivityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetail.swift; sourceTree = "<group>"; };
-		2ED201B7858A9A4F7245EF7E /* Pods-FinanceService-FinanceServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService-FinanceServiceTests.release.xcconfig"; path = "Target Support Files/Pods-FinanceService-FinanceServiceTests/Pods-FinanceService-FinanceServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		1D6AB44AB55958DBB28D1186 /* Pods-FinanceService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService.release.xcconfig"; path = "Target Support Files/Pods-FinanceService/Pods-FinanceService.release.xcconfig"; sourceTree = "<group>"; };
+		366CAADF9EE42D1F59803ED0 /* TransferResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferResult.swift; sourceTree = "<group>"; };
 		45CAD8AD6683AB968BF618CD /* FinanceService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FinanceService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		60C4B2D56951922CF0819815 /* Pods_FinanceService_FinanceServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceService_FinanceServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65021BA5EFF002E37431A65D /* Pods_FinanceService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5168BFBEC61C848AAC2EC2DC /* Pods-FinanceService-FinanceServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService-FinanceServiceTests.release.xcconfig"; path = "Target Support Files/Pods-FinanceService-FinanceServiceTests/Pods-FinanceService-FinanceServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		56B51875B83E717D0A7F4A70 /* ActivityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetail.swift; sourceTree = "<group>"; };
+		59AC0406091D500B3B698EB5 /* Pods-FinanceService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService.debug.xcconfig"; path = "Target Support Files/Pods-FinanceService/Pods-FinanceService.debug.xcconfig"; sourceTree = "<group>"; };
+		5A864D993533207015F79008 /* Pods-FinanceService-FinanceServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService-FinanceServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-FinanceService-FinanceServiceTests/Pods-FinanceService-FinanceServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		75B0D25237ABAEDE823FDD37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		7EC9218002DA6AC3411939D1 /* Pods-FinanceService-FinanceServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService-FinanceServiceTests.debug.xcconfig"; path = "Target Support Files/Pods-FinanceService-FinanceServiceTests/Pods-FinanceService-FinanceServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
-		80027A418708AA7FAA0164AC /* FinanceService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceService.h; sourceTree = "<group>"; };
 		844C3C2A9E8D3522D3A9FBBA /* FinanceServiceTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FinanceServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBCCFF02E16555008405330 /* Pods_FinanceService_FinanceServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceService_FinanceServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99548833FCBC2BCF58807E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9D9E2FC05631CC00C71C37A0 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
+		CB7F244FC67A1F962377FEDE /* Pods_FinanceService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinanceService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC98A547553A3C265BCEE85C /* FinanceServiceInitializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceServiceInitializerTests.swift; sourceTree = "<group>"; };
-		EDD369527977387B128B4251 /* Pods-FinanceService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinanceService.debug.xcconfig"; path = "Target Support Files/Pods-FinanceService/Pods-FinanceService.debug.xcconfig"; sourceTree = "<group>"; };
+		CCA6F570ABD916C9E0FC53D0 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		EA5781A5667B4937117413E3 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F8D543637EE3D6B14EFC64E6 /* FinanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		33649AE56B895A1783A5CC6A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				248D8B67BBE1A3CFCF3A99D9 /* Pods_FinanceService.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		43C1E702AB5BCA6BA5D5D3EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				08D6FDF4970E792E930F790B /* FinanceService.framework in Frameworks */,
-				60A67CFFC63DDA59CCA1BBE1 /* Pods_FinanceService_FinanceServiceTests.framework in Frameworks */,
+				1BC37006C9A328ECDD76A4CA /* Pods_FinanceService_FinanceServiceTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F422DD5E37BD21611367E660 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0158D45C88DDCE368FA3EB42 /* Pods_FinanceService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,37 +94,46 @@
 			path = FinanceServiceTests;
 			sourceTree = "<group>";
 		};
-		19CCB6142915985E001C8566 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				19CCB61529159864001C8566 /* HomeData.swift */,
-				19CCB617291598E3001C8566 /* Contact.swift */,
-				19CCB619291598E9001C8566 /* TransferResult.swift */,
-				19CCB61B291598ED001C8566 /* UserProfile.swift */,
-				19CCB61D291598FC001C8566 /* ActivityDetail.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		2CFF9EC3179120529990E17F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1850A648C345B91DA6D596F4 /* FinanceServiceInitializer.swift */,
-				19CCB6122915983F001C8566 /* FinanceService.swift */,
-				19CCB6142915985E001C8566 /* Entities */,
+				F8D543637EE3D6B14EFC64E6 /* FinanceService.swift */,
+				78D78895EB88C7AE4FB24389 /* Entities */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		4784CE4A737927693507E1E1 /* Pods */ = {
+		2FA58366767005FBE1F2A0E1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EDD369527977387B128B4251 /* Pods-FinanceService.debug.xcconfig */,
-				19967F44959520027CAC805B /* Pods-FinanceService.release.xcconfig */,
-				7EC9218002DA6AC3411939D1 /* Pods-FinanceService-FinanceServiceTests.debug.xcconfig */,
-				2ED201B7858A9A4F7245EF7E /* Pods-FinanceService-FinanceServiceTests.release.xcconfig */,
+				59AC0406091D500B3B698EB5 /* Pods-FinanceService.debug.xcconfig */,
+				1D6AB44AB55958DBB28D1186 /* Pods-FinanceService.release.xcconfig */,
+				5A864D993533207015F79008 /* Pods-FinanceService-FinanceServiceTests.debug.xcconfig */,
+				5168BFBEC61C848AAC2EC2DC /* Pods-FinanceService-FinanceServiceTests.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		78D78895EB88C7AE4FB24389 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				56B51875B83E717D0A7F4A70 /* ActivityDetail.swift */,
+				CCA6F570ABD916C9E0FC53D0 /* Contact.swift */,
+				9D9E2FC05631CC00C71C37A0 /* HomeData.swift */,
+				366CAADF9EE42D1F59803ED0 /* TransferResult.swift */,
+				EA5781A5667B4937117413E3 /* UserProfile.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7FFD71C23B1E0F70A8FA614B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB7F244FC67A1F962377FEDE /* Pods_FinanceService.framework */,
+				8DBCCFF02E16555008405330 /* Pods_FinanceService_FinanceServiceTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A3BFAE85BEE7E183AF76650A = {
@@ -141,18 +142,9 @@
 				D7FDCD659530B4C419A7CCE7 /* FinanceService */,
 				19B6B9AA9DED6E2625D9C66F /* FinanceServiceTests */,
 				B950CD8CFD6133FBC8AEE603 /* Products */,
-				4784CE4A737927693507E1E1 /* Pods */,
-				B21942BF0AA4F1CE9DC4A98D /* Frameworks */,
+				2FA58366767005FBE1F2A0E1 /* Pods */,
+				7FFD71C23B1E0F70A8FA614B /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		B21942BF0AA4F1CE9DC4A98D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				65021BA5EFF002E37431A65D /* Pods_FinanceService.framework */,
-				60C4B2D56951922CF0819815 /* Pods_FinanceService_FinanceServiceTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B950CD8CFD6133FBC8AEE603 /* Products */ = {
@@ -164,59 +156,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BDEB578EAC22DABB863C86D3 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				15A3DD7ED88F9FC5BC9C6A02 /* Strings.swift */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
 		D7FDCD659530B4C419A7CCE7 /* FinanceService */ = {
 			isa = PBXGroup;
 			children = (
-				80027A418708AA7FAA0164AC /* FinanceService.h */,
 				75B0D25237ABAEDE823FDD37 /* Info.plist */,
 				2CFF9EC3179120529990E17F /* Classes */,
-				BDEB578EAC22DABB863C86D3 /* Generated */,
-				E2F6FBBE6648C103F254218B /* Resources */,
 			);
 			path = FinanceService;
 			sourceTree = "<group>";
 		};
-		E2F6FBBE6648C103F254218B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0DFC960C09DFA1A1B7BCEE08 /* Localizable.strings */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		D788E2541E26B96B3181715A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				232D9D41AEA7FFD58D9876A3 /* FinanceService.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		002C351B26D203B32CEDE823 /* FinanceService */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA03309E7E6A3FFCFAF76969 /* Build configuration list for PBXNativeTarget "FinanceService" */;
 			buildPhases = (
-				E1D11C4D3FA6C42FD7D43A84 /* [CP] Check Pods Manifest.lock */,
-				49DCD66DCFE036F6CE5D00DA /* SwiftGen */,
-				D788E2541E26B96B3181715A /* Headers */,
+				1B6FF34E5383E6B2ED94A762 /* [CP] Check Pods Manifest.lock */,
 				5FAB4CA19941604C2D3CBD8E /* Sources */,
-				4051A0075D1776F035BF8756 /* Resources */,
 				DD4D0025917E635D8185F6FE /* SwiftLint */,
-				33649AE56B895A1783A5CC6A /* Frameworks */,
+				F422DD5E37BD21611367E660 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,7 +190,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4C151C3A8462C245A508C35 /* Build configuration list for PBXNativeTarget "FinanceServiceTests" */;
 			buildPhases = (
-				2E4A4EEC1B6A1BFFF881E48B /* [CP] Check Pods Manifest.lock */,
+				784CCA35B82C42DD321AC96D /* [CP] Check Pods Manifest.lock */,
 				BFC3EE24AD4B082DAA64B59A /* Sources */,
 				43C1E702AB5BCA6BA5D5D3EB /* Frameworks */,
 				AE9BB9981B64DD31A23A44B4 /* Embed Frameworks */,
@@ -261,7 +220,7 @@
 				};
 			};
 			buildConfigurationList = 672F1802A2E050D1D926908E /* Build configuration list for PBXProject "FinanceService" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -279,77 +238,8 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		4051A0075D1776F035BF8756 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				988E0475A43BC7195CB2546E /* Localizable.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		2E4A4EEC1B6A1BFFF881E48B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FinanceService-FinanceServiceTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49DCD66DCFE036F6CE5D00DA /* SwiftGen */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftGen;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen";
-		};
-		DD4D0025917E635D8185F6FE /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
-		};
-		E1D11C4D3FA6C42FD7D43A84 /* [CP] Check Pods Manifest.lock */ = {
+		1B6FF34E5383E6B2ED94A762 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,6 +261,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		784CCA35B82C42DD321AC96D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinanceService-FinanceServiceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD4D0025917E635D8185F6FE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -378,14 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19CCB61629159864001C8566 /* HomeData.swift in Sources */,
-				19CCB6132915983F001C8566 /* FinanceService.swift in Sources */,
-				19CCB61C291598ED001C8566 /* UserProfile.swift in Sources */,
-				19CCB618291598E3001C8566 /* Contact.swift in Sources */,
-				19CCB61A291598E9001C8566 /* TransferResult.swift in Sources */,
-				CEF2783065CDDEDF7D12E452 /* FinanceServiceInitializer.swift in Sources */,
-				C471F337C19F911D129C447E /* Strings.swift in Sources */,
-				19CCB61E291598FC001C8566 /* ActivityDetail.swift in Sources */,
+				35719E1593CFD5B589C5B3B0 /* ActivityDetail.swift in Sources */,
+				A8655A93559A291ADAE002BB /* Contact.swift in Sources */,
+				2494F947D977D00D526AD802 /* FinanceService.swift in Sources */,
+				EA1BEFC781AD42B341AD0C8C /* HomeData.swift in Sources */,
+				E1703874B0CCB39470542CC3 /* TransferResult.swift in Sources */,
+				6592F0EFEAFC16B3A32A5ED8 /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +338,7 @@
 /* Begin XCBuildConfiguration section */
 		04A48FF94FCBA504D2817252 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EC9218002DA6AC3411939D1 /* Pods-FinanceService-FinanceServiceTests.debug.xcconfig */;
+			baseConfigurationReference = 5A864D993533207015F79008 /* Pods-FinanceService-FinanceServiceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FinanceServiceTests/Info.plist;
@@ -426,7 +354,7 @@
 		};
 		1E6EDBDAB3A38D631C587BA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ED201B7858A9A4F7245EF7E /* Pods-FinanceService-FinanceServiceTests.release.xcconfig */;
+			baseConfigurationReference = 5168BFBEC61C848AAC2EC2DC /* Pods-FinanceService-FinanceServiceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FinanceServiceTests/Info.plist;
@@ -442,7 +370,7 @@
 		};
 		595A81FCE997E499EE853D44 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDD369527977387B128B4251 /* Pods-FinanceService.debug.xcconfig */;
+			baseConfigurationReference = 59AC0406091D500B3B698EB5 /* Pods-FinanceService.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
@@ -522,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 0.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -538,7 +466,7 @@
 		};
 		B749652027B6D85162A3215C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19967F44959520027CAC805B /* Pods-FinanceService.release.xcconfig */;
+			baseConfigurationReference = 1D6AB44AB55958DBB28D1186 /* Pods-FinanceService.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
@@ -612,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 0.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

@@ -42,10 +42,6 @@ targets:
     sources:
       - path: Components
 
-    preBuildScripts:
-      - script: "${PODS_ROOT}/SwiftGen/bin/swiftgen"
-        name: SwiftGen
-
     postBuildScripts:
       - script: "${PODS_ROOT}/SwiftLint/swiftlint"
         name: SwiftLint  
