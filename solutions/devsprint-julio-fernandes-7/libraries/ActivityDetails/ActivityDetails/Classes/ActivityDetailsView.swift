@@ -1,10 +1,3 @@
-//
-//  ActivityDetailsView.swift
-//  FinanceApp
-//
-//  Created by Rodrigo Borges on 30/12/21.
-//
-
 import Foundation
 import UIKit
 
@@ -18,18 +11,15 @@ class ActivityDetailsView: UIView {
     weak var delegate: ActivityDetailsViewDelegate?
 
     let stackView: UIStackView = {
-
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.distribution = .fill
-        
         return stackView
     }()
 
     let imageView: UIImageView = {
-
         let imageView = UIImageView()
         imageView.image = UIImage(named: "bag.circle.fill")
         imageView.layer.cornerRadius = 50
@@ -38,7 +28,6 @@ class ActivityDetailsView: UIView {
     }()
 
     let activityNameLabel: UILabel = {
-
         let label = UILabel()
         label.text = "Mall"
         label.textAlignment = .center
@@ -47,7 +36,6 @@ class ActivityDetailsView: UIView {
     }()
 
     let categoryLabel: UILabel = {
-
         let label = UILabel()
         label.text = "Shopping"
         label.textAlignment = .center
@@ -55,13 +43,11 @@ class ActivityDetailsView: UIView {
     }()
 
     let priceContainerView: UIView = {
-
         let view = UIView()
         return view
     }()
 
     let priceLabel: UILabel = {
-
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "$100"
@@ -70,7 +56,6 @@ class ActivityDetailsView: UIView {
     }()
 
     let timeLabel: UILabel = {
-
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "8:57 AM"
@@ -78,17 +63,15 @@ class ActivityDetailsView: UIView {
     }()
 
     lazy var reportIssueButton: UIButton = {
-
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Report a issue", for: .normal)
+        button.setTitle(Localization.ActivityDetails.Button.title, for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .systemBlue
         button.layer.cornerRadius = 14
         button.addTarget(self, action: #selector(reportButtonPressed), for: .touchUpInside)
         return button
     }()
-
 
     init() {
         super.init(frame: .zero)
@@ -132,7 +115,6 @@ class ActivityDetailsView: UIView {
 
     @objc
     func reportButtonPressed() {
-
         delegate?.didPressReportButton()
     }
 }

@@ -14,6 +14,7 @@ target 'Home' do
   pod 'SwiftGen', '6.5.1'
   pod 'Components', :path => '../Components'
   pod 'UserProfile', :path => '../UserProfile'
+  pod 'ActivityDetails', :path => '../ActivityDetails'
 
   target 'HomeTests' do
       #pod 'Dependency', '~> 1.0.0'
@@ -24,5 +25,6 @@ target 'SampleApp' do
   project 'SampleApp/SampleApp'
   pod 'Components', :path => '../Components'
   pod 'UserProfile', :path => '../UserProfile'
+  pod 'ActivityDetails', :path => '../ActivityDetails'
   pod 'Home', :path => './'
 end

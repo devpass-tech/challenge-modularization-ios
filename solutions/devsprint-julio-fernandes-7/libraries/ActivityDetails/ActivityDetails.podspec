@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.name = 'Home'
+  spec.name = 'ActivityDetails'
   spec.version = '0.1.0'
   spec.summary = 'Framework description.'
   spec.homepage = 'https://framework.com'
@@ -15,21 +15,19 @@ Pod::Spec.new do |spec|
   spec.cocoapods_version = '>= 1.5'
   spec.swift_version = '5.4'
 
-  spec.source_files = 'Home/**/*.{h,m,swift}'
+  spec.source_files = 'ActivityDetails/**/*.{h,m,swift}'
 
   spec.resource_bundles = {
-    'Home' => [
-      'Home/**/*.xcassets',
-      'Home/**/*.xib'
+    'ActivityDetails' => [
+      'ActivityDetails/**/*.xcassets',
+      'ActivityDetails/**/*.xib'
     ]
   }
 
   spec.resources = [
-    'Home/**/*.strings'
+    'ActivityDetails/**/*.strings'
   ]
 
-  spec.dependency 'UserProfile', '~> 0.1.0'
-  spec.dependency 'ActivityDetails', '~> 0.1.0'
-  spec.dependency 'Components', '~> 0.1.0'
+  #spec.dependency 'Dependency', '~> 1.0.0'
 
 end

@@ -7,6 +7,7 @@
 
 import UIKit
 import UserProfile
+import ActivityDetails
 
 public final class HomeViewController: UIViewController {
 
@@ -45,8 +46,7 @@ public final class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewDelegate {
 
     func didSelectActivity() {
-
-//        let activityDetailsViewController = ActivityDetailsViewController()
-//        self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
+        let activityDetailsViewController = ActivityDetailsViewController()
+        self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
     }
 }

@@ -10,6 +10,7 @@ target 'FinanceApp' do
   pod 'Confirmation', :path => 'libraries/Confirmation'
   pod 'Components', :path => 'libraries/Components'
   pod 'UserProfile', :path => 'libraries/UserProfile'
+  pod 'ActivityDetails', :path => 'libraries/ActivityDetails'
   pod 'Home', :path => 'libraries/Home'
    
   target 'FinanceAppTests' do
