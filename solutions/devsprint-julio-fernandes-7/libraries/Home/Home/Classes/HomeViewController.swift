@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserProfile
 
 public final class HomeViewController: UIViewController {
 
@@ -36,8 +37,8 @@ public final class HomeViewController: UIViewController {
     @objc
     func openProfile() {
 
-//        let navigationController = UINavigationController(rootViewController: UserProfileViewController())
-//        self.present(navigationController, animated: true)
+        let navigationController = UINavigationController(rootViewController: UserProfileViewController())
+        self.present(navigationController, animated: true)
     }
 }
 

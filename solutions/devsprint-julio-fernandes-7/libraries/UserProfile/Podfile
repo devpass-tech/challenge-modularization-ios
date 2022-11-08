@@ -6,23 +6,20 @@ platform :ios, '13.0'
 inhibit_all_warnings!
 use_frameworks!
 
-workspace 'Home'
+workspace 'UserProfile'
 
-target 'Home' do
+target 'UserProfile' do
 
   pod 'SwiftLint'
   pod 'SwiftGen', '6.5.1'
   pod 'Components', :path => '../Components'
-  pod 'UserProfile', :path => '../UserProfile'
 
-  target 'HomeTests' do
+  target 'UserProfileTests' do
       #pod 'Dependency', '~> 1.0.0'
   end
 end
 
 target 'SampleApp' do
   project 'SampleApp/SampleApp'
-  pod 'Components', :path => '../Components'
-  pod 'UserProfile', :path => '../UserProfile'
-  pod 'Home', :path => './'
+  pod 'UserProfile', :path => './'
 end

@@ -9,8 +9,9 @@ target 'FinanceApp' do
   pod 'FinanceService', :path => 'libraries/FinanceService'
   pod 'Confirmation', :path => 'libraries/Confirmation'
   pod 'Components', :path => 'libraries/Components'
+  pod 'UserProfile', :path => 'libraries/UserProfile'
   pod 'Home', :path => 'libraries/Home'
-  
+   
   target 'FinanceAppTests' do
     # Pods for testing
   end
