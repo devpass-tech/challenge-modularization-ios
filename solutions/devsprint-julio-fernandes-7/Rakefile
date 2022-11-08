@@ -24,3 +24,15 @@ task :setup do
     end 
 
 end
+
+desc 'Create new SDK Microfeature'
+task :create_microfrontend_sdk do 
+    
+    STDOUT.puts "1. Digite o nome do seu Dominio (Pasta)"
+    inputDomain = STDIN.gets.strip
+        
+    STDOUT.puts "2. Digite seus micro frontends, separado por virgula (ex: Feature1,Feature2)"
+    inputMicroFrontendNames = STDIN.gets.strip
+    sh "cd Support/MicrofrontendSDK && make uninstall && make install && featureGen #{inputDomain} #{inputMicroFrontendNames}"
+ 
+end
