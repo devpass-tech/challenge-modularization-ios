@@ -1,10 +1,3 @@
-//
-//  UserProfileView.swift
-//  FinanceApp
-//
-//  Created by Rodrigo Borges on 30/12/21.
-//
-
 import Foundation
 import UIKit
 import Components
@@ -63,15 +56,15 @@ extension UserProfileView: UITableViewDataSource {
         switch indexPath.row {
         case 0:
 
-            cell.textLabel?.text = "Phone"
+            cell.textLabel?.text = Localization.UserProfile.Phone.title
             cell.detailTextLabel?.text = "+55 (11) 99999-9999"
         case 1:
 
-            cell.textLabel?.text = "E-mail"
+            cell.textLabel?.text = Localization.UserProfile.Email.title
             cell.detailTextLabel?.text = "user@devpass.com"
         case 2:
 
-            cell.textLabel?.text = "Address"
+            cell.textLabel?.text = Localization.UserProfile.Address.title
             cell.detailTextLabel?.text = "Rua Bela Cintra, 495"
         default:
             break
@@ -80,7 +73,7 @@ extension UserProfileView: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "My account"
+        return Localization.UserProfile.Header.title
     }
 
 }

@@ -1,30 +1,33 @@
-//
-//  HomeViewController.swift
-//  FinanceApp
-//
-//  Created by Rodrigo Borges on 30/12/21.
-//
-
 import UIKit
+import UserProfile
+import ActivityDetails
 
-class HomeViewController: UIViewController {
+public final class HomeViewController: UIViewController {
 
     lazy var homeView: HomeView = {
-
         let homeView = HomeView()
         homeView.delegate = self
         return homeView
     }()
 
-    override func viewDidLoad() {
-
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(openProfile))
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Localization.Home.RightBarButtonItem.title, style: .plain, target: self, action: #selector(openProfile))
     }
 
-    override func loadView() {
+    public override func loadView() {
         self.view = homeView
     }
-
+    
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        nil
+    }
+    
     @objc
     func openProfile() {
 
@@ -36,7 +39,6 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewDelegate {
 
     func didSelectActivity() {
-
         let activityDetailsViewController = ActivityDetailsViewController()
         self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
     }

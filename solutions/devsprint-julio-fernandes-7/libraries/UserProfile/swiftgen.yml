@@ -1,0 +1,7 @@
+strings:
+  inputs: UserProfile/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      params:
+        enumName: Localization
+      output: UserProfile/Generated/Strings.swift
