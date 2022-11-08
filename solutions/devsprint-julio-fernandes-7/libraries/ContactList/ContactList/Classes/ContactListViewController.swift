@@ -28,7 +28,7 @@ class ContactListViewController: UIViewController {
     }
 
     override func viewDidLoad() {
-        self.title = "Contact List"
+        self.title = Localization.ContactList.title
     }
 }
 
@@ -39,4 +39,3 @@ extension ContactListViewController: ContactListViewDelegate {
         delegate?.didSelectContact()
     }
 }
-

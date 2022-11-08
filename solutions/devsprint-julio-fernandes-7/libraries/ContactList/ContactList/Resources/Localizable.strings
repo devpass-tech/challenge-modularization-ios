@@ -1,3 +1,5 @@
-// MARK: - Feature
+// MARK: - Contact List
 
-"Feature.Example.HelloWorld" = "Hello World from SDK!!";
+"ContactList.title" = "Contact List";
+"ContactList.Cell.defaultName" = "Contact Name";
+"ContactList.Cell.defaultNumber" = "Contact List";
