@@ -21,7 +21,7 @@ options:
   createIntermediateGroups: true
   developmentLanguage: "pt-BR"
   deploymentTarget:
-    iOS: "11.0"
+    iOS: "13.0"
 
 configs:
   Debug: debug
@@ -41,10 +41,6 @@ targets:
     
     sources:
       - path: FinanceService
-
-    preBuildScripts:
-      - script: "${PODS_ROOT}/SwiftGen/bin/swiftgen"
-        name: SwiftGen
 
     postBuildScripts:
       - script: "${PODS_ROOT}/SwiftLint/swiftlint"
