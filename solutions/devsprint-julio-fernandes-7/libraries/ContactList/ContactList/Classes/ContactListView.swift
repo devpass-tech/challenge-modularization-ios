@@ -1,13 +1,12 @@
 //
 //  ContactListView.swift
-//  FinanceApp
+//  ContactList
 //
-//  Created by Rodrigo Borges on 30/12/21.
+//  Created by Cibele Paulino on 08/11/22.
 //
 
 import Foundation
 import UIKit
-import Components
 
 protocol ContactListViewDelegate: AnyObject {
 
@@ -32,7 +31,7 @@ class ContactListView: UIView {
         return tableView
     }()
 
-   public init() {
+    init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
@@ -61,7 +60,7 @@ extension ContactListView {
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
 }
