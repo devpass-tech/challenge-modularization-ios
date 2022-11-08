@@ -7,6 +7,7 @@
 
 import UIKit
 import Confirmation
+import ContactList
 
 class TransfersViewController: UIViewController {
 
@@ -25,9 +26,7 @@ class TransfersViewController: UIViewController {
 extension TransfersViewController: TransferViewDelegate {
 
     func didPressChooseContactButton() {
-
-        let contactListViewController = ContactListViewController()
-        contactListViewController.delegate = self
+        let contactListViewController = ContactListInitializer.create(self)
         let navigationController = UINavigationController(rootViewController: contactListViewController)
         self.present(navigationController, animated: true)
     }
