@@ -1,0 +1,29 @@
+
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'Home'
+
+target 'Home' do
+
+  pod 'SwiftLint'
+  pod 'SwiftGen', '6.5.1'
+  pod 'Components', :path => '../Components'
+  pod 'UserProfile', :path => '../UserProfile'
+  pod 'ActivityDetails', :path => '../ActivityDetails'
+
+  target 'HomeTests' do
+  end
+end
+
+target 'SampleApp' do
+  project 'SampleApp/SampleApp'
+  pod 'Components', :path => '../Components'
+  pod 'UserProfile', :path => '../UserProfile'
+  pod 'ActivityDetails', :path => '../ActivityDetails'
+  pod 'Home', :path => './'
+end

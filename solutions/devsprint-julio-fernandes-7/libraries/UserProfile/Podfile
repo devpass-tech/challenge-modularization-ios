@@ -1,0 +1,24 @@
+
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'UserProfile'
+
+target 'UserProfile' do
+
+  pod 'SwiftLint'
+  pod 'SwiftGen', '6.5.1'
+  pod 'Components', :path => '../Components'
+
+  target 'UserProfileTests' do
+  end
+end
+
+target 'SampleApp' do
+  project 'SampleApp/SampleApp'
+  pod 'UserProfile', :path => './'
+end
