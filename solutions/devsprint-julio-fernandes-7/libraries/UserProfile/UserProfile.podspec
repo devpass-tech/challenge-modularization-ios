@@ -16,14 +16,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.4'
 
   spec.source_files = 'UserProfile/**/*.{h,m,swift}'
-
-  spec.resource_bundles = {
-    'UserProfile' => [
-      'UserProfile/**/*.xcassets',
-      'UserProfile/**/*.xib'
-    ]
-  }
-
+  
   spec.resources = [
     'UserProfile/**/*.strings'
   ]

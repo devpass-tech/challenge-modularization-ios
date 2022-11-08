@@ -1,10 +1,3 @@
-//
-//  HomeViewController.swift
-//  Home
-//
-//  Created by user on 07/11/22.
-//
-
 import UIKit
 import UserProfile
 import ActivityDetails

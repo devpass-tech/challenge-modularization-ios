@@ -17,7 +17,6 @@ target 'Home' do
   pod 'ActivityDetails', :path => '../ActivityDetails'
 
   target 'HomeTests' do
-      #pod 'Dependency', '~> 1.0.0'
   end
 end
 

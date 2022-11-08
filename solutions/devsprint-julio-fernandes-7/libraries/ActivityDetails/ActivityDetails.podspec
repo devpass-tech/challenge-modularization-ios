@@ -17,17 +17,8 @@ Pod::Spec.new do |spec|
 
   spec.source_files = 'ActivityDetails/**/*.{h,m,swift}'
 
-  spec.resource_bundles = {
-    'ActivityDetails' => [
-      'ActivityDetails/**/*.xcassets',
-      'ActivityDetails/**/*.xib'
-    ]
-  }
-
   spec.resources = [
     'ActivityDetails/**/*.strings'
   ]
-
-  #spec.dependency 'Dependency', '~> 1.0.0'
 
 end

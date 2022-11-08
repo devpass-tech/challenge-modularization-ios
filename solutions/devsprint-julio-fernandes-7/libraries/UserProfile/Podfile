@@ -15,7 +15,6 @@ target 'UserProfile' do
   pod 'Components', :path => '../Components'
 
   target 'UserProfileTests' do
-      #pod 'Dependency', '~> 1.0.0'
   end
 end
 

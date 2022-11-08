@@ -5,10 +5,3 @@ strings:
       params:
         enumName: Localization
       output: UserProfile/Generated/Strings.swift
-
-# xcassets:
-#   inputs:
-#     - UserProfile/Resources/Assets.xcassets
-#   outputs:
-#     - templateName: swift5
-#       output: UserProfile/Generated/Images.swift

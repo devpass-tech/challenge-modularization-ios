@@ -17,13 +17,6 @@ Pod::Spec.new do |spec|
 
   spec.source_files = 'Home/**/*.{h,m,swift}'
 
-  spec.resource_bundles = {
-    'Home' => [
-      'Home/**/*.xcassets',
-      'Home/**/*.xib'
-    ]
-  }
-
   spec.resources = [
     'Home/**/*.strings'
   ]
