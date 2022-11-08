@@ -1,0 +1,7 @@
+strings:
+  inputs: Home/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      params:
+        enumName: Localization
+      output: Home/Generated/Strings.swift
