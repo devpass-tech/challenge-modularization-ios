@@ -7,7 +7,7 @@ extension FrameworkTemplates {
             """
             source 'https://cdn.cocoapods.org/'
 
-            platform :ios, '11.0'
+            platform :ios, '13.0'
 
             inhibit_all_warnings!
             use_frameworks!

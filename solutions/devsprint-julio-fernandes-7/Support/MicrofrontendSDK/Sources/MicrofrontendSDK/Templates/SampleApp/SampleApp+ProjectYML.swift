@@ -16,7 +16,7 @@ extension SampleAppTemplates {
 
             settings:
               MARKETING_VERSION: "1.0.0"
-              SWIFT_VERSION: 5.0
+              SWIFT_VERSION: 5.4
               VERSIONING_SYSTEM: "apple-generic"
               CODE_SIGN_IDENTITY: "iPhone Developer"
               CLANG_ENABLE_OBJC_WEAK: "YES"
@@ -27,7 +27,7 @@ extension SampleAppTemplates {
               xcodeVersion: "13.0"
               createIntermediateGroups: true
               deploymentTarget:
-                iOS: "11.0"
+                iOS: "13.0"
               
             configs:
               Release: release

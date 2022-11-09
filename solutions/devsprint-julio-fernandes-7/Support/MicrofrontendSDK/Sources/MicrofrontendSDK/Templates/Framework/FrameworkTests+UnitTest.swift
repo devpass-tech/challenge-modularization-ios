@@ -14,7 +14,7 @@ extension FrameworkTemplates {
             @testable import \(podName)
 
             final class \(podName)Tests: XCTestCase {
-                let sut = \(podName)(localizationString: "test ")
+                let sut = \(podName)Initializer(localizationString: "test ")
                 func test_helloWorld() {
                     let result = sut.helloWorld()
                     XCTAssertEqual(result, "test Hello World from FrontendModule!!")
