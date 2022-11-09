@@ -12,7 +12,7 @@ public protocol ContactListViewControllerDelegate: AnyObject {
     func didSelectContact()
 }
 
-class ContactListViewController: UIViewController {
+public class ContactListViewController: UIViewController {
 
     weak var delegate: ContactListViewControllerDelegate?
 
@@ -23,11 +23,11 @@ class ContactListViewController: UIViewController {
         return contactListView
     }()
 
-    override func loadView() {
+    public override func loadView() {
         self.view = contactListView
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         self.title = Localization.ContactList.title
     }
 }

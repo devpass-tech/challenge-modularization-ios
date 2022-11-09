@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ContactList
 import Confirmation
 
 
@@ -18,14 +19,14 @@ public class TransfersViewController: UIViewController {
         return transferView
     }()
     
-    override func loadView() {
+    public override func loadView() {
         self.view = transferView
     }
 }
 
 extension TransfersViewController: TransferViewDelegate {
     
-    public func didPressChooseContactButton() {
+     func didPressChooseContactButton() {
         
         let contactListViewController = ContactListViewController()
         contactListViewController.delegate = self
@@ -33,7 +34,7 @@ extension TransfersViewController: TransferViewDelegate {
         self.present(navigationController, animated: true)
     }
     
-    public func didPressTransferButton(with amount: String) {
+     func didPressTransferButton(with amount: String) {
         
         let confirmationViewController = ConfirmationViewController(amount: amount)
         let navigationController = UINavigationController(rootViewController: confirmationViewController)
@@ -43,7 +44,7 @@ extension TransfersViewController: TransferViewDelegate {
 
 extension TransfersViewController: ContactListViewControllerDelegate {
     
-    func didSelectContact() {
+    public func didSelectContact() {
         
         self.dismiss(animated: true)
         

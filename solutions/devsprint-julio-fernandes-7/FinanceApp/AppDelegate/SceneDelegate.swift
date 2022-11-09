@@ -8,6 +8,7 @@
 import UIKit
 import Components
 import Home
+import Transfers
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

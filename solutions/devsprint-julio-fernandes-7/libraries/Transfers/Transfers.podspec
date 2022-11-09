@@ -28,6 +28,7 @@ Pod::Spec.new do |spec|
     'Transfers/**/*.strings'
   ]
 
-  #spec.dependency 'Dependency', '~> 1.0.0'
+  spec.dependency 'ContactList'
+  spec.dependency 'Confirmation'
 
 end
