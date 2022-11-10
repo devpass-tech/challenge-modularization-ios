@@ -1,0 +1,6 @@
+// MARK: - Feature
+
+"UserProfile.Header.Title" = "My account";
+"UserProfile.Phone.Title" = "Phone";
+"UserProfile.Email.Title" = "E-mail";
+"UserProfile.Address.Title" = "Address";
