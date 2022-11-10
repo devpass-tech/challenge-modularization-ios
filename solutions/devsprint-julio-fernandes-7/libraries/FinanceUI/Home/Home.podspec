@@ -29,8 +29,9 @@ Pod::Spec.new do |spec|
   ]
 
   spec.dependency 'HomeInterface'
+  spec.dependency 'UserProfileInterface'
   spec.dependency 'Components'
-  spec.dependency 'UserProfile'
+  
   spec.dependency 'ActivityDetails'
 
 end

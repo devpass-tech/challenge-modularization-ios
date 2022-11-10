@@ -1,15 +1,20 @@
 import UIKit
-import UserProfile
+import Swinject
+import UserProfileInterface
 import ActivityDetails
 import HomeInterface
+import Components
 
 // Design Patterns de criação
 public final class HomeFactory: HomeInterface {
     
-    public init() {}
+    private let container: DependencyInjectorInterface
+    public init(container: DependencyInjectorInterface) {
+        self.container = container
+    }
     
     public func createModule() -> UIViewController {
-        return HomeViewController()
+        return HomeViewController(container: container)
     }
         
 }
@@ -21,6 +26,8 @@ final class HomeViewController: UIViewController {
         homeView.delegate = self
         return homeView
     }()
+    
+    private let container: DependencyInjectorInterface
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +38,8 @@ final class HomeViewController: UIViewController {
         self.view = homeView
     }
     
-    init() {
+    init(container: DependencyInjectorInterface) {
+        self.container = container
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -42,7 +50,8 @@ final class HomeViewController: UIViewController {
     
     @objc
     func openProfile() {
-        let navigationController = UINavigationController(rootViewController: UserProfileViewController())
+        let controller = container.forceResolve(UserProfileInterface.self)
+        let navigationController = UINavigationController(rootViewController: controller.createModule())
         self.present(navigationController, animated: true)
     }
 }

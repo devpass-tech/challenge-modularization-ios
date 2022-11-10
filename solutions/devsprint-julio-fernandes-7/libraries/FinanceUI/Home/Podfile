@@ -9,10 +9,11 @@ workspace 'Home'
 
 target 'Home' do
   pod 'SwiftGen', '6.5.1'  
-  pod 'HomeInterface', :path => '../HomeInterface'
   
+  pod 'HomeInterface', :path => '../HomeInterface'
+  pod 'UserProfileInterface', :path => '../UserProfileInterface'
   pod 'Components', :path => '../../Components'
-  pod 'UserProfile', :path => '../../UserProfile'
+  
   pod 'ActivityDetails', :path => '../../ActivityDetails'
 
   target 'HomeTests' do
