@@ -12,6 +12,8 @@ target 'Transfers' do
 
   pod 'SwiftLint'
   pod 'SwiftGen', '6.5.1'
+  pod 'ContactList', :path => '../ContactList'
+  pod 'Confirmation', :path => '../Confirmation'
 
   target 'TransfersTests' do
       #pod 'Dependency', '~> 1.0.0'
