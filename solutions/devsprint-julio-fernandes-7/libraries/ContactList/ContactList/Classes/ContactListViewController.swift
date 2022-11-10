@@ -14,7 +14,7 @@ public protocol ContactListViewControllerDelegate: AnyObject {
 
 public class ContactListViewController: UIViewController {
 
-    weak var delegate: ContactListViewControllerDelegate?
+    public weak var delegate: ContactListViewControllerDelegate?
 
     lazy var contactListView: ContactListView = {
 
