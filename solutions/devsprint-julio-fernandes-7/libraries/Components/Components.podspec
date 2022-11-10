@@ -28,6 +28,6 @@ Pod::Spec.new do |spec|
     'Components/**/*.strings'
   ]
 
-  #spec.dependency 'Dependency', '~> 1.0.0'
+  spec.dependency 'Swinject'
 
 end

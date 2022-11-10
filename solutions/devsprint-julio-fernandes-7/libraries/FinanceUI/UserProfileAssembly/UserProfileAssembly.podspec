@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.name = 'Home'
+  spec.name = 'UserProfileAssembly'
   spec.version = '0.1.0'
   spec.summary = 'Micro feature description.'
   spec.homepage = 'https://github.com/jjfernandes87/MicrofrontendGenerator'
@@ -15,23 +15,11 @@ Pod::Spec.new do |spec|
   spec.cocoapods_version = '>= 1.5'
   spec.swift_version = '5.4'
 
-  spec.source_files = 'Home/**/*.{h,m,swift}'
-
-  spec.resource_bundles = {
-    'Home' => [
-      'Home/**/*.xcassets',
-      'Home/**/*.xib'
-    ]
-  }
-
-  spec.resources = [
-    'Home/**/*.strings'
-  ]
-
-  spec.dependency 'HomeInterface'
-  spec.dependency 'UserProfileInterface'
-  spec.dependency 'Components'
+  spec.source_files = 'UserProfileAssembly/**/*.{h,m,swift}'
   
-  spec.dependency 'ActivityDetails'
+  spec.dependency 'UserProfileInterface'
+  spec.dependency 'UserProfile'
+  spec.dependency 'Swinject', '~> 2.0'
+  spec.dependency 'SwinjectAutoregistration', '~> 2.0'
 
 end
