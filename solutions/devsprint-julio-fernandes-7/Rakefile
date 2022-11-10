@@ -19,6 +19,9 @@ task :setup do
 
     if name == "FinanceApp" 
         sh "xcodegen generate && pod install && open FinanceApp.xcworkspace"
+    elsif name.include? "/"
+        params = name.split("/")
+        sh "cd libraries/#{params[0]}/#{params[1]} && xcodegen generate && cd SampleApp/ && xcodegen generate && cd ../ && pod install && open #{params[1]}.xcworkspace"
     else 
         sh "cd libraries/#{name} && xcodegen generate && cd SampleApp/ && xcodegen generate && cd ../ && pod install && open #{name}.xcworkspace"
     end 

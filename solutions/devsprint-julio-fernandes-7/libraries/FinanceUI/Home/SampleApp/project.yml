@@ -4,11 +4,11 @@
 #==================================================================================================
 
 #==================================================================================================
-name: FinanceService
+name: SampleApp
 #==================================================================================================
 
 settings:
-  MARKETING_VERSION: "0.1.0"
+  MARKETING_VERSION: "1.0.0"
   SWIFT_VERSION: 5.4
   VERSIONING_SYSTEM: "apple-generic"
   CODE_SIGN_IDENTITY: "iPhone Developer"
@@ -19,81 +19,67 @@ settings:
 options:
   xcodeVersion: "13.0"
   createIntermediateGroups: true
-  developmentLanguage: "pt-BR"
   deploymentTarget:
     iOS: "13.0"
-
+  
 configs:
-  Debug: debug
   Release: release
+  Adhoc: release
+  Debug: debug
 
 #==================================================================================================
 targets:
 #==================================================================================================
 
-#____________________________________________________________
-# Framework
-
-  FinanceService:
+  SampleApp:
 
     platform: iOS
-    type: framework
+    type: application
     
     sources:
-      - path: FinanceService
-
-    postBuildScripts:
-      - script: "${PODS_ROOT}/SwiftLint/swiftlint"
-        name: SwiftLint  
+      - path: SampleApp
 
     settings:
-      CODE_SIGN_STYLE: "Manual"
-      DEVELOPMENT_TEAM: ""
-      PRODUCT_BUNDLE_IDENTIFIER: br.com.microfrontendGenerator.FinanceService
-      INFOPLIST_FILE: FinanceService/Info.plist
+      groups:
+        - commonSettings
 
-      ENABLE_BITCODE: "NO"
-      TARGETED_DEVICE_FAMILY: "1"
-      LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
-      ARCHS: $(ARCHS_STANDARD)
-
-#____________________________________________________________
-# Tests
-
-  FinanceServiceTests:
-
-    platform: iOS
-    type: bundle.unit-test
-
-    sources:
-      - path: FinanceServiceTests
-        excludes:
-          - "__Snapshots__"
-          - "**/__Snapshots__"
-    
-    dependencies:
-      - target: FinanceService
+      base:
+        INFOPLIST_FILE: SampleApp/Info.plist
 
 #==================================================================================================
 schemes:
 #==================================================================================================
 
-  FinanceServiceSDK:
+#____________________________________________________________
+# Debug
+
+  Sample:
     build:
       targets:
-        FinanceService: [run, test]
+        SampleApp: [run, archive]
       parallelizeBuild: true
       buildImplicitDependencies: true
-    archive:
-      config: Release
     run:
       config: Debug
-    test:
-      config: Debug
-      gatherCoverageData: true
-      coverageTargets:
-        - FinanceService
-      targets:
-        - FinanceServiceTests
+    archive:
+      config: Release
+      
+#==================================================================================================
+settingGroups:
+#==================================================================================================
+
+# Common build settings
+
+  commonSettings:
+    base:
+      PRODUCT_BUNDLE_IDENTIFIER: br.com.microfrontendGenerator.sample-app
+      CODE_SIGN_STYLE: "Manual"
+      DEVELOPMENT_TEAM: ""
+      PROVISIONING_PROFILE: "Wildcard"
+      ENABLE_BITCODE: "NO"
+      TARGETED_DEVICE_FAMILY: "1"
+      ARCHS: "$(ARCHS_STANDARD)"
+      LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
+      OTHER_SWIFT_FLAGS: "$(inherited) -D COCOAPODS"
 
 #==================================================================================================

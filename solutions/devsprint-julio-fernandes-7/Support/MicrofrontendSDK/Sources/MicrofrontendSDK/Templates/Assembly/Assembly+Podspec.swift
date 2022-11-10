@@ -16,11 +16,11 @@ extension AssemblyTemplates {
               spec.source = { :git => 'https://github.com/jjfernandes87/MicrofrontendGenerator',
                               :tag => spec.version.to_s }
 
-              spec.ios.deployment_target = '11.0'
+              spec.ios.deployment_target = '13.0'
               spec.requires_arc = true
 
               spec.cocoapods_version = '>= 1.5'
-              spec.swift_version = '5.0'
+              spec.swift_version = '5.4'
 
               spec.source_files = '\(podName)Assembly/**/*.{h,m,swift}'
               

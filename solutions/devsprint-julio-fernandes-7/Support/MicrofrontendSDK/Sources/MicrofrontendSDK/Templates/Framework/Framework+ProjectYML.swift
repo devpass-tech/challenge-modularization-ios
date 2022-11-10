@@ -16,7 +16,7 @@ extension FrameworkTemplates {
 
             settings:
               MARKETING_VERSION: "0.1.0"
-              SWIFT_VERSION: 5.0
+              SWIFT_VERSION: 5.4
               VERSIONING_SYSTEM: "apple-generic"
               CODE_SIGN_IDENTITY: "iPhone Developer"
               CLANG_ENABLE_OBJC_WEAK: "YES"
@@ -28,7 +28,7 @@ extension FrameworkTemplates {
               createIntermediateGroups: true
               developmentLanguage: "pt-BR"
               deploymentTarget:
-                iOS: "11.0"
+                iOS: "13.0"
 
             configs:
               Debug: debug
