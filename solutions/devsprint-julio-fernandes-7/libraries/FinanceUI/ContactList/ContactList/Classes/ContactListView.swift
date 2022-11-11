@@ -2,11 +2,10 @@ import Foundation
 import UIKit
 
 protocol ContactListViewDelegate: AnyObject {
-
     func didSelectContact()
 }
 
-class ContactListView: UIView {
+final class ContactListView: UIView {
 
     static let cellSize = CGFloat(82)
 
@@ -14,8 +13,7 @@ class ContactListView: UIView {
 
     weak var delegate: ContactListViewDelegate?
 
-    lazy var tableView: UITableView = {
-
+    private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(ContactCellView.self, forCellReuseIdentifier: self.cellIdentifier)
@@ -42,14 +40,11 @@ class ContactListView: UIView {
 extension ContactListView {
 
     func addSubviews() {
-
         addSubview(tableView)
     }
 
     func configureConstraints() {
-
         NSLayoutConstraint.activate([
-
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
@@ -61,15 +56,11 @@ extension ContactListView {
 extension ContactListView: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
         return 10
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactCellView
-
-        return cell
+        return tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactCellView
     }
 }
 

@@ -25,7 +25,6 @@ target 'FinanceApp' do
 
   pod 'FinanceService', :path => 'libraries/FinanceService'
   pod 'Confirmation', :path => 'libraries/Confirmation'
-  # pod 'ContactList', :path => 'libraries/ContactList'
   pod 'Components', :path => 'libraries/Components'
   pod 'ActivityDetails', :path => 'libraries/ActivityDetails'
   

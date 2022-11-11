@@ -18,7 +18,7 @@ final class ContactCellView: UITableViewCell {
         return stack
     }()
 
-    lazy var avatarImageView: UIImageView = {
+    private let avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
@@ -60,7 +60,6 @@ final class ContactCellView: UITableViewCell {
 private extension ContactCellView {
 
     func addSubviews() {
-
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(avatarImageView)
         mainStackView.addArrangedSubview(labelsStackView)
@@ -70,7 +69,6 @@ private extension ContactCellView {
     }
 
     func configureConstraints() {
-
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
