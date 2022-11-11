@@ -13,6 +13,7 @@ import ActivityDetailsAssembly
 import TransfersAssembly
 import ConfirmationAssembly
 import ContactListAssembly
+import FinanceServiceAssembly
 
 final class GlobalDependencyInjector {
     
@@ -25,6 +26,7 @@ final class GlobalDependencyInjector {
         TransfersAssembly().assemble(container: container)
         ConfirmationAssembly().assemble(container: container)
         ContactListAssembly().assemble(container: container)
+        FinanceServiceAssembly().assemble(container: container)
     }
 }
 

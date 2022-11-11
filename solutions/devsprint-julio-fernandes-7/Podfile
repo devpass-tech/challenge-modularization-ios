@@ -2,31 +2,80 @@
 platform :ios, '13.0'
 use_frameworks!
 
+# plugin 'cocoapods-dependency-graph'
+# dependency_output :graph
+
+def old_libraries
+  pod 'UserProfile', :path => 'Libraries/UserProfile'
+  pod 'Home', :path => 'Libraries/Home'
+  pod 'ActivityDetails', :path => 'Libraries/ActivityDetails'
+  pod 'FinanceService', :path => 'Libraries/FinanceService'
+  pod 'Confirmation', :path => 'Libraries/Confirmation'
+  pod 'ContactList', :path => 'Libraries/ContactList'
+  pod 'Components', :path => 'Libraries/Components'
+  pod 'Transfers', :path => 'Libraries/Transfers'
+end
+
+def new_libraries
+  # UserProfile
+  pod 'UserProfile', :path => 'NewLibraries/UserProfile'
+  pod 'UserProfileInterface', :path => 'NewLibraries/UserProfileInterface'
+  pod 'UserProfileAssembly', :path => 'NewLibraries/UserProfileAssembly'
+
+  # Home
+  pod 'Home', :path => 'NewLibraries/Home'
+  pod 'HomeInterface', :path => 'NewLibraries/HomeInterface'
+  pod 'HomeAssembly', :path => 'NewLibraries/HomeAssembly'
+  
+  # ActivityDetails
+  pod 'ActivityDetails', :path => 'NewLibraries/ActivityDetails'
+  pod 'ActivityDetailsInterface', :path => 'NewLibraries/ActivityDetailsInterface'
+  pod 'ActivityDetailsAssembly', :path => 'NewLibraries/ActivityDetailsAssembly'
+  
+  # Confirmation
+  pod 'Confirmation', :path => 'NewLibraries/Confirmation'
+  pod 'ConfirmationInterface', :path => 'NewLibraries/ConfirmationInterface'
+  pod 'ConfirmationAssembly', :path => 'NewLibraries/ConfirmationAssembly'
+  
+  # ContactList
+  pod 'ContactList', :path => 'NewLibraries/ContactList'
+  pod 'ContactListInterface', :path => 'NewLibraries/ContactListInterface'
+  pod 'ContactListAssembly', :path => 'NewLibraries/ContactListAssembly'
+  
+  # Transfers
+  pod 'Transfers', :path => 'NewLibraries/Transfers'
+  pod 'TransfersInterface', :path => 'NewLibraries/TransfersInterface'
+  pod 'TransfersAssembly', :path => 'NewLibraries/TransfersAssembly'
+  
+  # FinanceService
+  pod 'FinanceService', :path => 'NewLibraries/FinanceService'
+  pod 'FinanceServiceInterface', :path => 'NewLibraries/FinanceServiceInterface'
+  pod 'FinanceServiceAssembly', :path => 'NewLibraries/FinanceServiceAssembly'
+
+  pod 'FinanceFoundations', :path => 'NewLibraries/FinanceFoundations'
+  pod 'Components', :path => 'NewLibraries/Components'
+  
+  pod 'Swinject', '~> 2.0', :inhibit_warnings => true
+  pod 'SwinjectAutoregistration', '~> 2.0', :inhibit_warnings => true
+end
+
 target 'FinanceApp' do
   
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
   
-  # UserProfile
-  pod 'UserProfile', :path => 'libraries/FinanceUI/UserProfile'
-  pod 'UserProfileInterface', :path => 'libraries/FinanceUI/UserProfileInterface'
-  pod 'UserProfileAssembly', :path => 'libraries/FinanceUI/UserProfileAssembly'
-
-  # Home
-  pod 'Home', :path => 'libraries/FinanceUI/Home'
-  pod 'HomeInterface', :path => 'libraries/FinanceUI/HomeInterface'
-  pod 'HomeAssembly', :path => 'libraries/FinanceUI/HomeAssembly'
-
-  pod 'FinanceService', :path => 'libraries/FinanceService'
-  pod 'Confirmation', :path => 'libraries/Confirmation'
-  pod 'ContactList', :path => 'libraries/ContactList'
-  pod 'Components', :path => 'libraries/Components'
-  pod 'ActivityDetails', :path => 'libraries/ActivityDetails'
-  
-  pod 'Transfers', :path => 'libraries/Transfers'
+  new_libraries
 
   target 'FinanceAppTests' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
+  end
 end

@@ -1,0 +1,28 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'FinanceService'
+
+target 'FinanceService' do
+  pod 'SwiftGen', '6.5.1'  
+  pod 'FinanceServiceInterface', :path => '../FinanceServiceInterface'
+
+  target 'FinanceServiceTests' do
+      #pod 'Dependency', '~> 1.0.0'
+  end
+end
+
+target 'SampleApp' do
+  project 'SampleApp/SampleApp'
+  pod 'FinanceService', :path => './'
+  pod 'FinanceServiceAssembly', :path => '../FinanceServiceAssembly'
+
+  # DI
+  pod 'Swinject', '~> 2.0'
+  pod 'SwinjectAutoregistration', '~> 2.0'
+
+end
