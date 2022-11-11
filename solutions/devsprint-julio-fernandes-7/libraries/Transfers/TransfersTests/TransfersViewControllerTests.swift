@@ -6,10 +6,9 @@
 import XCTest
 @testable import Transfers
 
-final class TransfersInitializerTests: XCTestCase {
+final class TransfersViewControllerTests: XCTestCase {
     
     func testHellorWorld() {
-        XCTAssertEqual(TransfersInitializer.helloWorld(), "Hello World from SDK!!")
+        
     }
-    
 }

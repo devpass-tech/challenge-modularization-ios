@@ -17,9 +17,15 @@ target 'FinanceApp' do
   pod 'HomeInterface', :path => 'libraries/FinanceUI/HomeInterface'
   pod 'HomeAssembly', :path => 'libraries/FinanceUI/HomeAssembly'
 
+  # ContactList
+
+  pod 'ContactList', :path => 'libraries/ContactList/ContactList'
+  pod 'ContactListInterface', :path => 'libraries/ContactList/ContactListInterface'
+  pod 'ContactListAssembly', :path => 'libraries/ContactList/ContactListAssembly'
+
   pod 'FinanceService', :path => 'libraries/FinanceService'
   pod 'Confirmation', :path => 'libraries/Confirmation'
-  pod 'ContactList', :path => 'libraries/ContactList'
+  # pod 'ContactList', :path => 'libraries/ContactList'
   pod 'Components', :path => 'libraries/Components'
   pod 'ActivityDetails', :path => 'libraries/ActivityDetails'
   

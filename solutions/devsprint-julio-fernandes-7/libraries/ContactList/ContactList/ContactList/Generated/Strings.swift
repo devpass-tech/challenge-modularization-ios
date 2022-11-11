@@ -11,10 +11,14 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Localization {
 
-  internal enum Feature {
-    internal enum Example {
-      /// Hello World from SDK!!
-      internal static let helloWorld = Localization.tr("Localizable", "Feature.Example.HelloWorld")
+  internal enum ContactList {
+    /// Contact List
+    internal static let title = Localization.tr("Localizable", "ContactList.title")
+    internal enum Cell {
+      /// Contact Name
+      internal static let defaultName = Localization.tr("Localizable", "ContactList.Cell.defaultName")
+      /// Contact List
+      internal static let defaultNumber = Localization.tr("Localizable", "ContactList.Cell.defaultNumber")
     }
   }
 }

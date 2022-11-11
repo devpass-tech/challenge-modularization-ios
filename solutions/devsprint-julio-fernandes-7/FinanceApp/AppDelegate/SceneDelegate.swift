@@ -13,6 +13,7 @@ import Swinject
 import HomeInterface
 import HomeAssembly
 import UserProfileAssembly
+import ContactListAssembly
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -28,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func startScene(windowScene: UIWindowScene) {
         let controller = container.forceResolve(HomeInterface.self)
         let tabBar = TabBarController(viewController: controller.createModule(), title: "Home", nameIcon: "house.fill", tag: 0)
-        tabBar.addTabBar(viewController: TransfersViewController(), title: "Trans", nameIcon: "arrow.up.arrow.down", tag: 1)
+        tabBar.addTabBar(viewController: TransfersViewController(container: container), title: "Trans", nameIcon: "arrow.up.arrow.down", tag: 1)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = UINavigationController(rootViewController: tabBar)
         self.window?.windowScene = windowScene
@@ -39,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         DependencyInjectorAssembly().assemble(container: container)
         HomeAssembly().assemble(container: container)
         UserProfileAssembly().assemble(container: container)
+        ContactListAssembly().assemble(container: container)
     }
 }
 

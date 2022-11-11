@@ -1,0 +1,5 @@
+// MARK: - Feature
+
+"ContactList.title" = "Contact List";
+"ContactList.Cell.defaultName" = "Contact Name";
+"ContactList.Cell.defaultNumber" = "Contact List";

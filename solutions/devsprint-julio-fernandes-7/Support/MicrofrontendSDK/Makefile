@@ -1,6 +1,7 @@
 toolName = MicrofrontendSDK
 executableName = featureGen
-basePath = /usr/local/bin
+# basePath = /usr/local/bin
+basePath = $${HOME}/iOS
 installPath = $(basePath)/$(executableName)
 
 build:
