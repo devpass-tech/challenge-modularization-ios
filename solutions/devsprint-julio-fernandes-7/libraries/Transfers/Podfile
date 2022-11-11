@@ -12,7 +12,7 @@ target 'Transfers' do
 
   pod 'SwiftLint'
   pod 'SwiftGen', '6.5.1'
-  pod 'ContactListInterface', :path => '../ContactList/ContactListInterface'
+  pod 'ContactListInterface', :path => '../FinanceUI/ContactListInterface'
   pod 'Confirmation', :path => '../Confirmation'
   pod 'Components', :path => '../Components'
 

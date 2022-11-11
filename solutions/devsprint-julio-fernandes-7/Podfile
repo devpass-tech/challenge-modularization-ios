@@ -19,9 +19,9 @@ target 'FinanceApp' do
 
   # ContactList
 
-  pod 'ContactList', :path => 'libraries/ContactList/ContactList'
-  pod 'ContactListInterface', :path => 'libraries/ContactList/ContactListInterface'
-  pod 'ContactListAssembly', :path => 'libraries/ContactList/ContactListAssembly'
+  pod 'ContactList', :path => 'libraries/FinanceUI/ContactList'
+  pod 'ContactListInterface', :path => 'libraries/FinanceUI/ContactListInterface'
+  pod 'ContactListAssembly', :path => 'libraries/FinanceUI/ContactListAssembly'
 
   pod 'FinanceService', :path => 'libraries/FinanceService'
   pod 'Confirmation', :path => 'libraries/Confirmation'
