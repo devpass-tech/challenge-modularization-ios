@@ -13,6 +13,7 @@ import Swinject
 import HomeInterface
 import HomeAssembly
 import UserProfileAssembly
+import ActivityDetailsAssembly
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -39,6 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         DependencyInjectorAssembly().assemble(container: container)
         HomeAssembly().assemble(container: container)
         UserProfileAssembly().assemble(container: container)
+        ActivityDetailsAssembly().assemble(container: container)
     }
 }
 
