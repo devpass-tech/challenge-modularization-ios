@@ -2,9 +2,6 @@
 platform :ios, '13.0'
 use_frameworks!
 
-# plugin 'cocoapods-dependency-graph'
-# dependency_output :graph
-
 def old_libraries
   pod 'UserProfile', :path => 'Libraries/UserProfile'
   pod 'Home', :path => 'Libraries/Home'
@@ -64,7 +61,7 @@ target 'FinanceApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
   
-  new_libraries
+  old_libraries
 
   target 'FinanceAppTests' do
     # Pods for testing
