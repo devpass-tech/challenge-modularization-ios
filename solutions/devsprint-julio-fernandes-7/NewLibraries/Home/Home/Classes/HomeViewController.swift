@@ -18,7 +18,6 @@ public final class HomeFactory: HomeInterface {
     public func createModule() -> UIViewController {
         return HomeViewController(container: container, service: service)
     }
-        
 }
 
 final class HomeViewController: UIViewController {

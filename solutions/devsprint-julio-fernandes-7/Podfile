@@ -61,7 +61,7 @@ target 'FinanceApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
   
-  old_libraries
+  new_libraries
 
   target 'FinanceAppTests' do
     # Pods for testing
