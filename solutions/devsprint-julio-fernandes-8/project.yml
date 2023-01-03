@@ -1,0 +1,81 @@
+# Definimos o nome do projeto
+name: FinanceApp
+
+# Configuracoes de compilação
+settings: 
+  MARKETING_VERSION: "1.0.0"
+  VERSIONING_SYSTEM: "apple-generic"
+  SWIFT_VERSION: 5.4
+  CODE_SIGN_IDENTITY: "iPhone Developer"
+  ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: "YES"
+  ARCHS: $(ARCHS_STANDARD) 
+
+options:
+  xcodeVersion: "13.0" # Versao de compilacao do nosso app
+  deploymentTarget:
+    iOS: "13.0" # Base target do nosso app
+
+# definicao do target do projeto e testes
+targets: 
+  FinanceApp:
+    platform: iOS
+    type: application
+
+    sources:
+      - path: FinanceApp
+    
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.devpass.FinanceApp
+      INFOPLIST_FILE: FinanceApp/Resources/Info.plist
+      CODE_SIGN_STYLE: "Manual"
+      DEVELOPMENT_TEAM: ""
+      PROVISIONING_PROFILE: "Wildcard"
+  
+  FinanceAppTests:
+    platform: iOS
+    type: bundle.unit-test
+
+    settings:
+      base:
+        INFOPLIST_FILE: FinanceAppTests/Info.plist
+    
+    sources:
+      - path: FinanceAppTests
+  
+    dependencies:
+      - target: FinanceApp
+  
+  FinanceAppUITests:
+    platform: iOS
+    type: bundle.ui-testing
+
+    settings:
+      base:
+        INFOPLIST_FILE: FinanceAppUITests/Info.plist
+
+    sources:
+      - path: FinanceAppUITests
+
+  
+    dependencies:
+      - target: FinanceApp
+
+#  definição do scheme do projeto
+schemes:
+  FinanceApp:
+    build:
+      targets:
+        FinanceApp: [run, test]
+      parallelizeBuild: true
+      buildImplicitDependencies: true
+    run:
+      config: Debug
+    test: 
+      config: Debug
+      gatherCoverageData: true
+      randomExecutionOrder: true
+      coverageTargets: 
+        - FinanceApp
+      targets:
+        - FinanceAppTests
+        - FinanceAppUITests
