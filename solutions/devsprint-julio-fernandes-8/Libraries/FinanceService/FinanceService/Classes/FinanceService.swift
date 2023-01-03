@@ -7,9 +7,11 @@
 
 import Foundation
 
-class FinanceService {
+public final class FinanceService {
+    
+    public init() {}
 
-    func fetchHomeData(_ completion: @escaping (HomeData?) -> Void) {
+    public func fetchHomeData(_ completion: @escaping (HomeData?) -> Void) {
 
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/home_endpoint.json")!
 
@@ -39,7 +41,7 @@ class FinanceService {
         dataTask.resume()
     }
 
-    func fetchActivityDetails(_ completion: @escaping (ActivityDetails?) -> Void) {
+    public func fetchActivityDetails(_ completion: @escaping (ActivityDetails?) -> Void) {
 
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/activity_details_endpoint.json")!
 
@@ -69,7 +71,7 @@ class FinanceService {
         dataTask.resume()
     }
 
-    func fetchContactList(_ completion: @escaping ([Contact]?) -> Void) {
+    public func fetchContactList(_ completion: @escaping ([Contact]?) -> Void) {
 
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/contact_list_endpoint.json")!
 
@@ -99,7 +101,7 @@ class FinanceService {
         dataTask.resume()
     }
 
-    func transferAmount(_ completion: @escaping (TransferResult?) -> Void) {
+    public func transferAmount(_ completion: @escaping (TransferResult?) -> Void) {
 
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/transfer_successful_endpoint.json")!
 
@@ -129,7 +131,7 @@ class FinanceService {
         dataTask.resume()
     }
 
-    func fetchUserProfile(_ completion: @escaping (UserProfile?) -> Void) {
+    public func fetchUserProfile(_ completion: @escaping (UserProfile?) -> Void) {
 
         let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/user_profile_endpoint.json")!
 

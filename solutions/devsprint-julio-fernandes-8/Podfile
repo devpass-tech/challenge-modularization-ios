@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+use_frameworks!
+
+target 'FinanceApp' do
+  
+  # Comment the next line if you don't want to use dynamic frameworks
+  pod 'SwiftLint'
+  pod 'FinanceService', :path => 'Libraries/FinanceService'
+
+  target 'FinanceAppTests' do
+    # Pods for testing
+  end
+
+  target 'FinanceAppUITests' do
+    # Pods for testing
+  end
+
+end
