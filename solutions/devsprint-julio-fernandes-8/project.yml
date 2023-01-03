@@ -1,7 +1,7 @@
 # Definimos o nome do projeto
 name: FinanceApp
 
-# Configuracoes de compilação
+# Configurações de compilação
 settings: 
   MARKETING_VERSION: "1.0.0"
   VERSIONING_SYSTEM: "apple-generic"
@@ -11,11 +11,11 @@ settings:
   ARCHS: $(ARCHS_STANDARD) 
 
 options:
-  xcodeVersion: "13.0" # Versao de compilacao do nosso app
+  xcodeVersion: "13.0" # Versao de compilação do nosso app
   deploymentTarget:
     iOS: "13.0" # Base target do nosso app
 
-# definicao do target do projeto e testes
+# definação do target do projeto e testes
 targets: 
   FinanceApp:
     platform: iOS
@@ -34,31 +34,28 @@ targets:
   FinanceAppTests:
     platform: iOS
     type: bundle.unit-test
-
-    settings:
-      base:
-        INFOPLIST_FILE: FinanceAppTests/Info.plist
     
     sources:
       - path: FinanceAppTests
-  
+    
     dependencies:
       - target: FinanceApp
+    
+    settings:
+      INFOPLIST_FILE: FinanceAppTests/Info.plist
   
   FinanceAppUITests:
     platform: iOS
     type: bundle.ui-testing
 
-    settings:
-      base:
-        INFOPLIST_FILE: FinanceAppUITests/Info.plist
-
     sources:
       - path: FinanceAppUITests
-
   
     dependencies:
       - target: FinanceApp
+    
+    settings:
+      INFOPLIST_FILE: FinanceAppUITests/Info.plist
 
 #  definição do scheme do projeto
 schemes:
