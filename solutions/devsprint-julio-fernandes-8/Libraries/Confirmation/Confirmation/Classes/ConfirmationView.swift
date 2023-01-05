@@ -58,7 +58,6 @@ class ConfirmationView: UIView {
         return button
     }()
 
-
     init() {
         super.init(frame: .zero)
 

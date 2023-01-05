@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		123209D8C3C27736370276BF /* Pods_Confirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B00896E7B8137EB0B7C02F92 /* Pods_Confirmation.framework */; };
 		4193B5210BE24A68FEF8D088 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E76AF1811B0B793CF6D89D9 /* Strings.swift */; };
 		42287C79FDDCCDC5B06A774C /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE71C4EE3774816336669B4 /* ConfirmationViewController.swift */; };
 		48D52B4AEFA7396F47E33695 /* Confirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */; };
 		5910997FEA5F55BE556A069C /* Confirmation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5E3CD6205DBC9002F69E83AA /* ConfirmationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E133AA5CD7618DF166978 /* ConfirmationViewTests.swift */; };
 		7B196C7D365B8B398C184FE7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F4798E5489EEEDE5769637E /* Localizable.strings */; };
-		AAABE71F60C3552C0DF34461 /* Pods_Confirmation_ConfirmationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FD5800DF12D87BC533B1485 /* Pods_Confirmation_ConfirmationTests.framework */; };
+		89A6127A22A4EC23209560ED /* ConfirmationViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC594F028D4D41D2334952C3 /* ConfirmationViewControllerTests.swift */; };
+		91346BCDCBB22C7F52587979 /* Pods_Confirmation_ConfirmationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9729947D0ACBE65A8C3B9893 /* Pods_Confirmation_ConfirmationTests.framework */; };
+		928B349531923D4A6813D724 /* Pods_Confirmation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1371726E2FFD346C5D92795A /* Pods_Confirmation.framework */; };
 		B77C47DF3723E34732FD6A8E /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C065D7A12A4B4A940E77B8EA /* ConfirmationView.swift */; };
-		D641FB9C9FC42B3711B43EBF /* ConfirmationInitializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6261082CE47AEAED9B57878E /* ConfirmationInitializerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,44 +44,57 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02A1795647381E57DA02ACC9 /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation-ConfirmationTests.debug.xcconfig"; path = "Target Support Files/Pods-Confirmation-ConfirmationTests/Pods-Confirmation-ConfirmationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0E76AF1811B0B793CF6D89D9 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		0F298A6BAC2017B9E86F2EDC /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation-ConfirmationTests.debug.xcconfig"; path = "Target Support Files/Pods-Confirmation-ConfirmationTests/Pods-Confirmation-ConfirmationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0F4798E5489EEEDE5769637E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		0FD5800DF12D87BC533B1485 /* Pods_Confirmation_ConfirmationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Confirmation_ConfirmationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5E133AA5CD7618DF166978 /* ConfirmationViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewTests.swift; sourceTree = "<group>"; };
+		1371726E2FFD346C5D92795A /* Pods_Confirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Confirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D6E1CD502977BE5AA4FCA1 /* Confirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Confirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6261082CE47AEAED9B57878E /* ConfirmationInitializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationInitializerTests.swift; sourceTree = "<group>"; };
-		667A5B8E94A397532F0E8D67 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation-ConfirmationTests.release.xcconfig"; path = "Target Support Files/Pods-Confirmation-ConfirmationTests/Pods-Confirmation-ConfirmationTests.release.xcconfig"; sourceTree = "<group>"; };
+		475892D1DD9DE39E585FBFE7 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation-ConfirmationTests.release.xcconfig"; path = "Target Support Files/Pods-Confirmation-ConfirmationTests/Pods-Confirmation-ConfirmationTests.release.xcconfig"; sourceTree = "<group>"; };
+		59957970D6E28718162B806C /* Pods-Confirmation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation.debug.xcconfig"; path = "Target Support Files/Pods-Confirmation/Pods-Confirmation.debug.xcconfig"; sourceTree = "<group>"; };
 		69F71A618CD4AA28C6B09AB8 /* ConfirmationTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ConfirmationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87E9EFB104AF5CC701141A62 /* Pods-Confirmation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation.release.xcconfig"; path = "Target Support Files/Pods-Confirmation/Pods-Confirmation.release.xcconfig"; sourceTree = "<group>"; };
+		96B85A4B1AB6F3D98A787192 /* Pods-Confirmation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation.release.xcconfig"; path = "Target Support Files/Pods-Confirmation/Pods-Confirmation.release.xcconfig"; sourceTree = "<group>"; };
+		9729947D0ACBE65A8C3B9893 /* Pods_Confirmation_ConfirmationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Confirmation_ConfirmationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D00134014535F51182875A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9F35377C14B8AAA1E8BEC329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		B00896E7B8137EB0B7C02F92 /* Pods_Confirmation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Confirmation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC594F028D4D41D2334952C3 /* ConfirmationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewControllerTests.swift; sourceTree = "<group>"; };
 		C065D7A12A4B4A940E77B8EA /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
-		C2324508EE0292A3C6C13F63 /* Pods-Confirmation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Confirmation.debug.xcconfig"; path = "Target Support Files/Pods-Confirmation/Pods-Confirmation.debug.xcconfig"; sourceTree = "<group>"; };
 		CCE71C4EE3774816336669B4 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D0651AE89E9F6F10B82D9FD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				123209D8C3C27736370276BF /* Pods_Confirmation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D96AE5D885B5C28E6F5FE22C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				48D52B4AEFA7396F47E33695 /* Confirmation.framework in Frameworks */,
-				AAABE71F60C3552C0DF34461 /* Pods_Confirmation_ConfirmationTests.framework in Frameworks */,
+				91346BCDCBB22C7F52587979 /* Pods_Confirmation_ConfirmationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5E00B27952147C672725047 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				928B349531923D4A6813D724 /* Pods_Confirmation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DA6FD5E62FD8A1DA440543E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59957970D6E28718162B806C /* Pods-Confirmation.debug.xcconfig */,
+				96B85A4B1AB6F3D98A787192 /* Pods-Confirmation.release.xcconfig */,
+				0F298A6BAC2017B9E86F2EDC /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */,
+				475892D1DD9DE39E585FBFE7 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		22CD40250AFBDF3BFBC540E5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,27 +113,6 @@
 				CFB4429B27F12CDD8409A6EF /* Resources */,
 			);
 			path = Confirmation;
-			sourceTree = "<group>";
-		};
-		32697BD9CB93F34988224865 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C2324508EE0292A3C6C13F63 /* Pods-Confirmation.debug.xcconfig */,
-				87E9EFB104AF5CC701141A62 /* Pods-Confirmation.release.xcconfig */,
-				02A1795647381E57DA02ACC9 /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */,
-				667A5B8E94A397532F0E8D67 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		5508599621F5FA6A148D57CB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B00896E7B8137EB0B7C02F92 /* Pods_Confirmation.framework */,
-				0FD5800DF12D87BC533B1485 /* Pods_Confirmation_ConfirmationTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5551E24634C249A17B8A4531 /* Classes */ = {
@@ -147,21 +140,31 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D3CC089D0EE0971D55DCF803 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1371726E2FFD346C5D92795A /* Pods_Confirmation.framework */,
+				9729947D0ACBE65A8C3B9893 /* Pods_Confirmation_ConfirmationTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E39BE4427BC2C58AF6975FC2 = {
 			isa = PBXGroup;
 			children = (
 				26A9EAD509975BFDDDC81880 /* Confirmation */,
 				E64B392757E687966B2A4817 /* ConfirmationTests */,
 				22CD40250AFBDF3BFBC540E5 /* Products */,
-				32697BD9CB93F34988224865 /* Pods */,
-				5508599621F5FA6A148D57CB /* Frameworks */,
+				0DA6FD5E62FD8A1DA440543E /* Pods */,
+				D3CC089D0EE0971D55DCF803 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		E64B392757E687966B2A4817 /* ConfirmationTests */ = {
 			isa = PBXGroup;
 			children = (
-				6261082CE47AEAED9B57878E /* ConfirmationInitializerTests.swift */,
+				BC594F028D4D41D2334952C3 /* ConfirmationViewControllerTests.swift */,
+				0F5E133AA5CD7618DF166978 /* ConfirmationViewTests.swift */,
 				9D00134014535F51182875A0 /* Info.plist */,
 			);
 			path = ConfirmationTests;
@@ -174,12 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86E376A925C16820D9945040 /* Build configuration list for PBXNativeTarget "Confirmation" */;
 			buildPhases = (
-				0E1BDAD1DD149DE5F9D83170 /* [CP] Check Pods Manifest.lock */,
+				3EBDA28F414708CB7C777798 /* [CP] Check Pods Manifest.lock */,
 				DBD5AFAE0AB3B780F8AF5FB7 /* SwiftGen */,
 				10D3559BA0460DB94803F34B /* Sources */,
 				6D04C7F631022C0004414B57 /* Resources */,
 				9777A9C4EA0835247310FE39 /* SwiftLint */,
-				3D0651AE89E9F6F10B82D9FD /* Frameworks */,
+				F5E00B27952147C672725047 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,7 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27F2CF47AB19248D655D913F /* Build configuration list for PBXNativeTarget "ConfirmationTests" */;
 			buildPhases = (
-				C0A8F92481DC4160CCC8D6A1 /* [CP] Check Pods Manifest.lock */,
+				15B418F8F8B5E9AF0AE5DDA3 /* [CP] Check Pods Manifest.lock */,
 				2957B080F812BCA55140CE12 /* Sources */,
 				D96AE5D885B5C28E6F5FE22C /* Frameworks */,
 				CFC55D4B20C2E8C58EE747C2 /* Embed Frameworks */,
@@ -254,7 +257,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E1BDAD1DD149DE5F9D83170 /* [CP] Check Pods Manifest.lock */ = {
+		15B418F8F8B5E9AF0AE5DDA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Confirmation-ConfirmationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EBDA28F414708CB7C777798 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -294,28 +319,6 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint";
 		};
-		C0A8F92481DC4160CCC8D6A1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Confirmation-ConfirmationTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DBD5AFAE0AB3B780F8AF5FB7 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -351,7 +354,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D641FB9C9FC42B3711B43EBF /* ConfirmationInitializerTests.swift in Sources */,
+				89A6127A22A4EC23209560ED /* ConfirmationViewControllerTests.swift in Sources */,
+				5E3CD6205DBC9002F69E83AA /* ConfirmationViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +440,7 @@
 		};
 		40948FA84CBD5C2D782FE316 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02A1795647381E57DA02ACC9 /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */;
+			baseConfigurationReference = 0F298A6BAC2017B9E86F2EDC /* Pods-Confirmation-ConfirmationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ConfirmationTests/Info.plist;
@@ -452,7 +456,7 @@
 		};
 		8C8E5CD5CA958AA41F12020C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87E9EFB104AF5CC701141A62 /* Pods-Confirmation.release.xcconfig */;
+			baseConfigurationReference = 96B85A4B1AB6F3D98A787192 /* Pods-Confirmation.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
@@ -541,7 +545,7 @@
 		};
 		DCE90092C22399828078265D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 667A5B8E94A397532F0E8D67 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */;
+			baseConfigurationReference = 475892D1DD9DE39E585FBFE7 /* Pods-Confirmation-ConfirmationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ConfirmationTests/Info.plist;
@@ -557,7 +561,7 @@
 		};
 		E22AD543593BC05BC340426D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2324508EE0292A3C6C13F63 /* Pods-Confirmation.debug.xcconfig */;
+			baseConfigurationReference = 59957970D6E28718162B806C /* Pods-Confirmation.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "";
