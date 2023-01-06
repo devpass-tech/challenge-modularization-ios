@@ -7,20 +7,20 @@
 
 import UIKit
 
-protocol ActivityListViewDelegate: AnyObject {
+public protocol ActivityListViewDelegate: AnyObject {
 
     func didSelectedActivity()
 }
 
-class ActivityListView: UIView {
+public class ActivityListView: UIView {
 
-    weak var delegate: ActivityListViewDelegate?
+    public weak var delegate: ActivityListViewDelegate?
 
-    static let cellSize = CGFloat(82)
+    public static let cellSize = CGFloat(82)
 
     private let cellIdentifier = "ActivityCellIdentifier"
 
-    lazy var tableView: UITableView = {
+    public lazy var tableView: UITableView = {
 
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +30,7 @@ class ActivityListView: UIView {
         return tableView
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
@@ -55,7 +55,6 @@ extension ActivityListView {
     func configureConstraints() {
 
         NSLayoutConstraint.activate([
-
             tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
@@ -73,7 +72,9 @@ extension ActivityListView: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ActivityCellView
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ActivityCellView else {
+            return UITableViewCell()
+        }
 
         return cell
     }
@@ -81,7 +82,7 @@ extension ActivityListView: UITableViewDataSource {
 
 extension ActivityListView: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ActivityListView.cellSize
     }
 

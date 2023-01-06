@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserProfileHeaderView: UIView {
+public class UserProfileHeaderView: UIView {
 
     let stackView: UIStackView = {
 
@@ -66,7 +66,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white

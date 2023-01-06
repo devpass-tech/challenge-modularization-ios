@@ -1,5 +1,5 @@
 //
-//  ActivityCellView.swift
+//  ContactCellView.swift
 //  FinanceApp
 //
 //  Created by Rodrigo Borges on 30/12/21.
@@ -7,15 +7,13 @@
 
 import UIKit
 
-class ActivityCellView: UITableViewCell {
+public class ContactCellView: UITableViewCell {
 
    private var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
        stack.translatesAutoresizingMaskIntoConstraints = false
-       stack.spacing = 8
+       stack.spacing = 16
        stack.alignment = .center
-       stack.isLayoutMarginsRelativeArrangement = true
-       stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
        return stack
     }()
 
@@ -27,30 +25,29 @@ class ActivityCellView: UITableViewCell {
         return stack
     }()
 
-    lazy var categoryImageView: UIImageView = {
+    lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
         imageView.layer.masksToBounds = true
-        imageView.image = UIImage(named: "bag.circle.fill")
-        imageView.tintColor = .systemPurple
+        imageView.image = UIImage(named: "avatar-placeholder")
         return imageView
     }()
 
-    lazy var activityNameLabel: UILabel = {
+    lazy var contactNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
-        label.text = "Mall"
+        label.text = "Contact Name"
         return label
     }()
 
-    lazy var activityInfoLabel: UILabel = {
+    lazy var contactPhoneLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 14)
-        label.text = "$100.00 • 8:57 AM"
+        label.text = "(11) 99999-9999"
         return label
     }()
 
@@ -67,28 +64,28 @@ class ActivityCellView: UITableViewCell {
     }
 }
 
-extension ActivityCellView {
+extension ContactCellView {
 
     func addSubviews() {
 
         addSubview(mainStackView)
-        mainStackView.addArrangedSubview(categoryImageView)
+        mainStackView.addArrangedSubview(avatarImageView)
         mainStackView.addArrangedSubview(labelsStackView)
 
-        labelsStackView.addArrangedSubview(activityNameLabel)
-        labelsStackView.addArrangedSubview(activityInfoLabel)
+        labelsStackView.addArrangedSubview(contactNameLabel)
+        labelsStackView.addArrangedSubview(contactPhoneLabel)
     }
 
     func configureConstraints() {
 
         NSLayoutConstraint.activate([
-            mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            mainStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            mainStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            mainStackView.topAnchor.constraint(equalTo: topAnchor),
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
 
-            self.categoryImageView.widthAnchor.constraint(equalToConstant: 50),
-            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50),
+            self.avatarImageView.widthAnchor.constraint(equalToConstant: 50),
+            self.avatarImageView.heightAnchor.constraint(equalToConstant: 50),
 
         ])
     }

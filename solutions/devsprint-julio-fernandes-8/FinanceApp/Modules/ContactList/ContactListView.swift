@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Components
 
 protocol ContactListViewDelegate: AnyObject {
 
@@ -74,7 +75,9 @@ extension ContactListView: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactCellView
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ContactCellView else {
+            return UITableViewCell()
+        }
 
         return cell
     }
