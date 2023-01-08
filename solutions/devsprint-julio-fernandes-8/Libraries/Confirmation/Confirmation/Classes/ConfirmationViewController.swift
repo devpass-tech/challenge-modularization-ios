@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class ConfirmationViewController: UIViewController {
+public final class ConfirmationViewController: UIViewController {
 
     lazy var confirmationView: ConfirmationView = {
 
@@ -24,7 +24,7 @@ public class ConfirmationViewController: UIViewController {
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
     
     public override func loadView() {
