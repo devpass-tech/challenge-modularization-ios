@@ -7,9 +7,9 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController {
+public final class UserProfileViewController: UIViewController {
 
-    override func loadView() {
+    public override func loadView() {
         self.view = UserProfileView()
     }
 }
