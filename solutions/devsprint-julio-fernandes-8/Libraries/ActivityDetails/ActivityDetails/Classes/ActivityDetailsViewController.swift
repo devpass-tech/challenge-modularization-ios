@@ -1,13 +1,6 @@
-//
-//  ActivityDetailsViewController.swift
-//  FinanceApp
-//
-//  Created by Rodrigo Borges on 30/12/21.
-//
-
 import UIKit
 
-class ActivityDetailsViewController: UIViewController {
+public class ActivityDetailsViewController: UIViewController {
 
     lazy var activityDetailsView: ActivityDetailsView = {
 
@@ -16,7 +9,15 @@ class ActivityDetailsViewController: UIViewController {
         return activityDetailsView
     }()
 
-    override func loadView() {
+    public init() {
+          super.init(nibName: nil, bundle: nil)
+      }
+      
+      required init?(coder: NSCoder) {
+          nil
+      }
+    
+    override public func loadView() {
         self.view = activityDetailsView
     }
 }
