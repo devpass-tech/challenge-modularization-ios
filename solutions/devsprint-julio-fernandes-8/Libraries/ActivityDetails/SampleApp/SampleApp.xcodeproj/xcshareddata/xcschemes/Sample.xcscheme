@@ -8,17 +8,17 @@
       runPostActionsOnFailure = "NO">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
+            buildForTesting = "NO"
             buildForRunning = "YES"
             buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForArchiving = "YES"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2E97F0665DF3855DD2165992"
-               BuildableName = "FinanceApp.app"
-               BlueprintName = "FinanceApp"
-               ReferencedContainer = "container:FinanceApp.xcodeproj">
+               BlueprintIdentifier = "69D3C2A73C3237C27B28F505"
+               BuildableName = "SampleApp.app"
+               BlueprintName = "SampleApp"
+               ReferencedContainer = "container:SampleApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,50 +28,18 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES"
-      onlyGenerateCoverageForSpecifiedTargets = "YES">
+      onlyGenerateCoverageForSpecifiedTargets = "NO">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E97F0665DF3855DD2165992"
-            BuildableName = "FinanceApp.app"
-            BlueprintName = "FinanceApp"
-            ReferencedContainer = "container:FinanceApp.xcodeproj">
+            BlueprintIdentifier = "69D3C2A73C3237C27B28F505"
+            BuildableName = "SampleApp.app"
+            BlueprintName = "SampleApp"
+            ReferencedContainer = "container:SampleApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "174D99E27687D51F2EDC6181"
-               BuildableName = "FinanceAppTests.xctest"
-               BlueprintName = "FinanceAppTests"
-               ReferencedContainer = "container:FinanceApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DC9F54A61E9F34EFBF2AF77E"
-               BuildableName = "FinanceAppUITests.xctest"
-               BlueprintName = "FinanceAppUITests"
-               ReferencedContainer = "container:FinanceApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <CommandLineArguments>
-      </CommandLineArguments>
-      <CodeCoverageTargets>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E97F0665DF3855DD2165992"
-            BuildableName = "FinanceApp.app"
-            BlueprintName = "FinanceApp"
-            ReferencedContainer = "container:FinanceApp.xcodeproj">
-         </BuildableReference>
-      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -87,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E97F0665DF3855DD2165992"
-            BuildableName = "FinanceApp.app"
-            BlueprintName = "FinanceApp"
-            ReferencedContainer = "container:FinanceApp.xcodeproj">
+            BlueprintIdentifier = "69D3C2A73C3237C27B28F505"
+            BuildableName = "SampleApp.app"
+            BlueprintName = "SampleApp"
+            ReferencedContainer = "container:SampleApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -106,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2E97F0665DF3855DD2165992"
-            BuildableName = "FinanceApp.app"
-            BlueprintName = "FinanceApp"
-            ReferencedContainer = "container:FinanceApp.xcodeproj">
+            BlueprintIdentifier = "69D3C2A73C3237C27B28F505"
+            BuildableName = "SampleApp.app"
+            BlueprintName = "SampleApp"
+            ReferencedContainer = "container:SampleApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
