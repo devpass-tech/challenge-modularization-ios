@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
 
     static func activityDetails(with price: Float, and time: String) -> String {
 
