@@ -8,6 +8,7 @@ target 'FinanceApp' do
   pod 'SwiftLint'
   pod 'FinanceService', :path => 'Libraries/FinanceService'
   pod 'ActivityDetails', :path => 'Libraries/ActivityDetails'
+  pod 'Confirmation', :path => 'Libraries/Confirmation'
 
   target 'FinanceAppTests' do
     # Pods for testing

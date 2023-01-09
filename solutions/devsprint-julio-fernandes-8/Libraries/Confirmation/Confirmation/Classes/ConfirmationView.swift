@@ -58,7 +58,6 @@ class ConfirmationView: UIView {
         return button
     }()
 
-
     init() {
         super.init(frame: .zero)
 
@@ -86,8 +85,9 @@ class ConfirmationView: UIView {
         ])
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     @objc
