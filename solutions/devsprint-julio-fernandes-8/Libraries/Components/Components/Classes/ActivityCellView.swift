@@ -88,9 +88,8 @@ extension ActivityCellView {
             mainStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
 
             self.categoryImageView.widthAnchor.constraint(equalToConstant: 50),
-            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50),
+            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50)
 
         ])
     }
 }
-
