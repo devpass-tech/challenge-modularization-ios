@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactCellView: UITableViewCell {
+public class ContactCellView: UITableViewCell {
 
    private var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
@@ -85,9 +85,8 @@ extension ContactCellView {
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
 
             self.avatarImageView.widthAnchor.constraint(equalToConstant: 50),
-            self.avatarImageView.heightAnchor.constraint(equalToConstant: 50),
+            self.avatarImageView.heightAnchor.constraint(equalToConstant: 50)
 
         ])
     }
 }
-

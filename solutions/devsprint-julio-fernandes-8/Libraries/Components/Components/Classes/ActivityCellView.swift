@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActivityCellView: UITableViewCell {
+public class ActivityCellView: UITableViewCell {
 
    private var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
@@ -27,7 +27,7 @@ class ActivityCellView: UITableViewCell {
         return stack
     }()
 
-    lazy var categoryImageView: UIImageView = {
+    public lazy var categoryImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
@@ -37,7 +37,7 @@ class ActivityCellView: UITableViewCell {
         return imageView
     }()
 
-    lazy var activityNameLabel: UILabel = {
+    public lazy var activityNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
@@ -45,7 +45,7 @@ class ActivityCellView: UITableViewCell {
         return label
     }()
 
-    lazy var activityInfoLabel: UILabel = {
+    public lazy var activityInfoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .gray
@@ -88,9 +88,8 @@ extension ActivityCellView {
             mainStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
 
             self.categoryImageView.widthAnchor.constraint(equalToConstant: 50),
-            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50),
+            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50)
 
         ])
     }
 }
-
