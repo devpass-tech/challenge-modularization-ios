@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ActivityDetails
 
 class HomeViewController: UIViewController {
 
