@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserProfile
 import ActivityDetails
 
 class HomeViewController: UIViewController {
