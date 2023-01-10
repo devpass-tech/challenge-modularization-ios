@@ -1,0 +1,28 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'Feature2'
+
+target 'Feature2' do
+  pod 'SwiftGen', '6.5.1'  
+  pod 'Feature2Interface', :path => '../Feature2Interface'
+
+  target 'Feature2Tests' do
+      #pod 'Dependency', '~> 1.0.0'
+  end
+end
+
+target 'SampleApp' do
+  project 'SampleApp/SampleApp'
+  pod 'Feature2', :path => './'
+  pod 'Feature2Assembly', :path => '../Feature2Assembly'
+
+  # DI
+  pod 'Swinject', '~> 2.0'
+  pod 'SwinjectAutoregistration', '~> 2.0'
+
+end

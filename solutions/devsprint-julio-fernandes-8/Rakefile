@@ -1,0 +1,41 @@
+require 'rake'
+
+# New Domain SDK
+desc 'Create new SDK'
+task :create_domain_sdk do
+    ARGV.each { |name| task name.to_sym do ; end }
+
+    name = ARGV[1]
+    sh "cd Support/Scripts && ./create-sdk #{name}"
+    sh "cd Support/Scripts && ./setup #{name}"
+    sh "cd Support/Output/#{name}/ && open #{name}.xcworkspace"
+end
+
+desc 'Setup Project'
+task :setup do
+    
+    ARGV.each { |name| task name.to_sym do ; end }
+    name = ARGV[1]
+
+    if name == "FinanceApp" 
+        sh "xcodegen generate && pod install && open FinanceApp.xcworkspace"
+    elsif name.include? "/"
+        params = name.split("/")
+        sh "cd #{params[0]}/#{params[1]} && xcodegen generate && cd SampleApp/ && xcodegen generate && cd ../ && pod install && open #{params[1]}.xcworkspace"
+    else 
+        sh "cd Libraries/#{name} && xcodegen generate && cd SampleApp/ && xcodegen generate && cd ../ && pod install && open #{name}.xcworkspace"
+    end 
+
+end
+
+desc 'Create new SDK Microfeature'
+task :create_microfrontend_sdk do 
+    
+    STDOUT.puts "1. Digite o nome do seu Dominio (Pasta)"
+    inputDomain = STDIN.gets.strip
+        
+    STDOUT.puts "2. Digite seus micro frontends, separado por virgula (ex: Feature1,Feature2)"
+    inputMicroFrontendNames = STDIN.gets.strip
+    sh "cd Support/MicrofrontendSDK && make uninstall && make install && featureGen #{inputDomain} #{inputMicroFrontendNames}"
+ 
+end
