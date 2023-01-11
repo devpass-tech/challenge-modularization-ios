@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import Home
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.backgroundColor = .white
         window.makeKeyAndVisible()
-        window.rootViewController = UINavigationController(rootViewController: HomeViewController())
+        window.rootViewController = UINavigationController(rootViewController: ViewController())
         self.window = window
         
         return true
