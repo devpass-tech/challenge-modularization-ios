@@ -7,6 +7,7 @@
 
 import UIKit
 import Confirmation
+import ContactList
 
 public final class TransfersViewController: UIViewController {
 
@@ -42,7 +43,7 @@ extension TransfersViewController: TransferViewDelegate {
 
 extension TransfersViewController: ContactListViewControllerDelegate {
 
-    func didSelectContact() {
+    public func didSelectContact() {
 
         self.dismiss(animated: true)
 

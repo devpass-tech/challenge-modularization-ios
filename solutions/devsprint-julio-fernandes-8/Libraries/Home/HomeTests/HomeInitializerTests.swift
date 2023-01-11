@@ -8,8 +8,13 @@ import XCTest
 
 final class HomeInitializerTests: XCTestCase {
     
-    func testHellorWorld() {
-        XCTAssertEqual(HomeInitializer.helloWorld(), "Hello World from SDK!!")
+    func test_initializer() {
+        let sut = HomeViewController()
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertTrue(sut.view is HomeView)
+                                     
     }
     
 }

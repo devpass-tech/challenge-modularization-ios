@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.name = 'Transfers'
+  spec.name = 'ContactList'
   spec.version = '0.1.0'
   spec.summary = 'Framework description.'
   spec.homepage = 'https://framework.com'
@@ -15,21 +15,19 @@ Pod::Spec.new do |spec|
   spec.cocoapods_version = '>= 1.5'
   spec.swift_version = '5.4'
 
-  spec.source_files = 'Transfers/**/*.{h,m,swift}'
+  spec.source_files = 'ContactList/**/*.{h,m,swift}'
 
   spec.resource_bundles = {
-    'Transfers' => [
-      'Transfers/**/*.xcassets',
-      'Transfers/**/*.xib'
+    'ContactList' => [
+      'ContactList/**/*.xcassets',
+      'ContactList/**/*.xib'
     ]
   }
 
   spec.resources = [
-    'Transfers/**/*.strings'
+    'ContactList/**/*.strings'
   ]
 
-  spec.dependency 'Confirmation'
   spec.dependency 'Components'
-  spec.dependency 'ContactList'
 
 end

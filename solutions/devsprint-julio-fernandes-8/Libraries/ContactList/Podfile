@@ -6,22 +6,20 @@ platform :ios, '13.0'
 inhibit_all_warnings!
 use_frameworks!
 
-workspace 'Transfers'
+workspace 'ContactList'
 
-target 'Transfers' do
+target 'ContactList' do
 
   pod 'SwiftLint'
   pod 'SwiftGen', '6.5.1'
-  pod 'Confirmation', :path => '../Confirmation'
-  pod 'ContactList', :path => '../ContactList'
   pod 'Components', :path => '../Components'
 
-  target 'TransfersTests' do
+  target 'ContactListTests' do
       #pod 'Dependency', '~> 1.0.0'
   end
 end
 
 target 'SampleApp' do
   project 'SampleApp/SampleApp'
-  pod 'Transfers', :path => './'
+  pod 'ContactList', :path => './'
 end
