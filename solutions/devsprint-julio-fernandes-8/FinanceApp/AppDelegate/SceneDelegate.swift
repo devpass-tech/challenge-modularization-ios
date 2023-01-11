@@ -1,12 +1,6 @@
-//
-//  SceneDelegate.swift
-//  FinanceApp
-//
-//  Created by Rodrigo Borges on 30/12/21.
-//
-
 import UIKit
 import Components
+import Home
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
