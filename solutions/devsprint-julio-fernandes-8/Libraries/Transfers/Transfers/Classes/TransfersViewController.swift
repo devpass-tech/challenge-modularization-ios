@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Confirmation
 
 public final class TransfersViewController: UIViewController {
 

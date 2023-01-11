@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Components
 
 protocol HomeViewDelegate: AnyObject {
 
