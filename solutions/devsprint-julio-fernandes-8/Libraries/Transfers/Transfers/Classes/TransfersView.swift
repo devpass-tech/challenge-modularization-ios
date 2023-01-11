@@ -14,7 +14,7 @@ protocol TransferViewDelegate: AnyObject {
     func didPressTransferButton(with amount: String)
 }
 
-class TransfersView: UIView {
+public class TransfersView: UIView {
 
     weak var delegate: TransferViewDelegate?
 
@@ -60,7 +60,7 @@ class TransfersView: UIView {
         return button
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white

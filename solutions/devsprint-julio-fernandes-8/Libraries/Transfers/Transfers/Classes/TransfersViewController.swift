@@ -8,7 +8,7 @@
 import UIKit
 import Confirmation
 
-class TransfersViewController: UIViewController {
+public final class TransfersViewController: UIViewController {
 
     lazy var transferView: TransfersView = {
 
@@ -17,14 +17,14 @@ class TransfersViewController: UIViewController {
         return transferView
     }()
 
-    override func loadView() {
+    public override func loadView() {
         self.view = transferView
     }
 }
 
 extension TransfersViewController: TransferViewDelegate {
 
-    func didPressChooseContactButton() {
+    public func didPressChooseContactButton() {
 
         let contactListViewController = ContactListViewController()
         contactListViewController.delegate = self
@@ -32,7 +32,7 @@ extension TransfersViewController: TransferViewDelegate {
         self.present(navigationController, animated: true)
     }
 
-    func didPressTransferButton(with amount: String) {
+    public func didPressTransferButton(with amount: String) {
 
         let confirmationViewController = ConfirmationViewController(amount: amount)
         let navigationController = UINavigationController(rootViewController: confirmationViewController)
