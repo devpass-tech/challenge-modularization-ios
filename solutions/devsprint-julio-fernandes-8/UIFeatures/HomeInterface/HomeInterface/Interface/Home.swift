@@ -3,8 +3,8 @@
 //  HomeInterface
 //
 
-import Foundation
+import UIKit
 
 public protocol HomeInterface {
-    func helloWorld() -> String
+    func buildViewController() -> UIViewController
 }
