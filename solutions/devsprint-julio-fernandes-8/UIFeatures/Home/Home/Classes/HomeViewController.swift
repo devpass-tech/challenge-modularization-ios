@@ -4,13 +4,35 @@ import UserProfileInterface
 import HomeInterface
 
 public final class HomeFactory: HomeInterface {
-    public init() {}
+    
+    private let userProfile: UserProfileInterface
+    private let activityDetails: ActivityDetailsInterface
+    
+    public init(userProfile: UserProfileInterface, activityDetails: ActivityDetailsInterface) {
+        self.userProfile = userProfile
+        self.activityDetails = activityDetails
+    }
+    
     public func buildViewController() -> UIViewController {
-        return HomeViewController()
+        return HomeViewController(userProfile: userProfile, activityDetails: activityDetails)
     }
 }
 
 class HomeViewController: UIViewController {
+    
+    private let userProfile: UserProfileInterface
+    private let activityDetails: ActivityDetailsInterface
+    
+    init(userProfile: UserProfileInterface, activityDetails: ActivityDetailsInterface) {
+        self.userProfile = userProfile
+        self.activityDetails = activityDetails
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     lazy var homeView: HomeView = {
         let homeView = HomeView()
         homeView.delegate = self
@@ -25,24 +47,17 @@ class HomeViewController: UIViewController {
         self.view = homeView
     }
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     @objc
     func openProfile() {
-//        let navigationController = UINavigationController(rootViewController: UserProfileViewController())
-//        self.present(navigationController, animated: true)
+        let controller = userProfile.buildViewController()
+        let navigationController = UINavigationController(rootViewController: controller)
+        self.present(navigationController, animated: true)
     }
 }
 
 extension HomeViewController: HomeViewDelegate {
     func didSelectActivity() {
-//        let activityDetailsViewController = ActivityDetailsViewController()
-//        self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
+        let controller = activityDetails.buildViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
