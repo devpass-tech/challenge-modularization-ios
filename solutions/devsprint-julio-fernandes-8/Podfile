@@ -2,12 +2,16 @@
 platform :ios, '13.0'
 use_frameworks!
 
+# plugin 'cocoapods-dependency-graph'
+# dependency_output :graph
+
 def libraries
-  pod 'FinanceService', :path => 'Libraries/FinanceService'
+  # pod 'FinanceService', :path => 'Libraries/FinanceService'
+  # pod 'FinanceFoundations', :path => 'Libraries/FinanceFoundations'
   pod 'Transfers', :path => 'Libraries/Transfers'
   pod 'Components', :path => 'Libraries/Components'
   pod 'UserProfile', :path => 'Libraries/UserProfile'
-  pod 'FinanceFoundations', :path => 'Libraries/FinanceFoundations'
+  
   pod 'ActivityDetails', :path => 'Libraries/ActivityDetails'
   pod 'Confirmation', :path => 'Libraries/Confirmation'
   pod 'Home', :path => 'Libraries/Home'
@@ -16,8 +20,8 @@ end
 
 def uifeatures
   # old SDK's
-  pod 'FinanceService', :path => 'Libraries/FinanceService'
-  pod 'FinanceFoundations', :path => 'Libraries/FinanceFoundations'
+  # pod 'FinanceService', :path => 'Libraries/FinanceService'
+  # pod 'FinanceFoundations', :path => 'Libraries/FinanceFoundations'
   pod 'Components', :path => 'Libraries/Components'
   
   # new sdk's
@@ -51,7 +55,7 @@ target 'FinanceApp' do
   
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
-  uifeatures
+  libraries
 
   target 'FinanceAppTests' do
     # Pods for testing

@@ -1,0 +1,360 @@
+digraph RGL__DirectedAdjacencyGraph {
+    "{:target=>\"Pods-FinanceApp\"}" [
+        fontsize = 8,
+        label = "{:target=>\"Pods-FinanceApp\"}"
+    ]
+
+    "ActivityDetails (0.1.0)" [
+        fontsize = 8,
+        label = "ActivityDetails (0.1.0)"
+    ]
+
+    "ActivityDetailsInterface (0.1.0)" [
+        fontsize = 8,
+        label = "ActivityDetailsInterface (0.1.0)"
+    ]
+
+    "ActivityDetailsAssembly (0.1.0)" [
+        fontsize = 8,
+        label = "ActivityDetailsAssembly (0.1.0)"
+    ]
+
+    "Swinject (2.7.1)" [
+        fontsize = 8,
+        label = "Swinject (2.7.1)"
+    ]
+
+    "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8,
+        label = "SwinjectAutoregistration (2.8.1)"
+    ]
+
+    "Components (0.1.0)" [
+        fontsize = 8,
+        label = "Components (0.1.0)"
+    ]
+
+    "Confirmation (0.1.0)" [
+        fontsize = 8,
+        label = "Confirmation (0.1.0)"
+    ]
+
+    "ConfirmationInterface (0.1.0)" [
+        fontsize = 8,
+        label = "ConfirmationInterface (0.1.0)"
+    ]
+
+    "ConfirmationAssembly (0.1.0)" [
+        fontsize = 8,
+        label = "ConfirmationAssembly (0.1.0)"
+    ]
+
+    "ContactList (0.1.0)" [
+        fontsize = 8,
+        label = "ContactList (0.1.0)"
+    ]
+
+    "ContactListInterface (0.1.0)" [
+        fontsize = 8,
+        label = "ContactListInterface (0.1.0)"
+    ]
+
+    "ContactListAssembly (0.1.0)" [
+        fontsize = 8,
+        label = "ContactListAssembly (0.1.0)"
+    ]
+
+    "Home (0.1.0)" [
+        fontsize = 8,
+        label = "Home (0.1.0)"
+    ]
+
+    "HomeInterface (0.1.0)" [
+        fontsize = 8,
+        label = "HomeInterface (0.1.0)"
+    ]
+
+    "UserProfileInterface (0.1.0)" [
+        fontsize = 8,
+        label = "UserProfileInterface (0.1.0)"
+    ]
+
+    "HomeAssembly (0.1.0)" [
+        fontsize = 8,
+        label = "HomeAssembly (0.1.0)"
+    ]
+
+    "SwiftLint (0.49.1)" [
+        fontsize = 8,
+        label = "SwiftLint (0.49.1)"
+    ]
+
+    "Transfers (0.1.0)" [
+        fontsize = 8,
+        label = "Transfers (0.1.0)"
+    ]
+
+    "TransfersInterface (0.1.0)" [
+        fontsize = 8,
+        label = "TransfersInterface (0.1.0)"
+    ]
+
+    "TransfersAssembly (0.1.0)" [
+        fontsize = 8,
+        label = "TransfersAssembly (0.1.0)"
+    ]
+
+    "UserProfile (0.1.0)" [
+        fontsize = 8,
+        label = "UserProfile (0.1.0)"
+    ]
+
+    "UserProfileAssembly (0.1.0)" [
+        fontsize = 8,
+        label = "UserProfileAssembly (0.1.0)"
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ActivityDetails (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ActivityDetailsAssembly (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ActivityDetailsInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Confirmation (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ConfirmationAssembly (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ConfirmationInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ContactList (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ContactListAssembly (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ContactListInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Home (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "HomeAssembly (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "HomeInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "SwiftLint (0.49.1)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Transfers (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "TransfersAssembly (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "TransfersInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "UserProfile (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "UserProfileAssembly (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "UserProfileInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ActivityDetails (0.1.0)" -> "ActivityDetailsInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ActivityDetailsAssembly (0.1.0)" -> "ActivityDetailsInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ActivityDetailsAssembly (0.1.0)" -> "ActivityDetails (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ActivityDetailsAssembly (0.1.0)" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "ActivityDetailsAssembly (0.1.0)" -> "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8
+    ]
+
+    "SwinjectAutoregistration (2.8.1)" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "Confirmation (0.1.0)" -> "ConfirmationInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ConfirmationAssembly (0.1.0)" -> "ConfirmationInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ConfirmationAssembly (0.1.0)" -> "Confirmation (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ConfirmationAssembly (0.1.0)" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "ConfirmationAssembly (0.1.0)" -> "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8
+    ]
+
+    "ContactList (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ContactList (0.1.0)" -> "ContactListInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ContactListAssembly (0.1.0)" -> "ContactListInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ContactListAssembly (0.1.0)" -> "ContactList (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ContactListAssembly (0.1.0)" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "ContactListAssembly (0.1.0)" -> "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8
+    ]
+
+    "Home (0.1.0)" -> "HomeInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Home (0.1.0)" -> "ActivityDetailsInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Home (0.1.0)" -> "UserProfileInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Home (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "HomeAssembly (0.1.0)" -> "HomeInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "HomeAssembly (0.1.0)" -> "Home (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "HomeAssembly (0.1.0)" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "HomeAssembly (0.1.0)" -> "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8
+    ]
+
+    "Transfers (0.1.0)" -> "TransfersInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Transfers (0.1.0)" -> "ConfirmationInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Transfers (0.1.0)" -> "ContactListInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Transfers (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "TransfersAssembly (0.1.0)" -> "TransfersInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "TransfersAssembly (0.1.0)" -> "Transfers (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "TransfersAssembly (0.1.0)" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "TransfersAssembly (0.1.0)" -> "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8
+    ]
+
+    "UserProfile (0.1.0)" -> "UserProfileInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "UserProfile (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "UserProfileAssembly (0.1.0)" -> "UserProfileInterface (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "UserProfileAssembly (0.1.0)" -> "UserProfile (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "UserProfileAssembly (0.1.0)" -> "Swinject (2.7.1)" [
+        fontsize = 8
+    ]
+
+    "UserProfileAssembly (0.1.0)" -> "SwinjectAutoregistration (2.8.1)" [
+        fontsize = 8
+    ]
+}
