@@ -5,24 +5,24 @@ platform :ios, '13.0'
 inhibit_all_warnings!
 use_frameworks!
 
-workspace 'Home'
+workspace 'Transfers'
 
-target 'Home' do
+target 'Transfers' do
   pod 'SwiftGen', '6.5.1'  
-  pod 'HomeInterface', :path => '../HomeInterface'
-  pod 'ActivityDetailsInterface', :path => '../ActivityDetailsInterface'
-  pod 'UserProfileInterface', :path => '../UserProfileInterface'
+  pod 'TransfersInterface', :path => '../TransfersInterface'
+  pod 'ConfirmationInterface', :path => '../ConfirmationInterface'
+  pod 'ContactListInterface', :path => '../ContactListInterface'
   pod 'Components', :path => '../../Libraries/Components'
-  
-  target 'HomeTests' do
+
+  target 'TransfersTests' do
       #pod 'Dependency', '~> 1.0.0'
   end
 end
 
 target 'SampleApp' do
   project 'SampleApp/SampleApp'
-  pod 'Home', :path => './'
-  pod 'HomeAssembly', :path => '../HomeAssembly'
+  pod 'Transfers', :path => './'
+  pod 'TransfersAssembly', :path => '../TransfersAssembly'
 
   # DI
   pod 'Swinject', '~> 2.0'

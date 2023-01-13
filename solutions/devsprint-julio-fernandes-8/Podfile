@@ -18,9 +18,6 @@ def uifeatures
   # old SDK's
   pod 'FinanceService', :path => 'Libraries/FinanceService'
   pod 'FinanceFoundations', :path => 'Libraries/FinanceFoundations'
-  pod 'Confirmation', :path => 'Libraries/Confirmation'
-  pod 'Transfers', :path => 'Libraries/Transfers'
-  pod 'ContactList', :path => 'Libraries/ContactList'
   pod 'Components', :path => 'Libraries/Components'
   
   # new sdk's
@@ -35,6 +32,18 @@ def uifeatures
   pod 'UserProfile', :path => 'UIFeatures/UserProfile'
   pod 'UserProfileAssembly', :path => 'UIFeatures/UserProfileAssembly'
   pod 'UserProfileInterface', :path => 'UIFeatures/UserProfileInterface'
+
+  pod 'Confirmation', :path => 'UIFeatures/Confirmation'
+  pod 'ConfirmationAssembly', :path => 'UIFeatures/ConfirmationAssembly'
+  pod 'ConfirmationInterface', :path => 'UIFeatures/ConfirmationInterface'
+  
+  pod 'ContactList', :path => 'UIFeatures/ContactList'
+  pod 'ContactListAssembly', :path => 'UIFeatures/ContactListAssembly'
+  pod 'ContactListInterface', :path => 'UIFeatures/ContactListInterface'
+  
+  pod 'Transfers', :path => 'UIFeatures/Transfers'
+  pod 'TransfersAssembly', :path => 'UIFeatures/TransfersAssembly'
+  pod 'TransfersInterface', :path => 'UIFeatures/TransfersInterface'
   
 end
 
