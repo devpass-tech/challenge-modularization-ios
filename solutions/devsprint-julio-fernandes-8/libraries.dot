@@ -1,0 +1,110 @@
+digraph RGL__DirectedAdjacencyGraph {
+    "{:target=>\"Pods-FinanceApp\"}" [
+        fontsize = 8,
+        label = "{:target=>\"Pods-FinanceApp\"}"
+    ]
+
+    "ActivityDetails (0.1.0)" [
+        fontsize = 8,
+        label = "ActivityDetails (0.1.0)"
+    ]
+
+    "Components (0.1.0)" [
+        fontsize = 8,
+        label = "Components (0.1.0)"
+    ]
+
+    "Confirmation (0.1.0)" [
+        fontsize = 8,
+        label = "Confirmation (0.1.0)"
+    ]
+
+    "ContactList (0.1.0)" [
+        fontsize = 8,
+        label = "ContactList (0.1.0)"
+    ]
+
+    "Home (0.1.0)" [
+        fontsize = 8,
+        label = "Home (0.1.0)"
+    ]
+
+    "UserProfile (0.1.0)" [
+        fontsize = 8,
+        label = "UserProfile (0.1.0)"
+    ]
+
+    "SwiftLint (0.49.1)" [
+        fontsize = 8,
+        label = "SwiftLint (0.49.1)"
+    ]
+
+    "Transfers (0.1.0)" [
+        fontsize = 8,
+        label = "Transfers (0.1.0)"
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ActivityDetails (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Confirmation (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "ContactList (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Home (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "SwiftLint (0.49.1)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "Transfers (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "{:target=>\"Pods-FinanceApp\"}" -> "UserProfile (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "ContactList (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Home (0.1.0)" -> "ActivityDetails (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Home (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Home (0.1.0)" -> "UserProfile (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "UserProfile (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Transfers (0.1.0)" -> "Confirmation (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Transfers (0.1.0)" -> "Components (0.1.0)" [
+        fontsize = 8
+    ]
+
+    "Transfers (0.1.0)" -> "ContactList (0.1.0)" [
+        fontsize = 8
+    ]
+}
