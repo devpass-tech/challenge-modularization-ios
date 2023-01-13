@@ -19,6 +19,12 @@ final class HomeInitializerTests: XCTestCase {
                                      
     }
     
+    func test_initializer_with_coder() {
+        let sut = HomeViewController(coder: NSCoder())
+        XCTAssertNil(sut)
+                                     
+    }
+    
     func test_didTap_openProfile() {
         let (sut, fakeSpy) = makeSUT()
         
@@ -27,7 +33,15 @@ final class HomeInitializerTests: XCTestCase {
         XCTAssertTrue(fakeSpy.buildViewControllerCalled)
     }
     
-    func makeSUT() -> (sut: HomeViewController, spy: FaceInterfaceSpy) {
+    func test_didTap_didSelectActivity() {
+        let (sut, fakeSpy) = makeSUT()
+        
+        sut.didSelectActivity()
+        
+        XCTAssertTrue(fakeSpy.buildViewControllerCalled)
+    }
+    
+    private func makeSUT() -> (sut: HomeViewController, spy: FaceInterfaceSpy) {
         let fakeSpy = FaceInterfaceSpy()
         let sut = HomeViewController(userProfile: fakeSpy, activityDetails: fakeSpy)
         

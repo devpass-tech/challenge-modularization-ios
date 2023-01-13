@@ -2,10 +2,7 @@
 platform :ios, '13.0'
 use_frameworks!
 
-target 'FinanceApp' do
-  
-  # Comment the next line if you don't want to use dynamic frameworks
-  pod 'SwiftLint'
+def libraries
   pod 'FinanceService', :path => 'Libraries/FinanceService'
   pod 'Transfers', :path => 'Libraries/Transfers'
   pod 'Components', :path => 'Libraries/Components'
@@ -15,6 +12,37 @@ target 'FinanceApp' do
   pod 'Confirmation', :path => 'Libraries/Confirmation'
   pod 'Home', :path => 'Libraries/Home'
   pod 'ContactList', :path => 'Libraries/ContactList'
+end
+
+def uifeatures
+  # old SDK's
+  pod 'FinanceService', :path => 'Libraries/FinanceService'
+  pod 'FinanceFoundations', :path => 'Libraries/FinanceFoundations'
+  pod 'Confirmation', :path => 'Libraries/Confirmation'
+  pod 'Transfers', :path => 'Libraries/Transfers'
+  pod 'ContactList', :path => 'Libraries/ContactList'
+  pod 'Components', :path => 'Libraries/Components'
+  
+  # new sdk's
+  pod 'ActivityDetails', :path => 'UIFeatures/ActivityDetails'
+  pod 'ActivityDetailsAssembly', :path => 'UIFeatures/ActivityDetailsAssembly'
+  pod 'ActivityDetailsInterface', :path => 'UIFeatures/ActivityDetailsInterface'
+  
+  pod 'Home', :path => 'UIFeatures/Home'
+  pod 'HomeAssembly', :path => 'UIFeatures/HomeAssembly'
+  pod 'HomeInterface', :path => 'UIFeatures/HomeInterface'
+  
+  pod 'UserProfile', :path => 'UIFeatures/UserProfile'
+  pod 'UserProfileAssembly', :path => 'UIFeatures/UserProfileAssembly'
+  pod 'UserProfileInterface', :path => 'UIFeatures/UserProfileInterface'
+  
+end
+
+target 'FinanceApp' do
+  
+  # Comment the next line if you don't want to use dynamic frameworks
+  pod 'SwiftLint'
+  uifeatures
 
   target 'FinanceAppTests' do
     # Pods for testing
