@@ -7,20 +7,31 @@
 
 import Foundation
 
-class FinanceService {
+enum FinanceEndpoint: String {
+    case home = "home_endpoint"
+    case contactList = "contact_list_endpoint"
+    case userProfile = "user_profile_endpoint"
+    case transfer = "transfer_successful_endpoint"
+}
 
-    func fetchHomeData(_ completion: @escaping (HomeData?) -> Void) {
-
-        let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/home_endpoint.json")!
+final class FinanceService {
+    private let baseURL = "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/"
+    
+    func fetchData<T: Decodable>(_: T.Type, endpoint: FinanceEndpoint, _ completion: @escaping (T?) -> Void) {
+        guard let url = URL(string: baseURL + endpoint.rawValue + ".json") else {
+            print("Invalid URL")
+            completion(nil)
+            return
+        }
 
         let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
             guard error == nil else {
                 completion(nil)
                 return
             }
 
             guard let data = data else {
+                print("Invalid Data")
                 completion(nil)
                 return
             }
@@ -28,8 +39,9 @@ class FinanceService {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let homeData = try decoder.decode(HomeData.self, from: data)
-                completion(homeData)
+                
+                let result: T = try decoder.decode(T.self, from: data)
+                completion(result)
             } catch {
                 print(error)
                 completion(nil)
@@ -38,125 +50,4 @@ class FinanceService {
 
         dataTask.resume()
     }
-
-    func fetchActivityDetails(_ completion: @escaping (ActivityDetails?) -> Void) {
-
-        let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/activity_details_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
-            guard error == nil else {
-                completion(nil)
-                return
-            }
-
-            guard let data = data else {
-                completion(nil)
-                return
-            }
-
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let activityDetails = try decoder.decode(ActivityDetails.self, from: data)
-                completion(activityDetails)
-            } catch {
-                print(error)
-                completion(nil)
-            }
-        }
-
-        dataTask.resume()
-    }
-
-    func fetchContactList(_ completion: @escaping ([Contact]?) -> Void) {
-
-        let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/contact_list_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
-            guard error == nil else {
-                completion(nil)
-                return
-            }
-
-            guard let data = data else {
-                completion(nil)
-                return
-            }
-
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let contactList = try decoder.decode([Contact].self, from: data)
-                completion(contactList)
-            } catch {
-                print(error)
-                completion(nil)
-            }
-        }
-
-        dataTask.resume()
-    }
-
-    func transferAmount(_ completion: @escaping (TransferResult?) -> Void) {
-
-        let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/transfer_successful_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
-            guard error == nil else {
-                completion(nil)
-                return
-            }
-
-            guard let data = data else {
-                completion(nil)
-                return
-            }
-
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let transferResult = try decoder.decode(TransferResult.self, from: data)
-                completion(transferResult)
-            } catch {
-                print(error)
-                completion(nil)
-            }
-        }
-
-        dataTask.resume()
-    }
-
-    func fetchUserProfile(_ completion: @escaping (UserProfile?) -> Void) {
-
-        let url = URL(string: "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/user_profile_endpoint.json")!
-
-        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-
-            guard error == nil else {
-                completion(nil)
-                return
-            }
-
-            guard let data = data else {
-                completion(nil)
-                return
-            }
-
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let userProfile = try decoder.decode(UserProfile.self, from: data)
-                completion(userProfile)
-            } catch {
-                print(error)
-                completion(nil)
-            }
-        }
-
-        dataTask.resume()
-    }
-
 }
