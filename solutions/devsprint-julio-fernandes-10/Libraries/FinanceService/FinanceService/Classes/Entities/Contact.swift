@@ -8,6 +8,6 @@
 import Foundation
 
 public struct Contact: Decodable {
-    let name: String
-    let phone: String
+    public let name: String
+    public let phone: String
 }

@@ -8,14 +8,14 @@
 import Foundation
 
 public struct HomeData: Decodable {
-    let balance: Float
-    let savings: Float
-    let spending: Float
-    let activity: [Activity]
+    public let balance: Float
+    public let savings: Float
+    public let spending: Float
+    public let activity: [Activity]
 }
 
 public struct Activity: Decodable {
-    let name: String
-    let price: Float
-    let time: String
+    public let name: String
+    public let price: Float
+    public let time: String
 }

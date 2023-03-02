@@ -8,8 +8,8 @@
 import Foundation
 
 public struct ActivityDetails: Decodable {
-    let name: String
-    let price: Float
-    let category: String
-    let time: String
+    public let name: String
+    public let price: Float
+    public let category: String
+    public let time: String
 }

@@ -8,14 +8,14 @@
 import Foundation
 
 public struct UserProfile: Decodable {
-    let name: String
-    let phone: String
-    let email: String
-    let address: String
-    let account: Account
+    public let name: String
+    public let phone: String
+    public let email: String
+    public let address: String
+    public let account: Account
 }
 
 public struct Account: Decodable {
-    let agency: String
-    let account: String
+    public let agency: String
+    public let account: String
 }
