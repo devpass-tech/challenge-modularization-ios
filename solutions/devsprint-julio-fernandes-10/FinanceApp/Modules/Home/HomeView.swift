@@ -5,8 +5,8 @@
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
-import Foundation
 import UIKit
+import Components
 
 protocol HomeViewDelegate: AnyObject {
 

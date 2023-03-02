@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class HomeHeaderView: UIView {
+public final class HomeHeaderView: UIView {
 
-    let stackView: UIStackView = {
+    private let stackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,7 @@ class HomeHeaderView: UIView {
         return stackView
     }()
 
-    let label: UILabel = {
+    private let label: UILabel = {
 
         let label = UILabel()
         label.text = "$15,459.27"
@@ -29,7 +29,7 @@ class HomeHeaderView: UIView {
         return label
     }()
 
-    let savingsStackView: UIStackView = {
+    private let savingsStackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +38,7 @@ class HomeHeaderView: UIView {
         return stackView
     }()
 
-    let savingsLabel: UILabel = {
+    private let savingsLabel: UILabel = {
 
         let label = UILabel()
         label.text = "Savings"
@@ -46,7 +46,7 @@ class HomeHeaderView: UIView {
         return label
     }()
 
-    let savingsValueLabel: UILabel = {
+    private let savingsValueLabel: UILabel = {
 
         let label = UILabel()
         label.text = "$100.00"
@@ -54,7 +54,7 @@ class HomeHeaderView: UIView {
         return label
     }()
 
-    let spendingStackView: UIStackView = {
+    private let spendingStackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -63,7 +63,7 @@ class HomeHeaderView: UIView {
         return stackView
     }()
 
-    let spendingLabel: UILabel = {
+    private let spendingLabel: UILabel = {
 
         let label = UILabel()
         label.text = "Spending"
@@ -71,7 +71,7 @@ class HomeHeaderView: UIView {
         return label
     }()
 
-    let spendingValueLabel: UILabel = {
+    private let spendingValueLabel: UILabel = {
 
         let label = UILabel()
         label.text = "$100.00"
@@ -79,7 +79,7 @@ class HomeHeaderView: UIView {
         return label
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white

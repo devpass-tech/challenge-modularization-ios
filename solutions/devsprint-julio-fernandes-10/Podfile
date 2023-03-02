@@ -7,6 +7,7 @@ target 'FinanceApp' do
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
   pod 'FinanceService', :path => 'Libraries/FinanceService'
+  pod 'Components', :path => 'Libraries/Components'
   
   target 'FinanceAppTests' do
     # Pods for testing
