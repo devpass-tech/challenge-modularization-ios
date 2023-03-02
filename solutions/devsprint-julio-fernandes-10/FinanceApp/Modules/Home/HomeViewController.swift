@@ -8,10 +8,8 @@
 import UIKit
 import FinanceService
 
-class HomeViewController: UIViewController {
-
-    lazy var homeView: HomeView = {
-
+final class HomeViewController: UIViewController {
+    private lazy var homeView: HomeView = {
         let homeView = HomeView()
         homeView.delegate = self
         return homeView
@@ -28,7 +26,6 @@ class HomeViewController: UIViewController {
 
     @objc
     func openProfile() {
-
         let navigationController = UINavigationController(rootViewController: UserProfileViewController())
         self.present(navigationController, animated: true)
     }
@@ -39,9 +36,15 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let homeData):
-                    print(homeData)
+                    self.homeView.setup(homeData)
+                    
                 case .failure(let error):
-                    print(error)
+                    let alertViewController = UIAlertController(title: "Ops, algo de errado aconteceu!!!",
+                                                                message: error.localizedDescription,
+                                                                preferredStyle: .alert)
+                    
+                    alertViewController.addAction(UIAlertAction(title: "Fechar", style: .default))
+                    self.present(alertViewController, animated: true)
                 }
             }
         }
@@ -49,9 +52,7 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeViewDelegate {
-
     func didSelectActivity() {
-
         let activityDetailsViewController = ActivityDetailsViewController()
         self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
     }
