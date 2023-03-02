@@ -3,6 +3,7 @@ Pod::Spec.new do |spec|
   spec.name = 'FinanceService'
   spec.version = '0.1.0'
   spec.summary = 'Network Service Framework'
+  spec.homepage = 'https://framework.com'
   spec.author = { 'Framework Author' => "thonatas_borges@outlook.com" }
   spec.license = { :type => 'Private' }
   spec.source = { :git => 'https://framework-source-code.git',
