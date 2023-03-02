@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum FinanceServiceError: Error {
+public enum FinanceServiceError: Error {
     case invalidURL
     case invalidData
     case parse
 }
 
-enum FinanceEndpoint: String {
+public enum FinanceEndpoint: String {
     case home = "home_endpoint"
     case activityDetails = "activity_details_endpoint"
     case contactList = "contact_list_endpoint"
@@ -21,10 +21,12 @@ enum FinanceEndpoint: String {
     case transfer = "transfer_successful_endpoint"
 }
 
-final class FinanceService {
+public final class FinanceService {
+    public init() {}
+    
     private let baseURL = "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/"
     
-    func fetchData<T: Decodable>(_: T.Type, endpoint: FinanceEndpoint, _ completion: @escaping (Result<T, Error>) -> Void) {
+    public func fetchData<T: Decodable>(_: T.Type, endpoint: FinanceEndpoint, _ completion: @escaping (Result<T, Error>) -> Void) {
         guard let url = URL(string: baseURL + endpoint.rawValue + ".json") else {
             completion(.failure(FinanceServiceError.invalidURL))
             return

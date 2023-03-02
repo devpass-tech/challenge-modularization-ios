@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FinanceService
 
 class HomeViewController: UIViewController {
 
@@ -17,8 +18,8 @@ class HomeViewController: UIViewController {
     }()
 
     override func viewDidLoad() {
-
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(openProfile))
+        fetchHomeData()
     }
 
     override func loadView() {
@@ -30,6 +31,20 @@ class HomeViewController: UIViewController {
 
         let navigationController = UINavigationController(rootViewController: UserProfileViewController())
         self.present(navigationController, animated: true)
+    }
+    
+    private func fetchHomeData() {
+        let service = FinanceService()
+        service.fetchData(HomeData.self, endpoint: .home) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let homeData):
+                    print(homeData)
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
 }
 

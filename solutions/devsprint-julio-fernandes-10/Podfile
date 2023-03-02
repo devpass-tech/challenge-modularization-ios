@@ -2,17 +2,12 @@
 platform :ios, '13.0'
 use_frameworks!
 
-def libraries
-  # pod 'SDKDoain', :path => 'Libraries/SDKDomain'
-end
-
 target 'FinanceApp' do
   
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
+  pod 'FinanceService', :path => 'Libraries/FinanceService'
   
-  libraries
-
   target 'FinanceAppTests' do
     # Pods for testing
   end

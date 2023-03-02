@@ -7,7 +7,6 @@
 
 import Foundation
 
-struct TransferResult: Decodable {
-
-    let success: Bool
+public struct TransferResult: Decodable {
+    public let success: Bool
 }
