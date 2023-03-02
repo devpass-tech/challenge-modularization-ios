@@ -2,9 +2,8 @@ Pod::Spec.new do |spec|
 
   spec.name = 'FinanceService'
   spec.version = '0.1.0'
-  spec.summary = 'Framework description.'
-  spec.homepage = 'https://framework.com'
-  spec.author = { 'Framework Author' => "author@email.com" }
+  spec.summary = 'Network Service Framework'
+  spec.author = { 'Framework Author' => "thonatas_borges@outlook.com" }
   spec.license = { :type => 'Private' }
   spec.source = { :git => 'https://framework-source-code.git',
                   :tag => spec.version.to_s }
@@ -27,8 +26,5 @@ Pod::Spec.new do |spec|
   spec.resources = [
     'FinanceService/**/*.strings'
   ]
-
-  # spec.dependency 'Dependency', '~> 1.0.0' #Framework remoto
-  # spec.dependency 'Dependency' #Framework local
-
+  
 end
