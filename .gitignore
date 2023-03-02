@@ -56,12 +56,16 @@ solutions/devsprint-julio-fernandes-7/**/Gemfile.lock
 solutions/devsprint-julio-fernandes-7/**/Podfile.lock
 solutions/devsprint-julio-fernandes-8/**/Gemfile.lock
 solutions/devsprint-julio-fernandes-8/**/Podfile.lock
+solutions/devsprint-julio-fernandes-10/**/Gemfile.lock
+solutions/devsprint-julio-fernandes-10/**/Podfile.lock
 
 # XCodeGen
 solutions/devsprint-julio-fernandes-7/**/*.xcodeproj
 solutions/devsprint-julio-fernandes-7/**/*.xcworkspace
 solutions/devsprint-julio-fernandes-8/**/*.xcodeproj
 solutions/devsprint-julio-fernandes-8/**/*.xcworkspace
+solutions/devsprint-julio-fernandes-10/**/*.xcodeproj
+solutions/devsprint-julio-fernandes-10/**/*.xcworkspace
 
 # Carthage
 #
