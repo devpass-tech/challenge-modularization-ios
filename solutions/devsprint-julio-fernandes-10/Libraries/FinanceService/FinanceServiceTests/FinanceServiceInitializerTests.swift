@@ -11,5 +11,4 @@ final class FinanceServiceInitializerTests: XCTestCase {
     func testHellorWorld() {
         XCTAssertEqual(FinanceServiceInitializer.helloWorld(), "Hello World from SDK!!")
     }
-    
 }
