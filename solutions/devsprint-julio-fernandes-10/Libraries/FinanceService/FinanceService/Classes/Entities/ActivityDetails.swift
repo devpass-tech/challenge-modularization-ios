@@ -7,8 +7,7 @@
 
 import Foundation
 
-struct ActivityDetails: Decodable {
-
+public struct ActivityDetails: Decodable {
     let name: String
     let price: Float
     let category: String

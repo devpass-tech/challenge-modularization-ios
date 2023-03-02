@@ -21,7 +21,7 @@ enum FinanceEndpoint: String {
     case transfer = "transfer_successful_endpoint"
 }
 
-final class FinanceService {
+public final class FinanceService {
     private let baseURL = "https://raw.githubusercontent.com/devpass-tech/challenge-finance-app/main/api/"
     
     func fetchData<T: Decodable>(_: T.Type, endpoint: FinanceEndpoint, _ completion: @escaping (Result<T, Error>) -> Void) {
