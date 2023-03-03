@@ -7,6 +7,7 @@
 
 import UIKit
 import FinanceService
+import ActivityDetails
 
 class HomeViewController: UIViewController {
 
