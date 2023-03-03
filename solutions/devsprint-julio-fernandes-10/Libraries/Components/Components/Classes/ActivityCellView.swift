@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActivityCellView: UITableViewCell {
+public final class ActivityCellView: UITableViewCell {
 
    private var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
@@ -27,7 +27,7 @@ class ActivityCellView: UITableViewCell {
         return stack
     }()
 
-    lazy var categoryImageView: UIImageView = {
+    private lazy var categoryImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
@@ -37,7 +37,7 @@ class ActivityCellView: UITableViewCell {
         return imageView
     }()
 
-    lazy var activityNameLabel: UILabel = {
+    private lazy var activityNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
@@ -45,7 +45,7 @@ class ActivityCellView: UITableViewCell {
         return label
     }()
 
-    lazy var activityInfoLabel: UILabel = {
+    private lazy var activityInfoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .gray
@@ -69,7 +69,7 @@ class ActivityCellView: UITableViewCell {
 
 extension ActivityCellView {
 
-    func addSubviews() {
+    private func addSubviews() {
 
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(categoryImageView)
@@ -79,7 +79,7 @@ extension ActivityCellView {
         labelsStackView.addArrangedSubview(activityInfoLabel)
     }
 
-    func configureConstraints() {
+    private func configureConstraints() {
 
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactCellView: UITableViewCell {
+public final class ContactCellView: UITableViewCell {
 
    private var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
@@ -25,7 +25,7 @@ class ContactCellView: UITableViewCell {
         return stack
     }()
 
-    lazy var avatarImageView: UIImageView = {
+    private lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 25
@@ -34,7 +34,7 @@ class ContactCellView: UITableViewCell {
         return imageView
     }()
 
-    lazy var contactNameLabel: UILabel = {
+    private lazy var contactNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
@@ -42,7 +42,7 @@ class ContactCellView: UITableViewCell {
         return label
     }()
 
-    lazy var contactPhoneLabel: UILabel = {
+    private lazy var contactPhoneLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .gray
@@ -66,7 +66,7 @@ class ContactCellView: UITableViewCell {
 
 extension ContactCellView {
 
-    func addSubviews() {
+    private func addSubviews() {
 
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(avatarImageView)
@@ -76,7 +76,7 @@ extension ContactCellView {
         labelsStackView.addArrangedSubview(contactPhoneLabel)
     }
 
-    func configureConstraints() {
+    private func configureConstraints() {
 
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: topAnchor),
