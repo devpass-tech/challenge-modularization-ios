@@ -13,9 +13,8 @@ final class ViewController: UIViewController {
         
         title = "Sample App"
         
-        let alert = UIAlertController(title: "ActivityDetails", message: ActivityDetailsInitializer.helloWorld(), preferredStyle: .alert)
-        alert.addAction(.init(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        let controller = ActivityDetailsViewController()
+        show(controller, sender: self)
     }
     
 }
