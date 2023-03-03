@@ -7,9 +7,9 @@
 
 import UIKit
 
-class UserProfileHeaderView: UIView {
+public final class UserProfileHeaderView: UIView {
 
-    let stackView: UIStackView = {
+    private let stackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,7 @@ class UserProfileHeaderView: UIView {
         return stackView
     }()
 
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
 
         let imageView = UIImageView()
         imageView.image = UIImage(named: "avatar-placeholder")
@@ -29,7 +29,7 @@ class UserProfileHeaderView: UIView {
         return imageView
     }()
 
-    let nameLabel: UILabel = {
+    private let nameLabel: UILabel = {
 
         let label = UILabel()
         label.text = "User Name"
@@ -38,7 +38,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    let agencyLabel: UILabel = {
+    private let agencyLabel: UILabel = {
 
         let label = UILabel()
         label.text = "Agency 0001"
@@ -47,7 +47,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    let accountLabel: UILabel = {
+    private let accountLabel: UILabel = {
 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    let bankLabel: UILabel = {
+    private let bankLabel: UILabel = {
 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +66,7 @@ class UserProfileHeaderView: UIView {
         return label
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
