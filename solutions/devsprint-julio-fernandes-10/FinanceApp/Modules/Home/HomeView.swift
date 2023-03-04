@@ -7,70 +7,67 @@
 
 import UIKit
 import Components
+import FinanceService
 
 protocol HomeViewDelegate: AnyObject {
-
     func didSelectActivity()
 }
 
 class HomeView: UIView {
-
     weak var delegate: HomeViewDelegate?
 
-    let stackView: UIStackView = {
-
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 16
-        return stackView
-    }()
-
     let homeHeaderView: HomeHeaderView = {
-
         let homeHeaderView = HomeHeaderView()
+        homeHeaderView.translatesAutoresizingMaskIntoConstraints = false
         return homeHeaderView
     }()
 
     lazy var activityListView: ActivityListView = {
-
         let activityListView = ActivityListView()
         activityListView.translatesAutoresizingMaskIntoConstraints = false
         activityListView.delegate = self
         return activityListView
     }()
 
-
     init() {
         super.init(frame: .zero)
-
         backgroundColor = .white
-
-        stackView.addArrangedSubview(homeHeaderView)
-        stackView.addArrangedSubview(activityListView)
-        stackView.setCustomSpacing(32, after: homeHeaderView)
-        addSubview(stackView)
-
-        let estimatedHeight = CGFloat(activityListView.tableView.numberOfRows(inSection: 0))*ActivityListView.cellSize
-
-        NSLayoutConstraint.activate([
-            stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            stackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            
-            activityListView.heightAnchor.constraint(equalToConstant: estimatedHeight)
-        ])
+        setupHierarchyView()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setup(_ model: HomeData) {
+        homeHeaderView.label.text = String(model.balance).toCurrency()
+        homeHeaderView.savingsValueLabel.text = String(model.savings).toCurrency()
+        homeHeaderView.spendingValueLabel.text = String(model.spending).toCurrency()
+        activityListView.setup(model.activity)
+    }
+    
+    func setupHierarchyView() {
+        addSubview(homeHeaderView)
+        addSubview(activityListView)
+    }
+    
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            homeHeaderView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+            homeHeaderView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            homeHeaderView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+
+            activityListView.topAnchor.constraint(equalTo: homeHeaderView.bottomAnchor, constant: 32),
+            activityListView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            activityListView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            activityListView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+        ])
+    }
 }
 
 extension HomeView: ActivityListViewDelegate {
-
     func didSelectedActivity() {
-
         delegate?.didSelectActivity()
     }
 }

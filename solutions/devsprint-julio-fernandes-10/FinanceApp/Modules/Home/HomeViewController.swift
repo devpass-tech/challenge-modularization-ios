@@ -51,18 +51,22 @@ final class HomeViewController: UIViewController {
         mainQueueDecorator.fetchData(HomeData.self, endpoint: .home) { result in
             switch result {
             case .success(let homeData):
-                print(homeData)
+                self.homeView.setup(homeData)
+                
             case .failure(let error):
-                print(error)
+                let alertViewController = UIAlertController(title: "Ops, algo de errado aconteceu!!!",
+                                                            message: error.localizedDescription,
+                                                            preferredStyle: .alert)
+                
+                alertViewController.addAction(UIAlertAction(title: "Fechar", style: .default))
+                self.present(alertViewController, animated: true)
             }
         }
     }
 }
 
 extension HomeViewController: HomeViewDelegate {
-
     func didSelectActivity() {
-
         let activityDetailsViewController = ActivityDetailsViewController()
         self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
     }

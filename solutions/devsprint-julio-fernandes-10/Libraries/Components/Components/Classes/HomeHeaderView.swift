@@ -24,7 +24,6 @@ public final class HomeHeaderView: UIView {
     private let label: UILabel = {
 
         let label = UILabel()
-        label.text = "$15,459.27"
         label.font = UIFont.boldSystemFont(ofSize: 34)
         return label
     }()
@@ -49,7 +48,6 @@ public final class HomeHeaderView: UIView {
     private let savingsValueLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "$100.00"
         label.textColor = .lightGray
         return label
     }()
@@ -74,7 +72,6 @@ public final class HomeHeaderView: UIView {
     private let spendingValueLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "$100.00"
         label.textColor = .lightGray
         return label
     }()
