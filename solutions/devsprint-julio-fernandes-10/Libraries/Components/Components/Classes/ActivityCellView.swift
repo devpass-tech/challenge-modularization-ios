@@ -18,7 +18,7 @@ public final class ActivityCellView: UITableViewCell {
        stack.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 0)
        return stack
     }()
-    
+
     private lazy var labelsStackView: UIStackView = {
         let stack = UIStackView(frame: .zero)
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -26,7 +26,7 @@ public final class ActivityCellView: UITableViewCell {
         stack.spacing = 8
         return stack
     }()
-    
+
     private lazy var categoryImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +43,7 @@ public final class ActivityCellView: UITableViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 17)
         return label
     }()
-    
+
     private lazy var activityInfoLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -51,15 +51,15 @@ public final class ActivityCellView: UITableViewCell {
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.accessoryType = .disclosureIndicator
-        
+
         addSubviews()
         configureConstraints()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -75,7 +75,7 @@ extension ActivityCellView {
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(categoryImageView)
         mainStackView.addArrangedSubview(labelsStackView)
-        
+
         labelsStackView.addArrangedSubview(activityNameLabel)
         labelsStackView.addArrangedSubview(activityInfoLabel)
     }
