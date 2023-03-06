@@ -20,7 +20,7 @@ public final class ActivityDetailsViewController: UIViewController {
     
     // MARK: - Initializers
     public init(_ service: FinanceServiceProtocol = FinanceService()) {
-        self.service = service
+        self.service = MainQueueDecorator(decoratee: service)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -39,8 +39,7 @@ public final class ActivityDetailsViewController: UIViewController {
     
     // MARK: - Methods
     private func fecthActivityDetailsData() {
-        let mainQueueDecorator = MainQueueDecorator(service)
-        mainQueueDecorator.fetchData(ActivityDetails.self, endpoint: .activityDetails) { [weak self] (result) in
+        service.fetchData(ActivityDetails.self, endpoint: .activityDetails) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let activityDetails):

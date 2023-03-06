@@ -21,7 +21,7 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Initializers
     init(_ service: FinanceServiceProtocol = FinanceService()) {
-        self.service = service
+        self.service = MainQueueDecorator(decoratee: service)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -47,22 +47,25 @@ final class HomeViewController: UIViewController {
     }
     
     private func fetchHomeData() {
-        let mainQueueDecorator = MainQueueDecorator(service)
-        mainQueueDecorator.fetchData(HomeData.self, endpoint: .home) { [weak self] (result) in
+        service.fetchData(HomeData.self, endpoint: .home) { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success(let homeData):
                 self.homeView.setup(homeData)
                 
             case .failure(let error):
-                let alertViewController = UIAlertController(title: "Ops, algo de errado aconteceu!!!",
-                                                            message: error.localizedDescription,
-                                                            preferredStyle: .alert)
-                
-                alertViewController.addAction(UIAlertAction(title: "Fechar", style: .default))
-                self.present(alertViewController, animated: true)
+                self.showAlertController(title: "Ops, algo de errado aconteceu!!!", message:  error.localizedDescription, buttonTitle: "Fechar")
             }
         }
+    }
+    
+    private func showAlertController(title: String, message: String, buttonTitle: String) {
+        let alertViewController = UIAlertController(title: title,
+                                                    message: message,
+                                                    preferredStyle: .alert)
+        
+        alertViewController.addAction(UIAlertAction(title: buttonTitle, style: .default))
+        self.present(alertViewController, animated: true)
     }
 }
 

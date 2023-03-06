@@ -10,7 +10,7 @@ import Foundation
 public struct MainQueueDecorator: FinanceServiceProtocol {
     let decoratee: FinanceServiceProtocol
     
-    public init(_ decoratee: FinanceServiceProtocol) {
+    public init(decoratee: FinanceServiceProtocol) {
         self.decoratee = decoratee
     }
     
