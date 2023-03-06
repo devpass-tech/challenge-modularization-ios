@@ -66,7 +66,7 @@ public final class ActivityCellView: UITableViewCell {
     
     func setup(_ model: Activity) {
         activityNameLabel.text = model.name
-        activityInfoLabel.text = model.time // TODO: To Use Extension from Finance Foundations
+        activityInfoLabel.text = "$\(model.price) • \(model.time)"
     }
 }
 
