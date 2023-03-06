@@ -7,7 +7,6 @@
 
 import UIKit
 import Components
-import FinanceService
 
 protocol HomeViewDelegate: AnyObject {
     func didSelectActivity()

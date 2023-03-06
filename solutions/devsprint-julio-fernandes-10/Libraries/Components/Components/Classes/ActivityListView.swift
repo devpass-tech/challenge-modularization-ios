@@ -40,8 +40,8 @@ public final class ActivityListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(_ model: [Activity]) {
-        datasource = model
+    public func setup(_ activities: [Activity]) {
+        datasource = activities
         tableView.reloadData()
     }
 }
