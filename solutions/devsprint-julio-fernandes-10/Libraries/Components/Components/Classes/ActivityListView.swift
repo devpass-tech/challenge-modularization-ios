@@ -1,37 +1,36 @@
 //
-//  ContactListView.swift
+//  ActivityListView.swift
 //  FinanceApp
 //
 //  Created by Rodrigo Borges on 30/12/21.
 //
 
-import Components
 import UIKit
 
-protocol ContactListViewDelegate: AnyObject {
+public protocol ActivityListViewDelegate: AnyObject {
 
-    func didSelectContact()
+    func didSelectedActivity()
 }
 
-class ContactListView: UIView {
+public final class ActivityListView: UIView {
 
-    static let cellSize = CGFloat(82)
+    public weak var delegate: ActivityListViewDelegate?
 
-    private let cellIdentifier = "ContactCellIdentifier"
+    public static let cellSize = CGFloat(82)
 
-    weak var delegate: ContactListViewDelegate?
+    private let cellIdentifier = "ActivityCellIdentifier"
 
-    lazy var tableView: UITableView = {
+    public lazy var tableView: UITableView = {
 
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(ContactCellView.self, forCellReuseIdentifier: self.cellIdentifier)
+        tableView.register(ActivityCellView.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.dataSource = self
         tableView.delegate = self
         return tableView
     }()
 
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
@@ -46,14 +45,14 @@ class ContactListView: UIView {
     }
 }
 
-extension ContactListView {
+extension ActivityListView {
 
-    func addSubviews() {
+    private func addSubviews() {
 
         addSubview(tableView)
     }
 
-    func configureConstraints() {
+    private func configureConstraints() {
 
         NSLayoutConstraint.activate([
 
@@ -65,30 +64,31 @@ extension ContactListView {
     }
 }
 
-extension ContactListView: UITableViewDataSource {
+extension ActivityListView: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 10
+        return 5
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactCellView
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ActivityCellView
 
         return cell
     }
 }
 
-extension ContactListView: UITableViewDelegate {
+extension ActivityListView: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ContactListView.cellSize
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ActivityListView.cellSize
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        delegate?.didSelectContact()
+        delegate?.didSelectedActivity()
     }
 }
+
