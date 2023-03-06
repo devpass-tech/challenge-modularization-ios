@@ -29,6 +29,6 @@ Pod::Spec.new do |spec|
   ]
 
   # spec.dependency 'Dependency', '~> 1.0.0' #Framework remoto
-  # spec.dependency 'Dependency' #Framework local
+  spec.dependency 'FinanceService' #Framework local
 
 end

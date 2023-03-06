@@ -48,7 +48,8 @@ final class HomeViewController: UIViewController {
     
     private func fetchHomeData() {
         let mainQueueDecorator = MainQueueDecorator(service)
-        mainQueueDecorator.fetchData(HomeData.self, endpoint: .home) { result in
+        mainQueueDecorator.fetchData(HomeData.self, endpoint: .home) { [weak self] (result) in
+            guard let self = self else { return }
             switch result {
             case .success(let homeData):
                 self.homeView.setup(homeData)
