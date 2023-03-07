@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-protocol ConfirmationViewDelegate: AnyObject {
+public protocol ConfirmationViewDelegate: AnyObject {
 
     func didPressConfirmationButton()
 }
 
-class ConfirmationView: UIView {
+public class ConfirmationView: UIView {
 
-    weak var delegate: ConfirmationViewDelegate?
+    public weak var delegate: ConfirmationViewDelegate?
 
-    let stackView: UIStackView = {
+    private let stackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +27,7 @@ class ConfirmationView: UIView {
         return stackView
     }()
 
-    let confirmationImageView: UIImageView = {
+    private let confirmationImageView: UIImageView = {
 
         let imageView = UIImageView()
         imageView.image = UIImage(named: "checkmark.circle.fill")
@@ -38,7 +38,6 @@ class ConfirmationView: UIView {
     }()
 
     let confirmationLabel: UILabel = {
-
         let label = UILabel()
         label.text = "Your transfer was successful"
         label.font = UIFont.boldSystemFont(ofSize: 17)
@@ -46,7 +45,7 @@ class ConfirmationView: UIView {
         return label
     }()
 
-    lazy var confirmationButton: UIButton = {
+    private lazy var confirmationButton: UIButton = {
 
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -58,8 +57,7 @@ class ConfirmationView: UIView {
         return button
     }()
 
-
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
@@ -92,7 +90,6 @@ class ConfirmationView: UIView {
 
     @objc
     func confirmationButtonPressed() {
-
         delegate?.didPressConfirmationButton()
     }
 }

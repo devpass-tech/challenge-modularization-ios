@@ -9,16 +9,15 @@ import Foundation
 import UIKit
 import FinanceService
 
-protocol ActivityDetailsViewDelegate: AnyObject {
-
+public protocol ActivityDetailsViewDelegate: AnyObject {
     func didPressReportButton()
 }
 
-class ActivityDetailsView: UIView {
+public final class ActivityDetailsView: UIView {
 
-    weak var delegate: ActivityDetailsViewDelegate?
+    public weak var delegate: ActivityDetailsViewDelegate?
 
-    let stackView: UIStackView = {
+    private let stackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +28,7 @@ class ActivityDetailsView: UIView {
         return stackView
     }()
 
-    let imageView: UIImageView = {
+    private let imageView: UIImageView = {
 
         let imageView = UIImageView()
         imageView.image = UIImage(named: "bag.circle.fill")
@@ -38,7 +37,7 @@ class ActivityDetailsView: UIView {
         return imageView
     }()
 
-    let activityNameLabel: UILabel = {
+    private let activityNameLabel: UILabel = {
 
         let label = UILabel()
         label.textAlignment = .center
@@ -46,20 +45,20 @@ class ActivityDetailsView: UIView {
         return label
     }()
 
-    let categoryLabel: UILabel = {
+    private let categoryLabel: UILabel = {
 
         let label = UILabel()
         label.textAlignment = .center
         return label
     }()
 
-    let priceContainerView: UIView = {
+    private let priceContainerView: UIView = {
 
         let view = UIView()
         return view
     }()
 
-    let priceLabel: UILabel = {
+    private let priceLabel: UILabel = {
 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -67,14 +66,14 @@ class ActivityDetailsView: UIView {
         return label
     }()
 
-    let timeLabel: UILabel = {
+    private let timeLabel: UILabel = {
 
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
-    lazy var reportIssueButton: UIButton = {
+    private lazy var reportIssueButton: UIButton = {
 
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -86,8 +85,7 @@ class ActivityDetailsView: UIView {
         return button
     }()
 
-
-    init() {
+    public init() {
         super.init(frame: .zero)
 
         backgroundColor = .white
@@ -129,11 +127,10 @@ class ActivityDetailsView: UIView {
 
     @objc
     func reportButtonPressed() {
-
         delegate?.didPressReportButton()
     }
     
-    func setup(_ model: ActivityDetails) {
+    public func setup(_ model: ActivityDetails) {
         activityNameLabel.text = model.name
         categoryLabel.text = model.category
         priceLabel.text = "\(model.price)"
