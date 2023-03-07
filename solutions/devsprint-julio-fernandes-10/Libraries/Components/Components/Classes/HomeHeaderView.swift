@@ -21,15 +21,14 @@ public final class HomeHeaderView: UIView {
         return stackView
     }()
 
-    private let label: UILabel = {
+    public let label: UILabel = {
 
         let label = UILabel()
-        label.text = "$15,459.27"
         label.font = UIFont.boldSystemFont(ofSize: 34)
         return label
     }()
 
-    private let savingsStackView: UIStackView = {
+    public let savingsStackView: UIStackView = {
 
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,10 +45,9 @@ public final class HomeHeaderView: UIView {
         return label
     }()
 
-    private let savingsValueLabel: UILabel = {
+    public let savingsValueLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "$100.00"
         label.textColor = .lightGray
         return label
     }()
@@ -71,10 +69,9 @@ public final class HomeHeaderView: UIView {
         return label
     }()
 
-    private let spendingValueLabel: UILabel = {
+    public let spendingValueLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "$100.00"
         label.textColor = .lightGray
         return label
     }()

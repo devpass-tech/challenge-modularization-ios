@@ -12,6 +12,7 @@ target 'ActivityDetails' do
 
   pod 'SwiftLint'
   pod 'SwiftGen', '6.5.1'
+  pod 'FinanceService', :path => '../FinanceService'
 
   target 'ActivityDetailsTests' do
       # pod 'Dependency', '~> 1.0.0'
