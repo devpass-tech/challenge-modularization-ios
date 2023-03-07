@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import FinanceService
 
 public final class ActivityCellView: UITableViewCell {
-
-   private var mainStackView: UIStackView = {
+   private lazy var mainStackView: UIStackView = {
        let stack = UIStackView(frame: .zero)
        stack.translatesAutoresizingMaskIntoConstraints = false
        stack.spacing = 8
@@ -19,7 +19,7 @@ public final class ActivityCellView: UITableViewCell {
        return stack
     }()
 
-    private var labelsStackView: UIStackView = {
+    private lazy var labelsStackView: UIStackView = {
         let stack = UIStackView(frame: .zero)
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
@@ -41,7 +41,6 @@ public final class ActivityCellView: UITableViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 17)
-        label.text = "Mall"
         return label
     }()
 
@@ -50,7 +49,6 @@ public final class ActivityCellView: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 14)
-        label.text = "$100.00 • 8:57 AM"
         return label
     }()
 
@@ -65,12 +63,15 @@ public final class ActivityCellView: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setup(_ model: Activity) {
+        activityNameLabel.text = model.name
+        activityInfoLabel.text = "$\(model.price) • \(model.time)"
+    }
 }
 
 extension ActivityCellView {
-
     private func addSubviews() {
-
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(categoryImageView)
         mainStackView.addArrangedSubview(labelsStackView)
@@ -80,17 +81,14 @@ extension ActivityCellView {
     }
 
     private func configureConstraints() {
-
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             mainStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
             mainStackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
             mainStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-
-            self.categoryImageView.widthAnchor.constraint(equalToConstant: 50),
-            self.categoryImageView.heightAnchor.constraint(equalToConstant: 50),
-
+            
+            categoryImageView.widthAnchor.constraint(equalToConstant: 50),
+            categoryImageView.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
 }
-
