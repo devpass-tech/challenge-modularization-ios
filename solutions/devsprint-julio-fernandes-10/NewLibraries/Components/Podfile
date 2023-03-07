@@ -1,0 +1,25 @@
+
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'Components'
+
+target 'Components' do
+
+  pod 'SwiftLint'
+  pod 'SwiftGen', '6.5.1'
+  pod 'FinanceService', :path => '../FinanceService'
+
+  target 'ComponentsTests' do
+      # pod 'Dependency', '~> 1.0.0'
+  end
+end
+
+target 'SampleApp' do
+  project 'SampleApp/SampleApp'
+  pod 'Components', :path => './'
+end
