@@ -1,0 +1,14 @@
+strings:
+  inputs: Components/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      params:
+        enumName: Localization
+      output: Components/Generated/Strings.swift
+
+# xcassets:
+#   inputs:
+#     - Components/Resources/Assets.xcassets
+#   outputs:
+#     - templateName: swift5
+#       output: Components/Generated/Images.swift
