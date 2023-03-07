@@ -6,10 +6,15 @@ target 'FinanceApp' do
   
   # Comment the next line if you don't want to use dynamic frameworks
   pod 'SwiftLint'
-  pod 'FinanceService', :path => 'Libraries/FinanceService'
   pod 'ActivityDetails', :path => 'Libraries/ActivityDetails'
-  pod 'Confirmation', :path => 'Libraries/Confirmation'
   pod 'Components', :path => 'Libraries/Components'
+  pod 'Confirmation', :path => 'Libraries/Confirmation'
+  pod 'ContactList', :path => 'Libraries/ContactList'
+  pod 'FinanceExtensions', :path => 'Libraries/FinanceExtensions'
+  pod 'FinanceService', :path => 'Libraries/FinanceService'
+  pod 'Home', :path => 'Libraries/Home'
+  pod 'Transfers', :path => 'Libraries/Transfers'
+  pod 'UserProfile', :path => 'Libraries/UserProfile'
   
   target 'FinanceAppTests' do
     # Pods for testing

@@ -29,7 +29,7 @@ public final class ConfirmationViewController: UIViewController {
 }
 
 extension ConfirmationViewController: ConfirmationViewDelegate {
-    func didPressConfirmationButton() {
+    public func didPressConfirmationButton() {
         self.dismiss(animated: true)
     }
 }

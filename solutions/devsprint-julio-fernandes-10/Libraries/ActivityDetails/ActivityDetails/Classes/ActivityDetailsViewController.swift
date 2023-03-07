@@ -30,6 +30,7 @@ public final class ActivityDetailsViewController: UIViewController {
     
     // MARK: - Life Cycle
     public override func viewDidLoad() {
+        super.viewDidLoad()
         fecthActivityDetailsData()
     }
     
@@ -40,13 +41,15 @@ public final class ActivityDetailsViewController: UIViewController {
     // MARK: - Methods
     private func fecthActivityDetailsData() {
         service.fetchData(ActivityDetails.self, endpoint: .activityDetails) { [weak self] (result) in
-            guard let self = self else { return }
+            guard let self = self else {
+                return
+            }
             switch result {
             case .success(let activityDetails):
                 self.activityDetailsView.setup(activityDetails)
                 
             case .failure(let error):
-                self.showAlertController(title: "Ops, algo de errado aconteceu!!!", message:  error.localizedDescription, buttonTitle: "Fechar")
+                self.showAlertController(title: "Ops, algo de errado aconteceu!!!", message: error.localizedDescription, buttonTitle: "Fechar")
             }
         }
     }
@@ -63,7 +66,7 @@ public final class ActivityDetailsViewController: UIViewController {
 
 // MARK: - ActivityDetailsViewDelegate
 extension ActivityDetailsViewController: ActivityDetailsViewDelegate {
-    func didPressReportButton() {
-        showAlertController(title:  "Report an issue", message: "The issue was reported", buttonTitle: "Thanks")
+    public func didPressReportButton() {
+        showAlertController(title: "Report an issue", message: "The issue was reported", buttonTitle: "Thanks")
     }
 }

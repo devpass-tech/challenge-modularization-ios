@@ -85,9 +85,8 @@ extension ContactCellView {
             mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
 
             self.avatarImageView.widthAnchor.constraint(equalToConstant: 50),
-            self.avatarImageView.heightAnchor.constraint(equalToConstant: 50),
+            self.avatarImageView.heightAnchor.constraint(equalToConstant: 50)
 
         ])
     }
 }
-

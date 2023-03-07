@@ -1,0 +1,14 @@
+strings:
+  inputs: ContactList/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      params:
+        enumName: Localization
+      output: ContactList/Generated/Strings.swift
+
+# xcassets:
+#   inputs:
+#     - ContactList/Resources/Assets.xcassets
+#   outputs:
+#     - templateName: swift5
+#       output: ContactList/Generated/Images.swift
