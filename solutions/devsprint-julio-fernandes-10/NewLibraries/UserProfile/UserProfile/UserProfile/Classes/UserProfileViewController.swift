@@ -6,10 +6,19 @@
 //
 
 import UIKit
+import UserProfileInterface
 
-public final class UserProfileViewController: UIViewController {
+public final class UserProfileFactory: UserProfileInterface {
+    public init() {}
+    
+    public func make() -> UIViewController {
+        return UserProfileViewController()
+    }
+    
+}
 
-    public init() {
+final class UserProfileViewController: UIViewController {
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -17,9 +26,8 @@ public final class UserProfileViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public override func loadView() {
+    override func loadView() {
         super.loadView()
         self.view = UserProfileView()
     }
-
 }
