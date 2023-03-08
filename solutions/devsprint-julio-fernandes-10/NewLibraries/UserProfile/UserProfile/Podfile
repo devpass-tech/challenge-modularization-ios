@@ -10,6 +10,8 @@ workspace 'UserProfile'
 target 'UserProfile' do
   pod 'SwiftGen', '6.5.1'  
   pod 'UserProfileInterface', :path => '../UserProfileInterface'
+  pod 'Components', :path => '../../Components'
+  pod 'FinanceService', :path => '../../FinanceService'
 
   target 'UserProfileTests' do
       #pod 'Dependency', '~> 1.0.0'

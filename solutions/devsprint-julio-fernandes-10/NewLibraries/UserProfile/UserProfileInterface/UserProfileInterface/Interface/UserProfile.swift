@@ -3,8 +3,8 @@
 //  UserProfileInterface
 //
 
-import Foundation
+import UIKit
 
 public protocol UserProfileInterface {
-    func helloWorld() -> String
+    func make() -> UIViewController
 }

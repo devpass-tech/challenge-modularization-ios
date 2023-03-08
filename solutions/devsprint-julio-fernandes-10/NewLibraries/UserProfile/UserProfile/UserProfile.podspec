@@ -29,5 +29,7 @@ Pod::Spec.new do |spec|
   ]
 
   spec.dependency 'UserProfileInterface'
+  spec.dependency 'Components'
+  spec.dependency 'FinanceService'
 
 end

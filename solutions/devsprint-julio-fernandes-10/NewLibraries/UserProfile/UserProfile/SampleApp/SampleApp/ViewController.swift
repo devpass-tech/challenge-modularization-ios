@@ -12,22 +12,17 @@ import UserProfileAssembly
 final class ViewController: UIViewController {
 
     var assembler: Assembler = {
-        let assembler = Assembler(
-            [
-                UserProfileAssembly()
-            ]
-        )
-        return assembler
+        let userProfileAssembly = UserProfileAssembly()
+        return Assembler([userProfileAssembly])
     }()
 
     lazy var service = assembler.resolver.resolve(UserProfileInterface.self)
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        title = "Sample App"
+        title = "User Profile - Sample App"
         
-        let alert = UIAlertController(title: "UserProfile", message: service?.helloWorld(), preferredStyle: .alert)
-        alert.addAction(.init(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        guard let service = service else { return }
+        show(service.make(), sender: self)
     }
 }
