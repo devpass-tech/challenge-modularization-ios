@@ -2,6 +2,9 @@
 platform :ios, '13.0'
 use_frameworks!
 
+# plugin 'cocoapods-dependency-graph'
+# dependency_output :graph
+
 def libraries
   pod 'ActivityDetails', :path => 'Libraries/ActivityDetails'
   pod 'Components', :path => 'Libraries/Components'
