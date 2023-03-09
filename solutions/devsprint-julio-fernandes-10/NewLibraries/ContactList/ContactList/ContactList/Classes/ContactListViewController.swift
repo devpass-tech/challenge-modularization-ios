@@ -6,14 +6,24 @@
 //
 
 import UIKit
+import ContactListInterface
 
-public protocol ContactListViewControllerDelegate: AnyObject {
+public class ContactListFactory: ContactListInterface {
+    public init() {}
+    
+    public func make() -> UIViewController {
+        return ContactListViewController()
+    }
+
+}
+
+protocol ContactListViewControllerDelegate: AnyObject {
     func didSelectContact()
 }
 
-public class ContactListViewController: UIViewController {
+class ContactListViewController: UIViewController {
 
-    public weak var delegate: ContactListViewControllerDelegate?
+    weak var delegate: ContactListViewControllerDelegate?
 
     lazy var contactListView: ContactListView = {
 
@@ -22,12 +32,12 @@ public class ContactListViewController: UIViewController {
         return contactListView
     }()
 
-    public override func loadView() {
+    override func loadView() {
         super.loadView()
         self.view = contactListView
     }
 
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Contact List"
     }
