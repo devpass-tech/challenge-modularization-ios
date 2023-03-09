@@ -8,8 +8,7 @@ import Swinject
 import ContactListInterface
 import ContactListAssembly
 
-final class ViewController: UIViewController {
-
+final class ViewController: UIViewController, ContactListViewControllerDelegate {
     var assembler: Assembler = {
         let assembler = Assembler(
             [
@@ -26,6 +25,10 @@ final class ViewController: UIViewController {
         title = "Sample App"
         
         guard let service = service else { return }
-        show(service.make(), sender: self)
+        show(service.make(delegate: self), sender: self)
+    }
+    
+    func didSelectContact() {
+        print(#function)
     }
 }
