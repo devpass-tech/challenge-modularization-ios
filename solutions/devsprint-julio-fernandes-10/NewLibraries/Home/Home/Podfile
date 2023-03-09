@@ -10,6 +10,11 @@ workspace 'Home'
 target 'Home' do
   pod 'SwiftGen', '6.5.1'  
   pod 'HomeInterface', :path => '../HomeInterface'
+  pod 'Components', :path => '../../Components'
+  pod 'FinanceService', :path => '../../FinanceService'
+  pod 'FinanceExtensions', :path => '../../FinanceExtensions'
+  pod 'ActivityDetailsInterface', :path => '../../ActivityDetails/ActivityDetailsInterface'
+  pod 'UserProfileInterface', :path => '../../UserProfile/UserProfileInterface'
 
   target 'HomeTests' do
       #pod 'Dependency', '~> 1.0.0'

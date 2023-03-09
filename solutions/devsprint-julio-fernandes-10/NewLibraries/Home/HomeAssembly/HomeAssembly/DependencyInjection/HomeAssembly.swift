@@ -10,9 +10,6 @@ public class HomeAssembly: Assembly {
     public init() {}
     
     public func assemble(container: Container) {
-        container.register(String.self) { _ in
-            return "Hello DI!!!"
-        }
-        container.autoregister(HomeInterface.self, initializer: HomeInitializer.init)
+        container.autoregister(HomeInterface.self, initializer: HomeFactory.init)
     }
 }

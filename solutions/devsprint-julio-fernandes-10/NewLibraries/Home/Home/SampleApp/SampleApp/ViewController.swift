@@ -26,7 +26,7 @@ final class ViewController: UIViewController {
         super.viewDidAppear(animated)
         title = "Sample App"
         
-        let alert = UIAlertController(title: "Home", message: service?.helloWorld(), preferredStyle: .alert)
+        let alert = UIAlertController(title: "Home", message: "Home - Sample App", preferredStyle: .alert)
         alert.addAction(.init(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }

@@ -29,5 +29,10 @@ Pod::Spec.new do |spec|
   ]
 
   spec.dependency 'HomeInterface'
+  spec.dependency 'Components'
+  spec.dependency 'FinanceService'
+  spec.dependency 'FinanceExtensions'
+  spec.dependency 'ActivityDetailsInterface'
+  spec.dependency 'UserProfileInterface'
 
 end
