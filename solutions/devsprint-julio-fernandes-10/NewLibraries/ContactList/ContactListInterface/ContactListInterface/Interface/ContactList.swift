@@ -6,9 +6,5 @@
 import UIKit
 
 public protocol ContactListInterface {
-    func make(delegate: ContactListViewControllerDelegate?) -> UIViewController
-}
-
-public protocol ContactListViewControllerDelegate: AnyObject {
-    func didSelectContact()
+    func make() -> UIViewController
 }
