@@ -1,0 +1,33 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'Home'
+
+target 'Home' do
+  pod 'SwiftGen', '6.5.1'  
+  pod 'HomeInterface', :path => '../HomeInterface'
+  pod 'Components', :path => '../../Components'
+  pod 'FinanceService', :path => '../../FinanceService'
+  pod 'FinanceExtensions', :path => '../../FinanceExtensions'
+  pod 'ActivityDetailsInterface', :path => '../../ActivityDetails/ActivityDetailsInterface'
+  pod 'UserProfileInterface', :path => '../../UserProfile/UserProfileInterface'
+
+  target 'HomeTests' do
+      #pod 'Dependency', '~> 1.0.0'
+  end
+end
+
+target 'SampleApp' do
+  project 'SampleApp/SampleApp'
+  pod 'Home', :path => './'
+  pod 'HomeAssembly', :path => '../HomeAssembly'
+
+  # DI
+  pod 'Swinject', '~> 2.0'
+  pod 'SwinjectAutoregistration', '~> 2.0'
+
+end

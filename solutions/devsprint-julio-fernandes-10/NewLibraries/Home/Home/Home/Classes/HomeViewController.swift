@@ -7,10 +7,30 @@
 
 import UIKit
 import FinanceService
-import ActivityDetails
-import UserProfile
+import ActivityDetailsInterface
+import UserProfileInterface
+import HomeInterface
 
-public final class HomeViewController: UIViewController {
+public class HomeFactory: HomeInterface {
+    private let activityDetails: ActivityDetailsInterface
+    private let userProfile: UserProfileInterface
+    private let service: FinanceServiceProtocol
+    
+    public init(service: FinanceServiceProtocol,
+                activityDetails: ActivityDetailsInterface,
+                userProfile: UserProfileInterface) {
+        self.service = service
+        self.activityDetails = activityDetails
+        self.userProfile = userProfile
+    }
+    
+    public func make() -> UIViewController {
+        let controller = HomeViewController(service: service, activityDetails: activityDetails, userProfile: userProfile)
+        return controller
+    }
+}
+
+final class HomeViewController: UIViewController {
     
     // MARK: - Properties
     private lazy var homeView: HomeView = {
@@ -19,11 +39,17 @@ public final class HomeViewController: UIViewController {
         return homeView
     }()
     
+    private let activityDetails: ActivityDetailsInterface
+    private let userProfile: UserProfileInterface
     private let service: FinanceServiceProtocol
     
     // MARK: - Initializers
-    public init(_ service: FinanceServiceProtocol = FinanceService()) {
+    init(service: FinanceServiceProtocol,
+         activityDetails: ActivityDetailsInterface,
+         userProfile: UserProfileInterface) {
         self.service = MainQueueDecorator(decoratee: service)
+        self.activityDetails = activityDetails
+        self.userProfile = userProfile
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -32,13 +58,13 @@ public final class HomeViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
-    public override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(openProfile))
         fetchHomeData()
     }
 
-    public override func loadView() {
+    override func loadView() {
         super.loadView()
         self.view = homeView
     }
@@ -46,7 +72,8 @@ public final class HomeViewController: UIViewController {
     // MARK: - Methods
     @objc
     func openProfile() {
-        let navigationController = UINavigationController(rootViewController: UserProfileViewController())
+        let userProfileViewController = userProfile.make()
+        let navigationController = UINavigationController(rootViewController: userProfileViewController)
         self.present(navigationController, animated: true)
     }
     
@@ -77,7 +104,7 @@ public final class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeViewDelegate {
     func didSelectActivity() {
-        let activityDetailsViewController = ActivityDetailsViewController()
+        let activityDetailsViewController = activityDetails.make()
         self.navigationController?.pushViewController(activityDetailsViewController, animated: true)
     }
 }
