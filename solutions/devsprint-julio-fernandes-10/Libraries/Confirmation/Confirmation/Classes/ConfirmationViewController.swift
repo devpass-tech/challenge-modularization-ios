@@ -6,24 +6,15 @@
 //
 
 import UIKit
-import ConfirmationInterface
 
-public class ConfirmationFactory: ConfirmationInterface {
-    public init() {}
-    
-    public func make(amount: String) -> UIViewController {
-        return ConfirmationViewController(amount: amount)
-    }
-}
-
-final class ConfirmationViewController: UIViewController {
+public final class ConfirmationViewController: UIViewController {
     private lazy var confirmationView: ConfirmationView = {
         let confirmationView = ConfirmationView()
         confirmationView.delegate = self
         return confirmationView
     }()
 
-    init(amount: String) {
+    public init(amount: String) {
         super.init(nibName: nil, bundle: nil)
         confirmationView.confirmationLabel.text = "Your transfer of $\(amount) was successful 🤑"
     }
@@ -32,13 +23,13 @@ final class ConfirmationViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
+    public override func loadView() {
         self.view = confirmationView
     }
 }
 
 extension ConfirmationViewController: ConfirmationViewDelegate {
-    func didPressConfirmationButton() {
+    public func didPressConfirmationButton() {
         self.dismiss(animated: true)
     }
 }

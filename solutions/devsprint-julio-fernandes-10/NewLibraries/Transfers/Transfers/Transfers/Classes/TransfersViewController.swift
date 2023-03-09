@@ -6,10 +6,26 @@
 //
 
 import UIKit
-import Confirmation
-import ContactList
+import ConfirmationInterface
+import ContactListInterface
+import TransfersInterface
 
-public final class TransfersViewController: UIViewController {
+public class TransfersFactory: TransfersInterface {
+    private let contactList: ContactListInterface
+    private let confirmation: ConfirmationInterface
+    
+    public init(contactList: ContactListInterface, confirmation: ConfirmationInterface) {
+        self.contactList = contactList
+        self.confirmation = confirmation
+    }
+    
+    public func make() -> UIViewController {
+        let controller = TransfersViewController(contactList: contactList, confirmation: confirmation)
+        return controller
+    }
+}
+
+final class TransfersViewController: UIViewController {
 
     lazy var transferView: TransfersView = {
 
@@ -18,12 +34,17 @@ public final class TransfersViewController: UIViewController {
         return transferView
     }()
 
-    public override func loadView() {
+    override func loadView() {
         super.loadView()
         self.view = transferView
     }
     
-    public init() {
+    private let contactList: ContactListInterface
+    private let confirmation: ConfirmationInterface
+    
+    init(contactList: ContactListInterface, confirmation: ConfirmationInterface) {
+        self.contactList = contactList
+        self.confirmation = confirmation
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,16 +56,13 @@ public final class TransfersViewController: UIViewController {
 extension TransfersViewController: TransferViewDelegate {
 
     func didPressChooseContactButton() {
-
-        let contactListViewController = ContactListViewController()
-        contactListViewController.delegate = self
+        let contactListViewController = contactList.make(delegate: self)
         let navigationController = UINavigationController(rootViewController: contactListViewController)
         self.present(navigationController, animated: true)
     }
 
     func didPressTransferButton(with amount: String) {
-
-        let confirmationViewController = ConfirmationViewController(amount: amount)
+        let confirmationViewController = confirmation.make(amount: amount)
         let navigationController = UINavigationController(rootViewController: confirmationViewController)
         self.present(navigationController, animated: true)
     }
@@ -52,8 +70,7 @@ extension TransfersViewController: TransferViewDelegate {
 
 extension TransfersViewController: ContactListViewControllerDelegate {
 
-    public func didSelectContact() {
-
+    func didSelectContact() {
         self.dismiss(animated: true)
 
         let alertViewController = UIAlertController(title: "Contact selection", message: "A contact was selected", preferredStyle: .alert)

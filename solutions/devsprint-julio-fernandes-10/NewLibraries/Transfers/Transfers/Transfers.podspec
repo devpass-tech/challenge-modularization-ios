@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.name = 'Confirmation'
+  spec.name = 'Transfers'
   spec.version = '0.1.0'
   spec.summary = 'Micro feature description.'
   spec.homepage = 'https://github.com/jjfernandes87/MicrofrontendGenerator'
@@ -15,19 +15,23 @@ Pod::Spec.new do |spec|
   spec.cocoapods_version = '>= 1.5'
   spec.swift_version = '5.4'
 
-  spec.source_files = 'Confirmation/**/*.{h,m,swift}'
+  spec.source_files = 'Transfers/**/*.{h,m,swift}'
 
   spec.resource_bundles = {
-    'Confirmation' => [
-      'Confirmation/**/*.xcassets',
-      'Confirmation/**/*.xib'
+    'Transfers' => [
+      'Transfers/**/*.xcassets',
+      'Transfers/**/*.xib'
     ]
   }
 
   spec.resources = [
-    'Confirmation/**/*.strings'
+    'Transfers/**/*.strings'
   ]
 
+  spec.dependency 'TransfersInterface'
   spec.dependency 'ConfirmationInterface'
+  spec.dependency 'ContactListInterface'
+  spec.dependency 'Components'
+  spec.dependency 'FinanceService'
 
 end

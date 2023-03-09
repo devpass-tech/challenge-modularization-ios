@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.name = 'ConfirmationAssembly'
+  spec.name = 'TransfersInterface'
   spec.version = '0.1.0'
   spec.summary = 'Micro feature description.'
   spec.homepage = 'https://github.com/jjfernandes87/MicrofrontendGenerator'
@@ -15,11 +15,8 @@ Pod::Spec.new do |spec|
   spec.cocoapods_version = '>= 1.5'
   spec.swift_version = '5.4'
 
-  spec.source_files = 'ConfirmationAssembly/**/*.{h,m,swift}'
+  spec.source_files = 'TransfersInterface/**/*.{h,m,swift}'
   
-  spec.dependency 'ConfirmationInterface'
-  spec.dependency 'Confirmation'
-  spec.dependency 'Swinject', '~> 2.0'
-  spec.dependency 'SwinjectAutoregistration', '~> 2.0'
+  #spec.dependency 'Dependency', '~> 1.0.0'  
 
 end

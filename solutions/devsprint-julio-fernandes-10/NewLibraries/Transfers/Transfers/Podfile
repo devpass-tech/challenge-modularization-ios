@@ -1,0 +1,32 @@
+source 'https://cdn.cocoapods.org/'
+
+platform :ios, '13.0'
+
+inhibit_all_warnings!
+use_frameworks!
+
+workspace 'Transfers'
+
+target 'Transfers' do
+  pod 'SwiftGen', '6.5.1'  
+  pod 'TransfersInterface', :path => '../TransfersInterface'
+  pod 'ConfirmationInterface', :path => '../../Confirmation/ConfirmationInterface'
+  pod 'ContactListInterface', :path => '../../ContactList/ContactListInterface'
+  pod 'Components', :path => '../../Components'
+  pod 'FinanceService', :path => '../../FinanceService'
+
+  target 'TransfersTests' do
+      #pod 'Dependency', '~> 1.0.0'
+  end
+end
+
+target 'SampleApp' do
+  project 'SampleApp/SampleApp'
+  pod 'Transfers', :path => './'
+  pod 'TransfersAssembly', :path => '../TransfersAssembly'
+
+  # DI
+  pod 'Swinject', '~> 2.0'
+  pod 'SwinjectAutoregistration', '~> 2.0'
+
+end
