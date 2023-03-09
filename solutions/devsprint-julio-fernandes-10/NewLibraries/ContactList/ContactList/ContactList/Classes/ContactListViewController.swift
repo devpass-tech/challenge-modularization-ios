@@ -11,14 +11,11 @@ import ContactListInterface
 public class ContactListFactory: ContactListInterface {
     public init() {}
     
-    public func make() -> UIViewController {
-        return ContactListViewController()
+    public func make(delegate: ContactListViewControllerDelegate?) -> UIViewController {
+        let controller = ContactListViewController()
+        controller.delegate = delegate
+        return controller
     }
-
-}
-
-protocol ContactListViewControllerDelegate: AnyObject {
-    func didSelectContact()
 }
 
 class ContactListViewController: UIViewController {
