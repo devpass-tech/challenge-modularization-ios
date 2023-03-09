@@ -29,5 +29,9 @@ Pod::Spec.new do |spec|
   ]
 
   spec.dependency 'TransfersInterface'
+  spec.dependency 'ConfirmationInterface'
+  spec.dependency 'ContactListInterface'
+  spec.dependency 'Components'
+  spec.dependency 'FinanceService'
 
 end

@@ -3,8 +3,8 @@
 //  TransfersInterface
 //
 
-import Foundation
+import UIKit
 
 public protocol TransfersInterface {
-    func helloWorld() -> String
+    func make() -> UIViewController
 }
