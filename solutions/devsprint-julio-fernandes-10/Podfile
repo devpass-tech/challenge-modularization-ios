@@ -2,10 +2,10 @@
 platform :ios, '13.0'
 use_frameworks!
 
-target 'FinanceApp' do
-  
-  # Comment the next line if you don't want to use dynamic frameworks
-  pod 'SwiftLint'
+# plugin 'cocoapods-dependency-graph'
+# dependency_output :graph
+
+def libraries
   pod 'ActivityDetails', :path => 'Libraries/ActivityDetails'
   pod 'Components', :path => 'Libraries/Components'
   pod 'Confirmation', :path => 'Libraries/Confirmation'
@@ -15,6 +15,43 @@ target 'FinanceApp' do
   pod 'Home', :path => 'Libraries/Home'
   pod 'Transfers', :path => 'Libraries/Transfers'
   pod 'UserProfile', :path => 'Libraries/UserProfile'
+end
+
+def new_libraries
+  pod 'Components', :path => 'NewLibraries/Components'
+  pod 'FinanceExtensions', :path => 'NewLibraries/FinanceExtensions'
+  pod 'FinanceService', :path => 'NewLibraries/FinanceService'
+
+  pod 'ActivityDetails', :path => 'NewLibraries/ActivityDetails/ActivityDetails'
+  pod 'ActivityDetailsAssembly', :path => 'NewLibraries/ActivityDetails/ActivityDetailsAssembly'
+  pod 'ActivityDetailsInterface', :path => 'NewLibraries/ActivityDetails/ActivityDetailsInterface'
+
+  pod 'Confirmation', :path => 'NewLibraries/Confirmation/Confirmation'
+  pod 'ConfirmationAssembly', :path => 'NewLibraries/Confirmation/ConfirmationAssembly'
+  pod 'ConfirmationInterface', :path => 'NewLibraries/Confirmation/ConfirmationInterface'
+  
+  pod 'ContactList', :path => 'NewLibraries/ContactList/ContactList'
+  pod 'ContactListAssembly', :path => 'NewLibraries/ContactList/ContactListAssembly'
+  pod 'ContactListInterface', :path => 'NewLibraries/ContactList/ContactListInterface'
+  
+  pod 'Home', :path => 'NewLibraries/Home/Home'
+  pod 'HomeAssembly', :path => 'NewLibraries/Home/HomeAssembly'
+  pod 'HomeInterface', :path => 'NewLibraries/Home/HomeInterface'
+  
+  pod 'Transfers', :path => 'NewLibraries/Transfers/Transfers'
+  pod 'TransfersAssembly', :path => 'NewLibraries/Transfers/TransfersAssembly'
+  pod 'TransfersInterface', :path => 'NewLibraries/Transfers/TransfersInterface'
+  
+  pod 'UserProfile', :path => 'NewLibraries/UserProfile/UserProfile'
+  pod 'UserProfileAssembly', :path => 'NewLibraries/UserProfile/UserProfileAssembly'
+  pod 'UserProfileInterface', :path => 'NewLibraries/UserProfile/UserProfileInterface'
+end
+
+target 'FinanceApp' do
+  
+  # Comment the next line if you don't want to use dynamic frameworks
+  pod 'SwiftLint'
+  new_libraries
   
   target 'FinanceAppTests' do
     # Pods for testing
